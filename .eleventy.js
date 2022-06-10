@@ -32,6 +32,10 @@ module.exports = function(eleventyConfig) {
 	// eleventyConfig.addPassthroughCopy("./src/icon-512.png");
 	// eleventyConfig.addPassthroughCopy("./src/manifest.webmanifest");
 
+  //Watch target
+	// eleventyConfig.addWatchTarget("./src/_includes/css/");
+	// eleventyConfig.addWatchTarget('./src/scripts/');
+
   return {
     // dataTemplateEngine: "njk",
 		markdownTemplateEngine: "njk",
