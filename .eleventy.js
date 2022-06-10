@@ -1,5 +1,6 @@
 const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
 const htmlmin = require("html-minifier");
+const CleanCSS = require("clean-css");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setQuietMode(true);
@@ -35,6 +36,11 @@ module.exports = function(eleventyConfig) {
   //Watch target
 	// eleventyConfig.addWatchTarget("./src/_includes/css/");
 	// eleventyConfig.addWatchTarget('./src/scripts/');
+
+  //Filter
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
 
   return {
     // dataTemplateEngine: "njk",
