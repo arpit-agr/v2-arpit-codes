@@ -23,5 +23,8 @@
   "homepage": "https://github.com/arpit-agr/11ty-starter#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-directory-output": "^1.0.1"
   }
 }
