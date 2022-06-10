@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/arpit-agr/11ty-starter/issues"
   },
-  "homepage": "https://github.com/arpit-agr/11ty-starter#readme"
+  "homepage": "https://github.com/arpit-agr/11ty-starter#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  }
 }
