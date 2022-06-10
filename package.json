@@ -1,18 +1,22 @@
 {
   "name": "11ty-starter",
   "version": "1.0.0",
-  "description": "A starter repository to build a website with the [Eleventy](https://github.com/11ty/eleventy) static site generator.",
+  "description": "A starter repository to build a website with the Eleventy static site generator.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arpit-agr/11ty-starter.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Arpit Agrawal",
+    "email": "arpit.agrawal2502@gmail.com"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/arpit-agr/11ty-starter/issues"
   },
