@@ -32,7 +32,7 @@ module.exports = function(eleventyConfig) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
     if(process.env.NODE_ENV === "production" && this.outputPath && this.outputPath.endsWith(".html") ) {
       let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
+        useShortDoctype: false,
         removeComments: true,
         collapseWhitespace: true,
         collapseBooleanAttributes: true
