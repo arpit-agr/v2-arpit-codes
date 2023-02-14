@@ -1,55 +1,70 @@
+/**
+ * I strive to keep the `.eleventy.js` file clean and uncluttered. Most adjustments must be made in:
+ *  - `./config/collections/index.js`
+ *  - `./config/filters/index.js`
+ *  - `./config/plugins/index.js`
+ *  - `./config/shortcodes/index.js`
+ *  - `./config/transforms/index.js`
+ */
+
 const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
-const htmlmin = require("html-minifier");
-const CleanCSS = require("clean-css");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-module.exports = function(eleventyConfig) {
-  eleventyConfig.setQuietMode(true);
-  eleventyConfig.addPlugin(directoryOutputPlugin);
+// Importing from config
+const getPages = require("./config/collections/pages.js");
+const getNotes = require("./config/collections/notes.js");
+const getLikes = require("./config/collections/likes.js");
+const { readableDate, htmlDate } = require("./config/filters/date.js");
+const addNbsp = require("./config/filters/add-nbsp.js");
+const codetitle = require("./config/shortcodes/codetitle.js");
+const md = require("./config/plugins/md.js");
+const assetHash = require("./config/plugins/asset-hash.js");
+const bundlerPlugin = require("./config/plugins/bundler.js");
+const htmlmin = require("./config/transforms/html-min.js");
 
-  //Passthrough copy
-  // eleventyConfig.addPassthroughCopy("./src/fonts");
-	// eleventyConfig.addPassthroughCopy("./src/images");
-	// eleventyConfig.addPassthroughCopy("./src/scripts");
-  // eleventyConfig.addPassthroughCopy({"./src/favicons": "/"});
+module.exports = function (eleventyConfig) {
+	//Add Collections
+	eleventyConfig.addCollection("pages", getPages);
+	eleventyConfig.addCollection("notes", getNotes);
+	eleventyConfig.addCollection("likes", getLikes);
+
+	//Add Filters
+	eleventyConfig.addFilter("htmlDate", htmlDate);
+	eleventyConfig.addFilter("readableDate", readableDate);
+	eleventyConfig.addFilter("addNbsp", addNbsp);
+
+	//Add Plugins
+	eleventyConfig.addPlugin(md);
+	eleventyConfig.addPlugin(assetHash);
+	eleventyConfig.addPlugin(directoryOutputPlugin);
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	eleventyConfig.addPlugin(syntaxHighlight);
+	eleventyConfig.addPlugin(htmlmin);
+	eleventyConfig.addPlugin(bundlerPlugin);
+
+	//Shortcode
+	eleventyConfig.addShortcode("codetitle", codetitle);
+
+	//Passthrough copy
+	eleventyConfig.addPassthroughCopy("./src/assets/fonts");
+	eleventyConfig.addPassthroughCopy("./src/assets/images");
+	eleventyConfig.addPassthroughCopy("./src/assets/scripts");
+	eleventyConfig.addPassthroughCopy({ "./src/assets/favicons": "/" });
 	// eleventyConfig.addPassthroughCopy("./src/manifest.webmanifest");
 
-  //Watch target
-	// eleventyConfig.addWatchTarget("./src/_includes/css/");
-	// eleventyConfig.addWatchTarget('./src/scripts/');
+	eleventyConfig.setServerOptions({
+		showAllHosts: true,
+	});
+	eleventyConfig.setQuietMode(true);
 
-  //Filter
-  eleventyConfig.addFilter("cssmin", function(code) {
-    if(process.env.NODE_ENV === "production") {
-      return new CleanCSS({}).minify(code).styles;
-    }
-    else {
-      return code
-    }
-  });
-
-  //Transforms
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if(process.env.NODE_ENV === "production" && this.outputPath && this.outputPath.endsWith(".html") ) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: false,
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseBooleanAttributes: true
-      });
-      return minified;
-    }
-
-    return content;
-  });
-
-  return {
-    // dataTemplateEngine: "njk",
+	return {
+		dataTemplateEngine: "njk",
 		markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
+		htmlTemplateEngine: "njk",
 		dir: {
-			input: 'src',
-			output: 'public'
-		}
+			input: "src",
+			output: "public",
+		},
 	};
 };
