@@ -39,6 +39,12 @@ body {
 	line-height: 1.5;
 }
 
+@supports (min-height: 100dvh) {
+	body {
+		min-height: 100dvh;
+	}
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
 	text-decoration-skip-ink: auto;
