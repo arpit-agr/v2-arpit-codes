@@ -1,0 +1,39 @@
+{%- extends "layouts/base.njk" -%}
+
+{% html "head" %}
+  <link rel="preload" href="/assets/scripts/footnotes.js?{{ assetHash }}" as="script">
+{% endhtml %}
+
+{%- css "page-specific-styles" %}
+  {% include "css/footnotes.css" %}
+  {% include "css/syntax-highlighter.css" %}
+  {% include "css/note.css" %}
+{%- endcss %}
+
+{%- block content -%}
+  <article class="note region">
+    <header class="flow">
+      <h1 class="title">{{ title | safe }}</h1>
+      <time class="step--1" datetime={{ date | htmlDate }}>
+        {{ date | readableDate | safe }}
+      </time>
+    </header>
+    <div class="body flow">
+      {{ content | safe }}
+    </div>
+    {# <hr> #}
+    <footer class="flow">
+      <p class="cta-copy">
+        👋🏽 {{ site.description }}
+      </p>
+      <p>
+        If I seem like a good fit for your project, I'd love to <a href="#">get in touch</a> with you.
+      </p>
+    </footer>
+    <a href="/notes/">&larr; Back to Notes</a>
+  </article>
+{%- endblock -%}
+
+{%- js "body" %}
+  <script src="/assets/scripts/footnotes.js?{{ assetHash }}"></script>
+{%- endjs %}

@@ -1,0 +1,8 @@
+<a
+  class="site-name"
+  href="/"
+  {# {{ helpers.getLinkActiveState("/", page.url) | safe }}  #}
+  aria-label="Home">
+  {{ site.title }}
+</a>
+{% include "partials/main-nav.html" %}

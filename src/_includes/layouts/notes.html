@@ -1,0 +1,23 @@
+{%- extends "layouts/base.njk" -%}
+
+{%- block content -%}
+  <div class="archive region">
+    <header class="flow">
+      <h1>{{ title }}</h1>
+      <p class="subtitle step--1">{{ subtitle | addNbsp | safe }}</p>
+      {{ content | safe }}
+    </header>
+    <ol role="list" reversed>
+      {%- for item in collections.notes | reverse -%}
+        <li>
+          <a class href="{{ item.url }}">
+            {{ item.data.title | safe -}}
+          </a>
+          <time class="step--2" datetime={{ item.date | htmlDate }}>
+            {{ item.date | readableDate | safe }}
+          </time>
+        </li>
+      {%- endfor -%}
+    </ol>
+  </div>
+{%- endblock -%}

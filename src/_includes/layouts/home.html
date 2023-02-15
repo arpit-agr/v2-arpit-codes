@@ -1,5 +1,16 @@
-{%- extends "layouts/base.html" -%}
+{%- extends "layouts/base.njk" -%}
+
+{% html "head" %}
+  <link rel="preload" as="image" href="{{ developer.avatar.src }}?{{ assetHash }}">
+{% endhtml %}
+
+{%- css "page-specific-styles" %}
+  {% include "css/home.css" %}
+{%- endcss %}
 
 {%- block content -%}
-  {{ content | safe }}
+  <div class="hero region stack">
+    <h1 class="vh">About Me</h1>
+    {{ content | safe }}
+  </div>
 {%- endblock -%}
