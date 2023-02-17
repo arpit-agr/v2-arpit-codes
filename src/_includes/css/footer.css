@@ -1,0 +1,12 @@
+.site-footer {
+	position: relative;
+	margin-block-end: calc(
+		-1 * ((1em * var(--line-height)) + (2 * var(--nav-link-padding)))
+	);
+	text-align: end;
+}
+
+.site-footer a {
+	display: inline-block;
+	padding-block: var(--nav-link-padding);
+}

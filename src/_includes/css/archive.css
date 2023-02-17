@@ -1,0 +1,97 @@
+.archive {
+	--column-grid-gap: var(--archive-grid-gap);
+}
+
+.archive header {
+	position: sticky;
+	inset-block-start: var(--region-padding-block);
+	align-self: start;
+
+	/* The header needs to be above the list */
+	z-index: 1;
+	background: var(--bg);
+
+	transition: all 333ms ease;
+}
+
+.archive .subtitle {
+	--flow-space: 0.5em;
+	max-inline-size: 27ch;
+}
+
+/* @media (min-width: 48rem) {
+	.archive header {
+		align-self: start;
+		inset-block-start: var(--region-padding-block);
+	}
+
+	.archive .subtitle {
+		max-inline-size: 25ch;
+	}
+} */
+
+.archive ol {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--archive-grid-gap);
+	/* block-size: min-content; */
+}
+
+@media (min-width: 60rem) {
+	.archive header {
+		box-shadow: unset;
+	}
+
+	.archive ol {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.archive li {
+	--stack-gap: 0.75rem;
+	--radius: 1px;
+	border-radius: var(--radius);
+	outline: var(--space-5xs) solid transparent;
+	outline-offset: calc(1 / 2 * var(--body-inline-padding));
+	transition: all 333ms ease;
+}
+
+.archive li {
+	position: relative;
+}
+
+.archive li a::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
+.archive li h2 {
+	font-size: var(--step-1);
+}
+
+.archive li h2 * {
+	font-size: 1em;
+}
+
+.archive li .content {
+	font-size: 1rem;
+}
+
+.archive li h2 ~ * {
+	transition: all 333ms ease;
+}
+
+.archive li a:focus-visible {
+	outline: none;
+	text-decoration: underline;
+}
+
+.archive li:hover,
+.archive li:focus-within {
+	outline: var(--space-5xs) solid var(--accent);
+}
+
+:is(.archive li:hover, .archive li:focus-within) h2 ~ * {
+	color: var(--accent);
+}

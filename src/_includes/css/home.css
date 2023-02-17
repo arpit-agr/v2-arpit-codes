@@ -1,0 +1,51 @@
+.hero {
+	--stack-vertical-alignment: space-between;
+	--hero-h1-line-height: var(--space-l-2xl);
+	/* override the padding applied to the content class */
+	padding-block-end: 0;
+}
+
+.hero p {
+	opacity: 0;
+	animation-name: fade;
+	animation-duration: 999ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+
+.hero p:first-of-type {
+	/* position: relative; */
+	/* font-weight: 400; */
+	/* font-family: var(--font-plain); */
+	font-size: var(--space-m-xl);
+	line-height: var(--hero-h1-line-height);
+	letter-spacing: -0.015em;
+
+	translate: 0 calc(-23.1464737794 / 100 * var(--hero-h1-line-height));
+}
+
+.hero p:last-of-type {
+	max-inline-size: 45ch;
+	animation-delay: 555ms;
+}
+
+.hero a {
+	hyphens: initial;
+}
+
+.hero img {
+	display: inline-block;
+	block-size: var(--hero-h1-line-height);
+	inline-size: auto;
+	vertical-align: baseline;
+	margin-inline: 0.25ch;
+
+	transform: translateY(16.25%);
+	clip-path: var(--pixelated-corners);
+
+	/* animation = name duration timing-function delay iteration-count direction fill-mode; */
+	/* TODO: adjust the delay (111ms) */
+	/* animation: reveal 999ms ease 111ms forwards;
+	transform: translateY(16.25%);
+	opacity: 0; */
+}

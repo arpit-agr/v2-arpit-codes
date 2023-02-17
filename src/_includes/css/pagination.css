@@ -1,0 +1,11 @@
+.pagination-separator {
+	margin-block-start: auto;
+}
+
+.pagination {
+	min-inline-size: 100%;
+}
+
+.pagination [data-direction="forwards"] {
+	margin-inline-start: auto;
+}

@@ -1,0 +1,127 @@
+.site-head {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0 1em;
+	font-size: var(--nav-font-size, var(--step-0));
+}
+
+.site-head a {
+	position: relative;
+	display: inline-block;
+	padding-block: var(--nav-link-padding);
+	text-decoration: none;
+}
+
+.site-head a:focus-visible {
+	outline-offset: calc(0.125 * var(--nav-link-padding));
+}
+
+.site-head a:after {
+	--text-decoration-size: var(--space-5xs);
+
+	content: "";
+	position: absolute;
+	inset-block-end: calc((-1 / 2 * var(--text-decoration-size)) - 0.5px);
+	inset-inline-start: 0;
+
+	inline-size: 100%;
+	block-size: var(--text-decoration-size);
+
+	background-color: transparent;
+	border-radius: var(--radius);
+	z-index: 3;
+	transition: all 333ms ease;
+}
+
+.site-head a:where(:hover):after {
+	background-color: var(--accent);
+}
+
+.site-head [aria-current="page"]:before,
+.site-head [data-state="active"]:before {
+	content: "";
+	position: absolute;
+	inset-block-start: var(--nav-link-padding);
+	inset-inline-start: 100%;
+
+	inline-size: var(--space-3xs);
+	block-size: var(--space-3xs);
+
+	background-color: var(--accent);
+	border-radius: 50%;
+}
+
+:where(#mainnav) button {
+	display: none;
+}
+
+.mainnav-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0 var(--space-xs-s);
+}
+
+/* Where the view port size is less than 640px and javascript is available */
+@media (max-width: 40rem) {
+	.has-js .site-head {
+		display: block;
+	}
+
+	.has-js .mainnav-list-container {
+		display: grid;
+		grid-template-rows: 0fr;
+		transition: 0.333s;
+		overflow: hidden;
+	}
+
+	.has-js .mainnav-list {
+		min-block-size: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	/* .has-js .mainnav-list li:nth-child(2) {
+		grid-row: 2/3;
+	} */
+
+	.has-js [aria-expanded="true"] + .mainnav-list-container {
+		grid-template-rows: 1fr;
+	}
+
+	:where(.has-js #mainnav) button {
+		--cluster-gap: 0.5em;
+		display: flex;
+		position: absolute;
+		inset-block-start: var(--nav-link-padding);
+		inset-inline-end: var(--body-inline-padding);
+	}
+
+	:where(.has-js #mainnav) button svg {
+		fill: currentColor;
+		inline-size: calc(1em * var(--line-height));
+		block-size: auto;
+		/* translate: 0 2px; */
+	}
+
+	:where(.has-js #mainnav) button svg rect {
+		transition: all 0.2s ease-in-out;
+		transform-origin: center center;
+	}
+
+	:where(.has-js #mainnav) [aria-expanded="true"] .bar {
+		opacity: 0;
+	}
+
+	:where(.has-js #mainnav) [aria-expanded="true"] #turn1 {
+		transform: rotate(45deg);
+	}
+
+	:where(.has-js #mainnav) [aria-expanded="true"] #turn2 {
+		transform: rotate(-45deg);
+	}
+}

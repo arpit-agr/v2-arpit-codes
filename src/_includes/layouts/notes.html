@@ -1,23 +1,39 @@
 {%- extends "layouts/base.njk" -%}
 
 {%- block content -%}
-  <div class="archive region">
+  <div class="notes archive column-layout region" data-columns="1,3">
     <header class="flow">
       <h1>{{ title }}</h1>
-      <p class="subtitle step--1">{{ subtitle | addNbsp | safe }}</p>
-      {{ content | safe }}
+      <p class="subtitle step--1 color:secondary">
+        {{ subtitle | addNbsp | safe }}
+      </p>
     </header>
-    <ol role="list" reversed>
-      {%- for item in collections.notes | reverse -%}
-        <li>
-          <a class href="{{ item.url }}">
-            {{ item.data.title | safe -}}
-          </a>
-          <time class="step--2" datetime={{ item.date | htmlDate }}>
-            {{ item.date | readableDate | safe }}
-          </time>
-        </li>
-      {%- endfor -%}
-    </ol>
+    <section class="stack">
+      <ol role="list" reversed>
+        {%- for item in notes -%}
+          <li class="stack">
+            <h2>
+              <a class href="{{ item.url }}">
+                {{ item.data.title | addNbsp | safe -}}
+              </a>
+            </h2>
+            <p class="content color:secondary">
+              {% if item.data.excerpt %}
+                {{ item.data.excerpt }}
+              {% else %}
+                {{ item.templateContent | excerpt | safe }}
+              {% endif %}
+            </p>
+            <time 
+              class="step--2 color:secondary" 
+              datetime={{ item.date | htmlDate }}
+            >
+              {{ item.date | readableDate | safe }}
+            </time>
+          </li>
+        {%- endfor -%}
+      </ol>
+      {% include "partials/pagination.html" %}
+    </section>
   </div>
 {%- endblock -%}

@@ -15,10 +15,12 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const getPages = require("./config/collections/pages.js");
 const getNotes = require("./config/collections/notes.js");
 const getLikes = require("./config/collections/likes.js");
+const md = require("./config/filters/md.js");
 const { readableDate, htmlDate } = require("./config/filters/date.js");
 const addNbsp = require("./config/filters/add-nbsp.js");
+const excerpt = require("./config/filters/excerpt.js");
 const codetitle = require("./config/shortcodes/codetitle.js");
-const md = require("./config/plugins/md.js");
+const markdown = require("./config/plugins/md.js");
 const assetHash = require("./config/plugins/asset-hash.js");
 const bundlerPlugin = require("./config/plugins/bundler.js");
 const htmlmin = require("./config/transforms/html-min.js");
@@ -30,12 +32,14 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addCollection("likes", getLikes);
 
 	//Add Filters
+	eleventyConfig.addFilter("md", md);
 	eleventyConfig.addFilter("htmlDate", htmlDate);
 	eleventyConfig.addFilter("readableDate", readableDate);
 	eleventyConfig.addFilter("addNbsp", addNbsp);
+	eleventyConfig.addFilter("excerpt", excerpt);
 
 	//Add Plugins
-	eleventyConfig.addPlugin(md);
+	eleventyConfig.addPlugin(markdown);
 	eleventyConfig.addPlugin(assetHash);
 	eleventyConfig.addPlugin(directoryOutputPlugin);
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);

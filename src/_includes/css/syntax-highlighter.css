@@ -1,0 +1,351 @@
+/* code[class*="language"] {
+	color: #212121;
+}
+
+code[class*="language"] .comment {
+	color: #9398a2;
+}
+
+code[class*="language"] .string {
+	color: #d86a1b;
+}
+
+code[class*="language"] .unchanged .unchanged {
+	display: inline-block;
+	width: 0;
+}
+
+code[class*="language"] .inserted-sign .inserted {
+	color: transparent;
+	display: inline-block;
+	width: 0;
+}
+
+code[class*="language"] .inserted-sign .inserted:before {
+	background: #ded;
+	color: #679b67;
+	content: "+";
+	margin-left: -1.5rem;
+	position: absolute;
+	text-align: center;
+	width: 1rem;
+}
+
+.language-html .punctuation,
+.language-jsx .punctuation,
+.language-php .punctuation {
+	color: #de9c0b;
+}
+
+.language-html .attr-name,
+.language-jsx .attr-name,
+.language-php .attr-name {
+	color: #db9c0b;
+}
+
+.language-html .attr-value,
+.language-jsx .attr-value,
+.language-php .attr-value {
+	color: #789c2a;
+}
+
+.language-html .attr-equals,
+.language-jsx .attr-equals,
+.language-php .attr-equals {
+	color: #de9c0b;
+}
+
+.language-html .doctype,
+.language-html .tag,
+.language-jsx .doctype,
+.language-jsx .tag,
+.language-php .doctype,
+.language-php .tag {
+	color: #db9c0b;
+}
+
+.language-html .attr-value > .punctuation,
+.language-html .doctype > .punctuation,
+.language-html .tag > .punctuation,
+.language-jsx .attr-value > .punctuation,
+.language-jsx .doctype > .punctuation,
+.language-jsx .tag > .punctuation,
+.language-php .attr-value > .punctuation,
+.language-php .doctype > .punctuation,
+.language-php .tag > .punctuation {
+	color: #ae8630;
+}
+
+.language-css .rule {
+	color: #8d30b5;
+}
+
+.language-css .punctuation {
+	color: #777;
+}
+
+.language-css .property {
+	color: #245fc0;
+}
+
+.language-css .selector {
+	color: #d72a65;
+}
+
+.language-diff-js .function-variable,
+.language-diff-js .punctuation,
+.language-javascript .function-variable,
+.language-javascript .punctuation,
+.language-js .function-variable,
+.language-js .punctuation,
+.language-jsx .function-variable,
+.language-jsx .punctuation,
+.language-php .function-variable,
+.language-php .punctuation {
+	color: #212121;
+}
+
+.language-diff-js .function,
+.language-javascript .function,
+.language-js .function,
+.language-jsx .function,
+.language-php .function {
+	color: #708de9;
+}
+
+.language-diff-js .operator,
+.language-javascript .operator,
+.language-js .operator,
+.language-jsx .operator,
+.language-php .operator {
+	color: #8f9196;
+}
+
+.language-diff-js .constant,
+.language-diff-js .keyword,
+.language-javascript .constant,
+.language-javascript .keyword,
+.language-js .constant,
+.language-js .keyword,
+.language-jsx .constant,
+.language-jsx .keyword,
+.language-php .constant,
+.language-php .keyword {
+	color: #8d30b5;
+}
+
+.language-diff-js .boolean,
+.language-javascript .boolean,
+.language-js .boolean,
+.language-jsx .boolean,
+.language-php .boolean {
+	color: #3aa0ce;
+}
+
+.language-diff-js .class-name,
+.language-javascript .class-name,
+.language-js .class-name,
+.language-jsx .class-name,
+.language-php .class-name {
+	color: #d4a300;
+}
+
+.language-diff-js .number,
+.language-javascript .number,
+.language-js .number,
+.language-jsx .number,
+.language-php .number {
+	color: #348c38;
+}
+
+.language-jsx .class-name {
+	color: #67a5f4;
+} */
+
+/* syntax highlighter styles*/
+
+code[class*="language"] {
+	color: #ddd;
+}
+
+code[class*="language"] .comment {
+	color: #707985;
+}
+
+code[class*="language"] .string {
+	color: #f6a66c;
+}
+
+.highlight-line-active {
+	--color: #3a3a3b;
+}
+
+.language-html .attr-name,
+.language-jsx .attr-name,
+.language-php .attr-name,
+.language-svelte .attr-name {
+	color: #c7d6ec;
+}
+
+.language-html .attr-equals,
+.language-jsx .attr-equals,
+.language-php .attr-equals,
+.language-svelte .attr-equals {
+	color: #59677b;
+}
+
+.language-html .doctype,
+.language-html .tag,
+.language-jsx .doctype,
+.language-jsx .tag,
+.language-php .doctype,
+.language-php .tag,
+.language-svelte .doctype,
+.language-svelte .tag {
+	color: #788ca8;
+}
+
+.language-html .doctype .punctuation:first-of-type,
+.language-html .doctype .punctuation:last-of-type,
+.language-html .tag .punctuation:first-of-type,
+.language-html .tag .punctuation:last-of-type,
+.language-jsx .doctype .punctuation:first-of-type,
+.language-jsx .doctype .punctuation:last-of-type,
+.language-jsx .tag .punctuation:first-of-type,
+.language-jsx .tag .punctuation:last-of-type,
+.language-php .doctype .punctuation:first-of-type,
+.language-php .doctype .punctuation:last-of-type,
+.language-php .tag .punctuation:first-of-type,
+.language-php .tag .punctuation:last-of-type,
+.language-svelte .doctype .punctuation:first-of-type,
+.language-svelte .doctype .punctuation:last-of-type,
+.language-svelte .tag .punctuation:first-of-type,
+.language-svelte .tag .punctuation:last-of-type {
+	color: #59677b;
+}
+
+.language-html .attr-value,
+.language-html .attr-value .punctuation:last-of-type,
+.language-html .attr-value .punctuation:nth-of-type(2),
+.language-html .punctuation,
+.language-jsx .attr-value,
+.language-jsx .attr-value .punctuation:last-of-type,
+.language-jsx .attr-value .punctuation:nth-of-type(2),
+.language-jsx .punctuation,
+.language-php .attr-value,
+.language-php .attr-value .punctuation:last-of-type,
+.language-php .attr-value .punctuation:nth-of-type(2),
+.language-php .punctuation,
+.language-svelte .attr-value,
+.language-svelte .attr-value .punctuation:last-of-type,
+.language-svelte .attr-value .punctuation:nth-of-type(2),
+.language-svelte .punctuation {
+	color: #f6a66c;
+}
+
+.language-diff-js .function-variable,
+.language-diff-js .punctuation,
+.language-javascript .function-variable,
+.language-javascript .punctuation,
+.language-js .function-variable,
+.language-js .punctuation,
+.language-jsx .function-variable,
+.language-jsx .punctuation,
+.language-php .function-variable,
+.language-php .punctuation,
+.language-svelte .function-variable,
+.language-svelte .punctuation {
+	color: #9c9c9c;
+}
+
+.language-diff-js .function,
+.language-javascript .function,
+.language-js .function,
+.language-jsx .function,
+.language-php .function,
+.language-svelte .function {
+	color: #85b7f6;
+}
+
+.language-diff-js .operator,
+.language-javascript .operator,
+.language-js .operator,
+.language-jsx .operator,
+.language-php .operator,
+.language-svelte .operator {
+	color: #8f9196;
+}
+
+.language-diff-js .constant,
+.language-diff-js .keyword,
+.language-javascript .constant,
+.language-javascript .keyword,
+.language-js .constant,
+.language-js .keyword,
+.language-jsx .constant,
+.language-jsx .keyword,
+.language-php .constant,
+.language-php .keyword,
+.language-svelte .constant,
+.language-svelte .keyword {
+	color: #f699d1;
+}
+
+.language-diff-js .boolean,
+.language-javascript .boolean,
+.language-js .boolean,
+.language-jsx .boolean,
+.language-php .boolean,
+.language-svelte .boolean {
+	color: #3aa0ce;
+}
+
+.language-diff-js .class-name,
+.language-javascript .class-name,
+.language-js .class-name,
+.language-jsx .class-name,
+.language-php .class-name,
+.language-svelte .class-name {
+	color: #f4db86;
+}
+
+.language-diff-js .number,
+.language-javascript .number,
+.language-js .number,
+.language-jsx .number,
+.language-php .number,
+.language-svelte .number {
+	color: #8eb771;
+}
+
+.language-jsx .class-name {
+	color: #788ca8;
+}
+
+.language-jsx .token .punctuation {
+	color: #59677b;
+}
+
+.language-jsx .spread .attr-value {
+	color: #c7d6ec;
+}
+
+.language-css .selector {
+	color: #ff93b8;
+}
+
+.language-css .rule {
+	color: #e4d18a;
+}
+
+.language-css .punctuation {
+	color: #777;
+}
+
+.language-css .property {
+	color: #b7b7c0;
+}
+
+.language-css .atrule .property {
+	color: #abb7f2;
+}

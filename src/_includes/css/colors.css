@@ -1,0 +1,13 @@
+:root {
+	/* Variables for colors */
+	--hue: 225;
+	--white: hsl(var(--hue) 4% 95%);
+	--black: hsl(var(--hue) 0% 10%);
+	--highlight: hsl(var(--hue) 92% 50%);
+	--shade-white: hsl(var(--hue) 6% 83%);
+	--shade-black: hsl(var(--hue) 0% 10% / 6%);
+	--shade-highlight: hsl(var(--hue) 100% 50% / 6%);
+
+	--scrollbar-track-color: hsl(var(--hue) 6% 50% / 35%);
+	--scrollbar-thumb-color: hsl(var(--hue) 6% 50% / 85%);
+}

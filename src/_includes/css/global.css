@@ -1,0 +1,227 @@
+:root {
+	/* Variables for type */
+	--line-height: 1.6;
+	--line-height-h1: 1.2;
+	--line-height-h2: 1.4;
+	--radius: var(--space-3xs);
+
+	/* Variables for layout */
+	--gutter: var(--space-s-m);
+	--max-layout-width: 85rem;
+	--min-layout-height: 100vh;
+	--body-inline-padding: var(--space-xs-s);
+	--nav-link-padding: var(--space-2xs-xs);
+	--region-padding-block: var(--gutter);
+	--archive-grid-gap: var(--space-l-xl);
+	--note-grid-gap: var(--archive-grid-gap);
+
+	/* Variables for colors */
+	--bg: var(--white);
+	--text: var(--black);
+	--separator: var(--shade-white);
+	--accent: var(--highlight);
+	--shade-accent: var(--shade-highlight);
+	--shade-bg: var(--shade-black);
+	--shade-text: hsl(var(--hue) 3% 32%);
+	--text-decoration-color: hsl(var(--hue) 0% 83%);
+	--guide-color: var(--separator);
+	/* --guide-color: var(--shade-accent); */
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue) 8% 9%);
+		--text: hsl(var(--hue) 7% 87%);
+		--separator: hsl(var(--hue) 6% 19%);
+		--accent: hsl(var(--hue) 93% 82%);
+		--shade-accent: hsl(var(--hue) 93% 82% / 6%);
+		--shade-bg: hsl(var(--hue) 7% 87% / 6%);
+		--shade-text: hsl(var(--hue) 3% 64%);
+		--text-decoration-color: hsl(var(--hue) 0% 41%);
+
+		--code-bg: var(--shade-bg);
+		--code-text: var(--text);
+		--code-outline: var(--separator);
+	}
+}
+
+@supports (min-height: 100dvh) {
+	:root {
+		--min-layout-height: 100dvh;
+	}
+}
+
+/* https://andy-bell.co.uk/always-aim-high/ */
+* {
+	text-decoration-color: var(--text-decoration-color, currentColor);
+}
+
+body {
+	position: relative;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-gap: 0;
+
+	padding-inline: var(--body-inline-padding);
+
+	background-color: var(--bg);
+	color: var(--text);
+
+	font-family: var(--font-plain);
+	font-size: var(--step-0);
+	line-height: var(--line-height);
+
+	hyphens: auto;
+	hyphenate-limit-chars: 10 3 4;
+}
+
+body > :is(header, main, footer) {
+	padding-inline: var(--body-inline-padding);
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 500;
+}
+
+h1 {
+	font-size: var(--step-4);
+	line-height: var(--line-height-h1);
+	/* font-family: var(--font-special); */
+}
+
+h2 {
+	font-size: var(--step-2);
+	line-height: var(--line-height-h2);
+}
+
+h3 {
+	font-size: var(--step-1);
+}
+
+/* Basic link styling */
+a {
+	/* display: inline-block; */
+	/* padding: 0.1rem; */
+	color: inherit;
+	text-underline-offset: max(0.1em, 3.6px);
+	transition: all 333ms ease;
+}
+
+/* Change the color on :hover and :focus */
+a:where(:hover, :focus) {
+	--text-decoration-color: var(--accent);
+	color: var(--accent);
+}
+
+/* Reset button styling */
+button {
+	/* all: unset; */
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+}
+
+pre {
+	/* reset user-agent margin */
+	margin-block-end: unset;
+
+	padding: var(--body-inline-padding);
+	max-inline-size: calc(100vw - (4 * var(--body-inline-padding)));
+
+	background-color: var(--code-bg, var(--text));
+	color: var(--code-text, var(--bg));
+	font-family: var(--font-monospace);
+
+	clip-path: inset(0 0 0 0 round var(--radius));
+	overflow-x: auto;
+}
+
+code {
+	padding-inline: var(--space-3xs);
+	border-radius: var(--radius);
+	background-color: var(--shade-bg);
+	font-size: 1rem;
+	font-family: var(--font-monospace);
+	tab-size: 2;
+}
+
+pre > code {
+	padding-inline: 0;
+	background-color: transparent;
+}
+
+pre::-webkit-scrollbar {
+	block-size: 1rem;
+}
+
+pre::-webkit-scrollbar-track {
+	background-color: var(--scrollbar-track-color);
+}
+
+pre::-webkit-scrollbar-thumb {
+	background-clip: padding-box;
+	background-color: var(--scrollbar-thumb-color);
+	border: 0.3125rem solid transparent;
+	border-radius: 9999rem;
+	cursor: pointer;
+}
+
+pre > code::-webkit-scrollbar-corner,
+pre > code::-webkit-scrollbar-track {
+	background-color: var(--scrollbar-track-color);
+}
+
+hr {
+	margin: 0;
+	border: unset;
+	/* inline-size: var(--space-m-l); */
+	/* border-block-start: 1px solid var(--separator); */
+	inline-size: 100%;
+	border-block-start: 1px solid var(--guide-color);
+}
+
+blockquote {
+	padding-inline-start: var(--body-inline-padding);
+	border-inline-start: var(--space-4xs-3xs) solid var(--accent);
+}
+
+blockquote > * + * {
+	margin-block-start: var(--flow-space, 1em);
+}
+
+sup,
+sub {
+	line-height: 1;
+}
+
+em {
+	font-family: var(--font-serif);
+}
+
+time {
+	display: inline-block;
+	font-variant-numeric: tabular-nums;
+}
+
+del {
+	--text-decoration-color: var(--accent);
+}
+
+/* Remove the default :focus outline */
+*:focus {
+	outline: none;
+}
+
+/* Show a custom outline on :focus-visible */
+*:focus-visible {
+	outline: var(--space-5xs) solid var(--accent);
+	outline-offset: var(--space-5xs);
+	border-radius: var(--radius);
+	text-decoration: none;
+}
+
+:target {
+	scroll-margin: calc(1ex * var(--line-height));
+	scroll-behavior: smooth;
+}

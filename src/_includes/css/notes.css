@@ -1,0 +1,42 @@
+.notes-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--archive-grid-gap);
+	/* block-size: min-content; */
+}
+
+@media (min-width: 60rem) {
+	.notes-list {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.notes-list li {
+	--stack-gap: 0.75rem;
+	--radius: 1px;
+	border-radius: var(--radius);
+	box-shadow: 0 0 0 var(--body-inline-padding) transparent;
+	transition: all 333ms ease;
+}
+
+.notes-list li h2 {
+	font-size: var(--step-1);
+}
+
+.notes-list li h2 * {
+	font-size: 1em;
+}
+
+.notes-list li p {
+	font-size: 1rem;
+}
+
+.notes-list li:hover,
+.notes-list li:focus-within {
+	box-shadow: 0 0 0 var(--body-inline-padding) var(--shade-accent);
+	background-color: var(--shade-accent);
+}
+
+:is(.notes-list li:hover, .notes li:focus-within) h2 ~ * {
+	color: var(--text);
+}

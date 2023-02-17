@@ -1,0 +1,64 @@
+body:before,
+body:after,
+.site-head:after,
+.site-footer:before,
+.archive header:after {
+	content: "";
+	position: absolute;
+	background-color: var(--guide-color);
+	box-shadow: 0 0 0 100vmax var(--guide-color);
+}
+
+body:before,
+body:after {
+	inline-size: 1px;
+	block-size: 100%;
+	clip-path: inset(-100vmax 0);
+	/* Guides need to be above the footnotes which have a z-index of 1 */
+	z-index: 2;
+}
+
+body:before {
+	inset-inline-start: calc(1 * var(--body-inline-padding));
+}
+
+body:after {
+	inset-inline-end: calc(1 * var(--body-inline-padding));
+}
+
+.site-head:after,
+.site-footer:before,
+.archive header:after {
+	inline-size: 100%;
+	block-size: 1px;
+	clip-path: inset(0 -100vmax);
+	z-index: 2;
+}
+
+.site-head:after {
+	inset-block-start: 100%;
+	inset-inline-start: 0;
+}
+
+.site-footer:before {
+	inset-block-end: 100%;
+	inset-inline-start: 0;
+}
+
+.archive header:after {
+	inset-block-end: calc(-1 * var(--region-padding-block));
+}
+
+@media (min-width: 48rem) {
+	.archive header:after {
+		display: none;
+	}
+}
+
+/* uncomment this if you don't want full width guides */
+/* .site-head:after,
+.site-footer:before,
+.archive header:after {
+	box-shadow: unset;
+	clip-path: unset;
+} */

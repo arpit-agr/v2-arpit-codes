@@ -1,19 +1,19 @@
-@font-face {
+/* @font-face {
 	font-family: "Afronaut";
 	font-display: swap;
 	src: url("/assets/fonts/afronaut-regular-subset.woff2?{{ assetHash }}")
 			format("woff2"),
 		url("/assets/fonts/afronaut-regular-subset.woff?{{ assetHash }}")
 			format("woff");
-}
+} */
 
 :root {
 	/* Variables for type */
 	--font-plain: -apple-system, BlinkMacSystemFont, helvetica neue, helvetica,
 		avenir next, avenir, segoe ui, roboto, noto, arial, sans-serif;
 
-	--font-special: "Afronaut", -apple-system, BlinkMacSystemFont, helvetica neue,
-		helvetica, avenir next, avenir, segoe ui, roboto, noto, arial, sans-serif;
+	/* --font-special: "Afronaut", -apple-system, BlinkMacSystemFont, helvetica neue,
+		helvetica, avenir next, avenir, segoe ui, roboto, noto, arial, sans-serif; */
 
 	--font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
 		Droid Serif, Times, Source Serif Pro, serif;

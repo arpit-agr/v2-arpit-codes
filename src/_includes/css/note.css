@@ -1,0 +1,91 @@
+.note {
+	--column-grid-gap: var(--note-grid-gap);
+}
+
+.note .body :where(h2, h3) {
+	--flow-space: calc(var(--line-height) * 1em);
+}
+
+.note .body .codetitle {
+	--flow-space: var(--step-0);
+}
+
+.note .body .codetitle + pre {
+	--flow-space: 0.5em;
+}
+
+.note h1 code {
+	font-size: 1em;
+}
+
+.note li + li {
+	margin-block-start: var(--flow-space, 0.5em);
+}
+
+.note .body img,
+.note .body pre,
+.note footer {
+	min-inline-size: calc(100% + (2 * var(--body-inline-padding)));
+	margin-inline-start: calc(-1 * var(--body-inline-padding));
+	border-radius: var(--radius);
+}
+
+/* .note .body blockquote {
+	padding: var(--body-inline-padding) 0 var(--body-inline-padding)
+		var(--body-inline-padding);
+	border-inline-start: var(--space-3xs-2xs) solid;
+}
+
+.note .body blockquote > * + * {
+	margin-block-start: var(--flow-space, 0.75em);
+} */
+
+.note footer {
+	grid-column: 1/-1;
+	padding: var(--space-s-m) var(--body-inline-padding);
+	background-color: var(--shade-accent);
+}
+
+@media (min-width: 48rem) {
+	.note:after {
+		content: "";
+		inline-size: 100%;
+		block-size: 100%;
+		grid-row: 1/5;
+		grid-column: 3/-1;
+		/* justify-self: end; */
+		background: var(--shade-bg);
+		scale: 1 -1;
+		clip-path: var(--swirl);
+	}
+
+	.note header {
+		grid-column: 1/3;
+	}
+
+	.note footer {
+		grid-column: 1/3;
+	}
+
+	.note .body {
+		grid-column: 1/3;
+	}
+}
+
+@media (min-width: 64rem) {
+	.note:after {
+		grid-column: 4/-1;
+	}
+
+	.note header {
+		grid-column: 1/4;
+	}
+
+	.note .body {
+		grid-column: 1/4;
+	}
+
+	.note footer {
+		grid-column: 1/4;
+	}
+}
