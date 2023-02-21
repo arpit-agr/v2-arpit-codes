@@ -23,6 +23,7 @@ const codetitle = require("./config/shortcodes/codetitle.js");
 const markdown = require("./config/plugins/md.js");
 const assetHash = require("./config/plugins/asset-hash.js");
 const bundlerPlugin = require("./config/plugins/bundler.js");
+const drafts = require("./config/plugins/drafts.js");
 const htmlmin = require("./config/transforms/html-min.js");
 
 module.exports = function (eleventyConfig) {
@@ -46,6 +47,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(syntaxHighlight);
 	eleventyConfig.addPlugin(htmlmin);
 	eleventyConfig.addPlugin(bundlerPlugin);
+	eleventyConfig.addPlugin(drafts);
 
 	//Shortcode
 	eleventyConfig.addShortcode("codetitle", codetitle);
