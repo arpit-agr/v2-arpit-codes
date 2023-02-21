@@ -8,4 +8,4 @@ permalink: "/"
 
 Hi, I'm Arpit Agrawal {% include "partials/avatar.html" %}<span class="vh">.</span> I'm a&nbsp;[front-end web developer]({{ frontend.url }}). I&nbsp;focus on building accessible websites that resonate with&nbsp;everyone.
 
-I’d love to build an excellent website for you, so if you've got a project in mind, please get in touch at <{{ developer.email }}>.
+I’d love to build an excellent website for you, so if you've got a project in mind, please get in touch at <{{ developer.email }}>

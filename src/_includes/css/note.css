@@ -32,7 +32,11 @@
 }
 
 .note .meta-info {
-	translate: 0 -100%;
+	--cluster-gap: 0.5em;
+	display: flex;
+	flex-direction: row;
+	gap: var(--cluster-gap);
+	translate: 0 calc(-1 * 1em * var(--line-height));
 }
 
 .note footer {
@@ -51,10 +55,19 @@
 	}
 
 	.note .meta-info {
-		grid-column: 1;
+		--cluster-horizontal-alignment: end;
+		flex-direction: column;
+		/* grid-column: 1; */
 		justify-self: end;
-		text-align: end;
 		translate: 0 2px;
+	}
+
+	.note .meta-info * {
+		align-self: end;
+	}
+
+	.meta-separator {
+		display: none;
 	}
 }
 

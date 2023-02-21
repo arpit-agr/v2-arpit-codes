@@ -13,10 +13,18 @@
 {%- block content -%}
   <article class="note column-layout region" data-columns="12">
     <h1 class="title">{{ title | safe }}</h1>
-    <div class="meta-info flow step--1">
+    <div class="meta-info step--1">
       <time datetime={{ date | htmlDate }}>
         {{ date | readableDate | safe }}
       </time>
+      {% if tags %}
+      <span class="meta-separator" aria-hidden="true">/</span>
+      <ul class="cluster ttu" role="list" aria-label="Tags">
+        {% for tag in tags %}
+          <li>#{{ tag }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
     <div class="body flow">
       {{ content | safe }}

@@ -51,9 +51,9 @@
 	font-size: 1em;
 }
 
-.archive li .content {
+/* .archive li .content {
 	font-size: 1rem;
-}
+} */
 
 .archive li h2 ~ * {
 	transition: all 333ms ease;

@@ -83,6 +83,7 @@ h1,
 h2,
 h3 {
 	font-weight: 500;
+	font-family: var(--font-special);
 }
 
 h1 {
