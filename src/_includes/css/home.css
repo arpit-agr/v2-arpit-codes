@@ -1,8 +1,6 @@
 .hero {
-	--stack-vertical-alignment: space-between;
 	--hero-h1-line-height: var(--space-l-2xl);
-	/* override the padding applied to the content class */
-	padding-block-end: 0;
+	min-block-size: 100%;
 }
 
 .hero p {
@@ -14,9 +12,6 @@
 }
 
 .hero p:first-of-type {
-	/* position: relative; */
-	/* font-weight: 400; */
-	/* font-family: var(--font-plain); */
 	font-size: var(--space-m-xl);
 	line-height: var(--hero-h1-line-height);
 	letter-spacing: -0.015em;
@@ -25,6 +20,7 @@
 }
 
 .hero p:last-of-type {
+	margin-block-start: auto;
 	max-inline-size: 45ch;
 	animation-delay: 555ms;
 }
@@ -42,10 +38,4 @@
 
 	transform: translateY(16.25%);
 	clip-path: var(--pixelated-corners);
-
-	/* animation = name duration timing-function delay iteration-count direction fill-mode; */
-	/* TODO: adjust the delay (111ms) */
-	/* animation: reveal 999ms ease 111ms forwards;
-	transform: translateY(16.25%);
-	opacity: 0; */
 }

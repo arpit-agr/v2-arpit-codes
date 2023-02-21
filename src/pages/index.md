@@ -6,10 +6,6 @@ layout: "layouts/home.html"
 permalink: "/"
 ---
 
-<!-- Hello, I'm Arpit <img src="{{ developer.avatar.src }}" alt="{{ developer.avatar.alt }}" aria-hidden="true" width="{{ developer.avatar.width }}" height="{{ developer.avatar.height }}">, a [front-end web developer]({{ frontend.url }}). I focus on making robust, resilient websites that change and adapt according to the needs of the people using the website. -->
-
-Hi, I'm Arpit Agrawal <img src="{{ developer.avatar.src }}?{{ assetHash }}" alt="{{ developer.avatar.alt }}" aria-hidden="true" width="{{ developer.avatar.width }}" height="{{ developer.avatar.height }}">, a&nbsp;[front-end web developer]({{ frontend.url }}). I focus on making robust, resilient websites that change and adapt according to the needs of the people using the website.
-
-<!-- You can contact me at <{{ developer.email }}> if you want to chat about a project. I’d love to hear from you. -->
+Hi, I'm Arpit Agrawal {% include "partials/avatar.html" %}<span class="vh">.</span> I'm a&nbsp;[front-end web developer]({{ frontend.url }}). I&nbsp;focus on building accessible websites that resonate with&nbsp;everyone.
 
 I’d love to build an excellent website for you, so if you've got a project in mind, please get in touch at <{{ developer.email }}>.

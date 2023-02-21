@@ -16,9 +16,11 @@
               {{ item.data.title | safe -}}
             </a>
           </h2>
-          <div class="content flow color:secondary">
-            {{ item.templateContent | safe }}
-          </div>
+          {% if item.templateContent %}
+            <div class="content flow color:secondary">
+              {{ item.templateContent | safe }}
+            </div>
+          {% endif %}
         </li>
       {%- endfor -%}
     </ol>

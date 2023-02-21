@@ -125,3 +125,25 @@
 		transform: rotate(-45deg);
 	}
 }
+
+a.site-name span {
+	display: none;
+}
+
+/* when hover is the user's primary input mechanism */
+@media (hover: hover) {
+	a.site-name span {
+		display: unset;
+		position: absolute;
+		inline-size: max-content;
+		inset-block-start: 50%;
+		transform: translate(-2ch, -50%);
+		opacity: 0;
+		transition: all 0.1s ease;
+	}
+
+	a.site-name:hover span {
+		transform: translate(1ch, -50%);
+		opacity: 1;
+	}
+}

@@ -3,15 +3,7 @@
 }
 
 .archive header {
-	position: sticky;
-	inset-block-start: var(--region-padding-block);
-	align-self: start;
-
-	/* The header needs to be above the list */
-	z-index: 1;
-	background: var(--bg);
-
-	transition: all 333ms ease;
+	position: relative;
 }
 
 .archive .subtitle {
@@ -19,29 +11,14 @@
 	max-inline-size: 27ch;
 }
 
-/* @media (min-width: 48rem) {
-	.archive header {
-		align-self: start;
-		inset-block-start: var(--region-padding-block);
-	}
-
-	.archive .subtitle {
-		max-inline-size: 25ch;
-	}
-} */
-
 .archive ol {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: var(--archive-grid-gap);
-	/* block-size: min-content; */
+	block-size: max-content;
 }
 
 @media (min-width: 60rem) {
-	.archive header {
-		box-shadow: unset;
-	}
-
 	.archive ol {
 		grid-template-columns: 1fr 1fr;
 	}
@@ -51,7 +28,7 @@
 	--stack-gap: 0.75rem;
 	--radius: 1px;
 	border-radius: var(--radius);
-	outline: var(--space-5xs) solid transparent;
+	outline: 1px solid transparent;
 	outline-offset: calc(1 / 2 * var(--body-inline-padding));
 	transition: all 333ms ease;
 }
@@ -82,6 +59,10 @@
 	transition: all 333ms ease;
 }
 
+.archive li time {
+	margin-block-start: auto;
+}
+
 .archive li a:focus-visible {
 	outline: none;
 	text-decoration: underline;
@@ -89,7 +70,7 @@
 
 .archive li:hover,
 .archive li:focus-within {
-	outline: var(--space-5xs) solid var(--accent);
+	outline: 1px solid var(--accent);
 }
 
 :is(.archive li:hover, .archive li:focus-within) h2 ~ * {

@@ -1,19 +1,27 @@
-/* @font-face {
-	font-family: "Afronaut";
+/* TODO: optimise font files */
+@font-face {
+	font-family: "OnestRegular";
 	font-display: swap;
-	src: url("/assets/fonts/afronaut-regular-subset.woff2?{{ assetHash }}")
-			format("woff2"),
-		url("/assets/fonts/afronaut-regular-subset.woff?{{ assetHash }}")
-			format("woff");
-} */
+	src: url("/assets/fonts/OnestRegular1602-hint.woff?{{ assetHash }}")
+		format("woff");
+}
+
+@font-face {
+	font-family: "OnestMedium";
+	font-display: swap;
+	src: url("/assets/fonts/OnestMedium1602-hint.woff?{{ assetHash }}")
+		format("woff");
+}
 
 :root {
 	/* Variables for type */
-	--font-plain: -apple-system, BlinkMacSystemFont, helvetica neue, helvetica,
-		avenir next, avenir, segoe ui, roboto, noto, arial, sans-serif;
+	--font-plain: "OnestRegular", -apple-system, BlinkMacSystemFont,
+		helvetica neue, helvetica, avenir next, avenir, segoe ui, roboto, noto,
+		arial, sans-serif;
 
-	/* --font-special: "Afronaut", -apple-system, BlinkMacSystemFont, helvetica neue,
-		helvetica, avenir next, avenir, segoe ui, roboto, noto, arial, sans-serif; */
+	--font-special: "OnestMedium", -apple-system, BlinkMacSystemFont,
+		helvetica neue, helvetica, avenir next, avenir, segoe ui, roboto, noto,
+		arial, sans-serif;
 
 	--font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
 		Droid Serif, Times, Source Serif Pro, serif;

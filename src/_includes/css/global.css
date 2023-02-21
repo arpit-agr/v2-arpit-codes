@@ -45,9 +45,9 @@
 	}
 }
 
-@supports (min-height: 100dvh) {
+@supports (min-height: 100svh) {
 	:root {
-		--min-layout-height: 100dvh;
+		--min-layout-height: 100svh;
 	}
 }
 
@@ -88,7 +88,6 @@ h3 {
 h1 {
 	font-size: var(--step-4);
 	line-height: var(--line-height-h1);
-	/* font-family: var(--font-special); */
 }
 
 h2 {
@@ -140,7 +139,8 @@ pre {
 code {
 	padding-inline: var(--space-3xs);
 	border-radius: var(--radius);
-	background-color: var(--shade-bg);
+	background-color: var(--shade-accent);
+	color: var(--accent);
 	font-size: 1rem;
 	font-family: var(--font-monospace);
 	tab-size: 2;
@@ -193,6 +193,7 @@ blockquote > * + * {
 sup,
 sub {
 	line-height: 1;
+	font-variant-numeric: tabular-nums;
 }
 
 em {
@@ -219,9 +220,4 @@ del {
 	outline-offset: var(--space-5xs);
 	border-radius: var(--radius);
 	text-decoration: none;
-}
-
-:target {
-	scroll-margin: calc(1ex * var(--line-height));
-	scroll-behavior: smooth;
 }

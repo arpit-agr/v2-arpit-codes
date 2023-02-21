@@ -6,6 +6,11 @@
 	min-inline-size: 100%;
 }
 
+.pagination a {
+	/* display: inline-block; */
+	padding-block: var(--region-padding-block);
+}
+
 .pagination [data-direction="forwards"] {
 	margin-inline-start: auto;
 }

@@ -30,3 +30,11 @@
 .color\:secondary {
 	color: var(--shade-text);
 }
+
+.ttu {
+	text-transform: uppercase;
+}
+
+.fw400 {
+	font-weight: 400;
+}

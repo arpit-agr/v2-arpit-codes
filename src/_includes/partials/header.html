@@ -4,5 +4,12 @@
   {# {{ helpers.getLinkActiveState("/", page.url) | safe }}  #}
   aria-label="Home">
   {{ site.title }}
+  <span class="step--2" aria-hidden="true">
+    {% if page.url == "/" %}
+      (You are here)
+    {% else %}
+      (Home)
+    {% endif %}
+  </span>
 </a>
 {% include "partials/main-nav.html" %}
