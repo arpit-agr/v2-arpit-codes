@@ -1,14 +1,17 @@
 [
 	{
-		"platform": "Github",
-		"url": "https://github.com/arpit-agr"
+		"platform": "Mastodon",
+		"url": "https://indieweb.social/@arpit",
+		"icon": "partials/mastodon.html"
 	},
 	{
-		"platform": "Mastodon",
-		"url": "https://indieweb.social/@arpit"
+		"platform": "Github",
+		"url": "https://github.com/arpit-agr",
+		"icon": "partials/github.html"
 	},
 	{
 		"platform": "RSS",
-		"url": "/feed.xml"
+		"url": "/feed.xml",
+		"icon": "partials/rss.html"
 	}
 ]
