@@ -48,23 +48,18 @@ module.exports = function (eleventyConfig) {
 
 			return `
 				<li id="fn${id}" class="footnote-item">
-					<div>
+					<div class="grid">
 						<span>${n}.</span>
 			`;
 		};
+
 		mdLib.renderer.rules.footnote_close = () => {
 			return `
-					<button type="button" aria-label="Close" class="close">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor; vertical-align: middle;">
-							<rect id="turn1" x="2" y="11" width="20" height="1.25" style="rotate: 45deg; transform-origin: center center">
-							</rect>
-							<rect id="turn2" x="2" y="11" width="20" height="1.25" style="rotate: -45deg; transform-origin: center center"></rect>
-						</svg>
-					</button>
 				</div>
 			</li>
 			`;
 		};
+
 		mdLib.renderer.rules.footnote_anchor = (tokens, idx, options, env, slf) => {
 			let id = slf.rules.footnote_anchor_name(tokens, idx, options, env, slf);
 
