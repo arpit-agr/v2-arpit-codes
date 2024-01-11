@@ -3,8 +3,9 @@ title: "Contact"
 layout: "layouts/contact.html"
 eleventyNavigation:
   key: "Contact"
-  order: 4
-draft: true
----
+  order: 5
 
-# Coming Soon
+introduction: "I'm thrilled that you want to get in touch! If you have a project proposal or would simply like to say hello, I'd love to have a chat with you."
+mail: "<hello@arpit.codes>"
+location: "I'm currently based in Mumbai, India."
+---
