@@ -1,0 +1,12 @@
+/* Show a custom outline on :focus-visible */
+:focus-visible {
+	outline: var(--focus-border-width) solid var(--color-brand-border-primary);
+	outline-offset: var(--focus-border-width);
+	border-radius: var(--border-radius);
+	text-decoration: none;
+}
+
+[tabindex="-1"]:focus {
+	outline: none;
+	scroll-margin-block: calc(-1 * var(--border-width));
+}
