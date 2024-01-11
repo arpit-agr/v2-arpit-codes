@@ -1,0 +1,20 @@
+{%- extends "layouts/base.njk" -%}
+
+{%- css "page-specific-styles" %}
+  {% include "css/about.css" %}
+{%- endcss %}
+
+{%- block content -%}
+  <div class="about stack">
+    <h1 class="fade">{{ title }}</h1>
+    <div class="body">
+      {% for item in copy %}
+        <div class="copy grid">
+          <h2 class="heading-3">{{ item.title }}</h2>
+          <p>{{ item.body | md | safe }}</p>
+        </div>
+      {% endfor %}
+      {{ content | safe }}
+    </div>
+  </div>
+{%- endblock -%}
