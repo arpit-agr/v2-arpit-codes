@@ -1,34 +1,22 @@
-/* TODO: optimise font files */
 @font-face {
-	font-family: "OnestRegular";
+	font-family: "Golos Text";
+	src: url("/assets/fonts/GolosText-VariableFont_wght-subset.woff2?{{ assetHash }}")
+		format("woff2");
 	font-display: swap;
-	src: url("/assets/fonts/OnestRegular1602-hint-subset.woff?{{ assetHash }}")
-			format("woff"),
-		url("/assets/fonts/OnestRegular1602-hint-subset.woff2?{{ assetHash }}")
-			format("woff2");
-}
-
-@font-face {
-	font-family: "OnestMedium";
-	font-display: swap;
-	src: url("/assets/fonts/OnestMedium1602-hint-subset.woff?{{ assetHash }}")
-			format("woff"),
-		url("/assets/fonts/OnestMedium1602-hint-subset.woff2?{{ assetHash }}")
-			format("woff2");
 }
 
 :root {
 	/* Variables for type */
-	--font-plain: "OnestRegular", -apple-system, BlinkMacSystemFont,
-		helvetica neue, helvetica, avenir next, avenir, segoe ui, roboto, noto,
-		arial, sans-serif;
+	--font-plain: "Golos Text", -apple-system, BlinkMacSystemFont, helvetica neue,
+		helvetica, avenir next, avenir, segoe ui, roboto, noto, arial, sans-serif;
 
-	--font-special: "OnestMedium", -apple-system, BlinkMacSystemFont,
+	--font-special: "Golos Text", -apple-system, BlinkMacSystemFont,
 		helvetica neue, helvetica, avenir next, avenir, segoe ui, roboto, noto,
 		arial, sans-serif;
 
 	--font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
-		Droid Serif, Times, Source Serif Pro, serif;
+		Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+		Segoe UI Emoji, Segoe UI Symbol;
 
 	--font-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco,
 		Consolas, "Liberation Mono", "Courier New", monospace;
