@@ -2,6 +2,8 @@
 title: "What Grief Is And What It Isn't"
 date: 2022-12-11
 url: "https://www.robinrendle.com/notes/the-last-walk/"
+tags:
+  - "grief"
 ---
 
 Robin Rendle on what grief is and what it isn't:
