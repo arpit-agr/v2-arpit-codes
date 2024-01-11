@@ -1,16 +1,31 @@
 {%- extends "layouts/base.njk" -%}
 
-{% html "head" %}
-  <link rel="preload" as="image" href="{{ developer.avatar.src }}?{{ assetHash }}">
-{% endhtml %}
-
 {%- css "page-specific-styles" %}
   {% include "css/home.css" %}
+  {% include "css/god-rays.css" %}
 {%- endcss %}
 
 {%- block content -%}
-  <div class="hero region stack">
-    <h1 class="vh">About Me</h1>
-    {{ content | safe }}
+  <div class="home stack">
+    <div class="hero fade">
+      <h1>
+        <span class="english">{{ name.english }}</span>
+        <span class="multi-lang" aria-hidden="true">
+          <span lang="hi">{{ name.hindi }}</span>
+          <span lang="ur" dir="rtl">{{ name.urdu }}</span>
+        </span>
+      </h1>
+    </div>
+    <div class="body stack fade">
+      {{ content | safe }}
+      <div class="info-container cluster">
+        <p class="text-wrap:balance">
+          {{ introduction | md | safe }}
+        </p>
+        <p class="cta text-wrap:balance">
+          {{ cta | md | safe }}
+        </p>
+      </div>
+    </div>
   </div>
 {%- endblock -%}
