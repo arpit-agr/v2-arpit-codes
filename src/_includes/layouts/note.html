@@ -1,47 +1,46 @@
 {%- extends "layouts/base.njk" -%}
 
-{% html "head" %}
-  <link rel="preload" href="/assets/scripts/footnotes.js?{{ assetHash }}" as="script">
-{% endhtml %}
-
 {%- css "page-specific-styles" %}
-  {% include "css/footnotes.css" %}
-  {% include "css/syntax-highlighter.css" %}
   {% include "css/note.css" %}
+  {% include "css/tags-list.css" %}
+  {% include "css/syntax-highlighter.css" %}
 {%- endcss %}
 
 {%- block content -%}
-  <article class="note column-layout region" data-columns="12">
-    <h1 class="title">{{ title | safe }}</h1>
-    <div class="meta-info step--1">
-      <time datetime={{ date | htmlDate }}>
+  <article class="note flow">
+    <header class="stack">
+      <h1 class="note-title fade">{{ title }}</h1>
+      <time 
+        class="step--2" 
+        datetime={{ date | htmlDate }}
+      >
         {{ date | readableDate | safe }}
       </time>
-      {% if tags %}
-      <span class="meta-separator" aria-hidden="true">/</span>
-      <ul class="cluster ttu" role="list" aria-label="Tags">
-        {% for tag in tags %}
-          <li>#{{ tag }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </div>
+    </header>
     <div class="body flow">
       {{ content | safe }}
     </div>
-    <hr class="footer-separator">
+    {% if tags %}
+    <ul class="tags-list cluster step--2" role="list" aria-label="Tags">
+      {% for tag in tags %}
+        <li>#{{ tag }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {# <hr class="footer-separator"> #}
     <footer class="flow">
-      <p class="cta-copy">
-        👋🏽 &nbsp;{{ site.description }}
+      <p>
+        👋🏽 &nbsp;{{ site.description | md | safe }}
       </p>
       <p>
-        If I seem like a good fit for your project, I'd love to <a href="#">get in touch</a> with you.
+        If I seem like a good fit for your project, I'd love to <a href="mailto:{{ developer.email }}">get in touch</a> with you.
       </p>
     </footer>
-    <a class="back-to-notes" href="/notes/">&larr; Back to Notes</a>
+    <a class="back-to-notes cluster step--1" href="/notes/">
+      <span>
+        {% include "partials/caret-arrow.html" %}
+      </span>
+      Back to Notes Archive
+    </a>
   </article>
 {%- endblock -%}
-
-{%- js "body" %}
-  <script src="/assets/scripts/footnotes.js?{{ assetHash }}"></script>
-{%- endjs %}
