@@ -1,10 +1,10 @@
 ---
-title: "Notes, January 2023"
-date: 2023-01-31
-tags: "notes"
+title: "Style The Marker Of The Summary Element For Open And Closed States"
+date: 2023-01-25
+url: "https://andy-bell.co.uk/improving-likes-on-my-site/"
+tags:
+  - "CSS"
 ---
-
-## Article: [Improving “likes” on my site](https://andy-bell.co.uk/improving-likes-on-my-site/)
 
 TIL how Andy styles the summary `::marker` pseudo-element for open and closed states:
 
@@ -51,4 +51,4 @@ summary::marker {
 >
 > Also, this is why I’m using transform to scale the symbol, because then, the ch unit is still predictable. If I sized it with font-size, there’d be weird in-between sizes, so I’d have to do margin-inline-start: -1.6ch; or something.
 
-This article is definitely worth a read. Andy has a few more tricks up his sleeve.
+This article is definitely worth a read. Andy shares a few more tricks in this article.
