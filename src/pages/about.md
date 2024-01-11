@@ -21,6 +21,5 @@ copy:
   # - title: "The Stack"
   #   body: "I build static websites on the JAMstack that encourages static files on CDNs and JavaScript-accessed services for any dynamic needs."
   - title: "Project Starter"
-    body: |
-      Here are a few [questions](/questionnaire) that will help me evaluate your needs.
+    body: "Here are a few [questions](/questionnaire) that will help me evaluate your needs."
 ---
