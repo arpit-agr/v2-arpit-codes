@@ -1,7 +1,42 @@
 {%- extends "layouts/base.njk" -%}
 
+{%- css "page-specific-styles" %}
+  {% include "css/contact.css" %}
+{%- endcss %}
+
 {%- block content -%}
-  <div class="region stack">
-    {{ content | safe }}
+  <div class="contact stack">
+    <header class="stack">
+      <h1 class="fade">{{ title }}</h1>
+      <p class="introduction">
+        {{ introduction | md | safe }}
+      </p>
+    </header>
+    <div class="body stack">
+      {{ content | safe }}
+      <div class="info-container cluster">
+        <div class="info-box stack">
+          <h2>Mail:</h2>
+          <p>{{ mail | md | safe  }}</p>
+        </div>
+        <div class="socials info-box stack">
+          <h2>Socials:</h2>
+          <ul class="cluster" role="list">
+            {% for item in socials %}
+              <li>
+                <a class="cluster" href="{{ item.url }}">
+                  {% include item.icon %}
+                  {{ item.platform }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="info-box stack">
+          <h2>Location:</h2>
+          <p>{{ location }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 {%- endblock -%}
