@@ -1,46 +1,46 @@
 {%- extends "layouts/base.njk" -%}
 
 {%- css "page-specific-styles" %}
-  {% include "css/notes.css" %}
+  {% include "css/notes-archive.css" %}
+  {% include "css/notes-list.css" %}
+  {% include "css/syntax-highlighter.css" %}
 {%- endcss %}
 
 {%- block content -%}
-  <div
-    class="notes archive column-layout region"
-    data-columns="1,3"
-  >
-    <header class="flow">
-      <h1>
-        {{ title }}
-        <small class="color:secondary step--2 fw400">
-          p.{{ pagination.pageNumber + 1 }}
-        </small>
-      </h1>
-      <p class="subtitle step--1 color:secondary">
-        {{ subtitle | addNbsp | safe }}
+  <div class="notes archive grid">
+    <header class="stack fade">
+      <h1>{{ title }}</h1>
+      <p class="subtitle step--1 color:secondary text-wrap:balance">
+        {{ subtitle }}
+      </p>
+      <p class="page-number step--1 color:secondary">
+        Page {{ pagination.pageNumber + 1 }} of {{pagination.hrefs.length}}
       </p>
     </header>
-    <ol role="list" reversed>
+    <ol class="notes-list grid" role="list" reversed>
       {%- for item in notes -%}
         <li class="stack">
-          <h2>
-            <a class href="{{ item.url }}">
-              {{ item.data.title | addNbsp | safe -}}
-            </a>
+          <h2 class="heading-3 text-wrap:pretty">
+            {{ item.data.title -}}
           </h2>
-          <p class="content color:secondary">
+          <div class="excerpt step--1 color:secondary line-clamp">
             {% if item.data.excerpt %}
-              {{ item.data.excerpt | addNbsp | safe }}
+              <p>{{ item.data.excerpt }}</p>
             {% else %}
-              {{ item.templateContent | excerpt | safe }}
+              <p>{{ item.content | excerpt | safe }}</p>
             {% endif %}
-          </p>
-          <time 
-            class="step--1 color:secondary" 
-            datetime={{ item.date | htmlDate }}
+          </div>
+          <a
+            class="full-note cluster step--1 color:secondary"
+            href="{{ item.url }}"
           >
-            {{ item.date | readableDate | safe }}
-          </time>
+            <span>Read full note</span>
+            <span class="vh">: {{ item.data.title -}}</span>
+            <span class="icon-container">
+              <span class="square"></span>
+              {% include "partials/arrow.html" %}
+            </span>
+          </a>
         </li>
       {%- endfor -%}
     </ol>
