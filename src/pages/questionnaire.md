@@ -7,8 +7,8 @@ Here are a few questions that will give me a good sense of **what you’re looki
 
 - Can you tell me about your project in a few sentences?
 - What’s the timeframe? Does a certain event depend on this project launching?
-- What are you looking for from us? Do you want us to design, build, and launch the whole site? Or do you have designers or other partners lined up and only need us for development?
-- Have you already started on any part of the project? Do you have existing work? Some rough ideas or designs for the&nbsp;site?
+- What are you looking for from me? Do you want me to design, build, and launch the whole site? Or do you have designers or other partners lined up and only need me for development?
+- Have you already started on any part of the project? Do you have existing work? Some rough ideas or designs for the site?
 - Do you already have content like text and images/videos ready for the project?
 - How much money have you set aside for this project?
 - Anything else that I should know about?
