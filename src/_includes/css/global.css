@@ -6,6 +6,7 @@
 	--line-height-h3: 1.4;
 	--line-height-body: 1.6;
 	--letter-spacing-h1: -0.033em;
+	--letter-spacing-step--1: 0.0125em;
 	--letter-spacing-step--2: 0.05em;
 
 	/* Variables for border */
@@ -287,5 +288,5 @@ th {
 }
 
 :target {
-	scroll-margin-block: var(--step-1);
+	scroll-margin-block: 1em;
 }
