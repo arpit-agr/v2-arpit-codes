@@ -1,0 +1,14 @@
+{%- extends "layouts/base.njk" -%}
+
+{%- css "page-specific-styles" %}
+  {% include "css/questionnaire.css" %}
+{%- endcss %}
+
+{%- block content -%}
+  <div class="questionnaire stack">
+    <h1 class="fade">Question&shy;naire</h1>
+    <div class="body grid">
+      {{ content | safe }}
+    </div>
+  </div>
+{%- endblock -%}
