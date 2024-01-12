@@ -1,0 +1,9 @@
+.projects {
+	--stack-gap: var(--main-padding-block);
+	--stack-vertical-alignment: space-between;
+	block-size: 100%;
+}
+
+.projects p {
+	text-wrap: balance;
+}
