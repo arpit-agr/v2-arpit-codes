@@ -7,7 +7,7 @@
 {%- if page.url == '/' -%}
   {%- set pageTitle = siteTitle -%}
 {%- else -%}
-  {%- set pageTitle = title + ' / ' + site.title -%}
+  {%- set pageTitle = title + ' - ' + site.title -%}
 {%- endif -%}
 
 {% set currentUrl = site.url + page.url %}
@@ -38,16 +38,7 @@
 <meta property="og:description" content="{{ description }}">
 
 <!-- theme-color -->
-<meta
-  name="theme-color"
-  media="(prefers-color-scheme: light)"
-  content="{{ themeColor.light }}"
-/>
-<meta
-  name="theme-color"
-  media="(prefers-color-scheme: dark)"
-  content="{{ themeColor.dark }}"
-/>
+
 <meta name="color-scheme" content="{{ site.colorScheme }}">
 
 <!-- favicon -->
