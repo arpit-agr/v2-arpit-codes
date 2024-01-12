@@ -22,6 +22,8 @@ dd {
 /* Remove list styles and padding on ul, ol elements with a list role, which suggests default styling will be removed */
 :where(ul[role="list"], ol[role="list"]) {
 	list-style: none;
+	/* Browsers apply a default padding-inline-start
+	 of 40px to <ul> and <ol> elements. */
 	padding: 0;
 	margin: 0;
 }
@@ -34,14 +36,12 @@ html:focus-within {
 /* Set core body defaults */
 body {
 	min-height: 100vh;
-	text-rendering: optimizeSpeed;
-	/* -webkit-font-smoothing: antialiased; */
 	line-height: 1.5;
 }
 
-@supports (min-height: 100dvh) {
+@supports (min-height: 100svh) {
 	body {
-		min-height: 100dvh;
+		min-height: 100svh;
 	}
 }
 
