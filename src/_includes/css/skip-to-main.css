@@ -1,11 +1,11 @@
 .skip-to-main {
-	--_padding-block: calc(1 / 2 * var(--nav-link-padding));
-	--_padding-inline: var(--nav-link-padding);
+	--_padding-block: calc(1 / 2 * var(--link-padding));
+	--_padding-inline: var(--link-padding);
 
 	display: block;
 	position: absolute;
 	inset-block-start: 0;
-	inset-inline-start: var(--body-inline-padding);
+	inset-inline-start: var(--gutter);
 	padding: var(--_padding-block) var(--_padding-inline);
 
 	background-color: var(--color-skip-to-main-bg);
@@ -22,9 +22,9 @@
 .skip-to-main:focus-visible {
 	outline-offset: 0;
 	inset-block-start: calc(
-		var(--nav-link-padding) - (2 * var(--focus-border-width))
+		var(--link-padding) - (2 * var(--focus-border-thickness))
 	);
-	inset-inline-start: var(--body-inline-padding);
+	inset-inline-start: var(--gutter);
 
 	opacity: 1;
 	transform: translate(0);
