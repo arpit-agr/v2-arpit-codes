@@ -17,7 +17,7 @@
         Page {{ pagination.pageNumber + 1 }} of {{pagination.hrefs.length}}
       </p>
     </header>
-    <ol class="notes-list grid" role="list" reversed>
+    <ol class="notes-list" role="list" reversed>
       {%- for item in notes -%}
         <li class="stack">
           <h2 class="heading-3 text-wrap:pretty">
