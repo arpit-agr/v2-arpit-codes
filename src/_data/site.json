@@ -2,9 +2,5 @@
 	"title": "Arpit Agrawal",
 	"description": "Hi, I'm a **front-end web developer** based in Mumbai, India. I focus on building visually stunning, high-performance websites.",
 	"url": "https://arpit.codes",
-	"themeColor": {
-		"light": "#f9fafa",
-		"dark": "#1a1a1a"
-	},
 	"colorScheme": "light dark"
 }
