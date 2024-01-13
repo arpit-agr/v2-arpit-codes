@@ -1,0 +1,9 @@
+.tags-list {
+	column-gap: 0.5em;
+}
+
+.tags-list li {
+	padding: 0.5ex 1.5ex;
+	background-color: var(--color-neutral-bg-secondary);
+	border-radius: var(--border-radius);
+}
