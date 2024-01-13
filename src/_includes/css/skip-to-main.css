@@ -11,23 +11,24 @@
 	background-color: var(--color-skip-to-main-bg);
 	color: var(--color-skip-to-main-text);
 	line-height: 1;
+	outline-offset: 0;
 
 	opacity: 0;
 	transform: translateY(-100%);
-	transition: transform 0.15s ease;
+	transition: transform 150ms ease;
 	z-index: 999;
 	-webkit-font-smoothing: antialiased;
 }
 
 .skip-to-main:focus-visible {
-	outline-offset: 0;
 	inset-block-start: calc(
 		var(--link-padding) - (2 * var(--focus-border-thickness))
 	);
-	inset-inline-start: var(--gutter);
-
 	opacity: 1;
 	transform: translate(0);
+
+	/* this needs to be added  to override a style in the global styles */
+	transition: transform 150ms ease;
 }
 
 @media (prefers-color-scheme: dark) {
