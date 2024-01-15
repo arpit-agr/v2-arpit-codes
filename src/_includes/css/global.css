@@ -74,7 +74,9 @@ body > footer {
 
 h1,
 h2,
+.heading-2,
 h3,
+.heading-3,
 th {
 	font-weight: 500;
 	font-family: var(--font-special);
