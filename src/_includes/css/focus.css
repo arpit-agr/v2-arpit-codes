@@ -8,7 +8,6 @@
 
 [tabindex="-1"]:focus {
 	outline: none;
-	scroll-margin-block: calc(-1 * var(--border-thickness));
 }
 
 /* 
