@@ -3,7 +3,7 @@
 }
 
 .tags-list li {
-	padding: 0.5ex 1.5ex;
+	padding: 0.25ex 1ex;
 	background-color: var(--color-neutral-bg-secondary);
 	border-radius: var(--border-radius);
 }
