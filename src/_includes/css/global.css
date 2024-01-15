@@ -11,6 +11,11 @@
 
 	/* Variables for border */
 	--border-radius: var(--space-3xs);
+	--conditional-border-radius: clamp(
+		0px,
+		((100vw - var(--border-radius)) - 100%) * 9999,
+		var(--border-radius)
+	);
 	--border-thickness: var(--space-5xs);
 	--focus-border-thickness: min(0.125em, var(--space-4xs));
 

@@ -54,3 +54,45 @@
 	display: inline-flex;
 	padding-block: var(--link-padding);
 }
+
+/* TODO: image */
+.body
+	:is(
+		.codetitle,
+		pre,
+		pre + *,
+		figure,
+		figure + *,
+		/* blockquote,
+		blockquote + *, */
+		h2,
+		h3,
+		h4
+	) {
+	--flow-space: var(--space-m-l);
+}
+
+.note .body .codetitle + pre {
+	--flow-space: 0.5em;
+}
+
+.note .body blockquote > :where(ul, ol) {
+	padding-inline-start: 2em;
+}
+
+/* make the margin top zero for any ul or ol which is the first child in a blockquote */
+.note .body blockquote > :first-child:where(ul, ol) {
+	margin-block: 0;
+}
+
+.note .body li + li {
+	--flow-space: 0.75em;
+	margin-block-start: var(--flow-space, 1em);
+}
+
+.note .body img,
+.note .body pre {
+	min-inline-size: calc(100% + (2 * var(--gutter)));
+	margin-inline-start: calc(-1 * var(--gutter));
+	border-radius: var(--conditional-border-radius);
+}
