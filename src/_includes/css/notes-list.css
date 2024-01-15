@@ -30,7 +30,8 @@
 }
 
 .full-note {
-	--cluster-gap: var(--space-5xs-4xs);
+	/* --cluster-gap: var(--space-5xs-4xs); */
+	--cluster-gap: 0;
 }
 
 .full-note:after {
