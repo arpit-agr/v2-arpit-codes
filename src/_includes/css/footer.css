@@ -9,40 +9,4 @@
 	padding-block: var(--link-padding);
 }
 
-/* I've implement a custom focus ring for these links so the default is not needed */
-.site-footer a:focus-visible {
-	outline: none;
-}
-
-/* custom focus ring */
-.site-footer a:focus-visible:before {
-	content: "";
-	position: absolute;
-	inset: var(--link-padding) calc(-1 / 4 * var(--gutter));
-	border-radius: var(--border-radius);
-	outline: var(--focus-border-thickness) solid var(--color-brand-border-primary);
-	z-index: -1;
-}
-
-.site-footer .copyright span {
-	display: none;
-}
-
-/* when hover is the user's primary input mechanism */
-@media (hover: hover) {
-	.site-footer .copyright span {
-		display: unset;
-		position: absolute;
-		inline-size: max-content;
-		inset-block-start: 50%;
-		padding-inline-start: 1ch;
-		transform: translate(-1ch, -50%);
-		opacity: 0;
-		transition: transform 150ms ease, opacity 150ms ease;
-	}
-
-	.site-footer .copyright:hover span {
-		transform: translate(0, -50%);
-		opacity: 1;
-	}
-}
+/* copyright styles are with the site-name styles in header.css */

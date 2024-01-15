@@ -10,3 +10,26 @@
 	outline: none;
 	scroll-margin-block: calc(-1 * var(--border-thickness));
 }
+
+/* 
+	I've implemented a custom focus ring for these links
+	so the default is not needed
+*/
+:is(.site-head, .site-footer) a:focus-visible {
+	outline: none;
+}
+
+/* custom focus ring */
+:is(.site-head, .site-footer) a:before {
+	content: "";
+	position: absolute;
+	inset: var(--link-padding) calc(-1 / 4 * var(--gutter));
+	border-radius: var(--border-radius);
+	pointer-events: none;
+	/* z-index: -1; */
+}
+
+:is(.site-head, .site-footer) a:focus-visible:before {
+	outline: var(--focus-border-thickness) solid
+		var(--color-brand-border-secondary);
+}
