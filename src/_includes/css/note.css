@@ -1,81 +1,56 @@
 .note {
-	--column-grid-gap: var(--note-grid-gap);
+	max-inline-size: var(--measure);
 	margin-inline: auto;
 }
 
-.note .body :where(h2, h3) {
-	--flow-space: calc(var(--line-height) * 1em);
+.footnote-item div {
+	--grid-gap: 1ch;
+	grid-template-columns: auto 1fr;
+	font-variant: tabular-nums;
 }
 
-.note .body .codetitle {
-	--flow-space: var(--step-0);
+.footnote-backref {
+	padding-inline: 0.5ch;
 }
 
-.note .body .codetitle + pre {
-	--flow-space: 0.5em;
+.note .tags-list {
+	--flow-space: var(--space-m-l);
+	--cluster-horizontal-alignment: end;
+	position: relative;
 }
 
-.note h1 code {
-	font-size: 1em;
+.note .tags-list:before {
+	content: "";
+	position: absolute;
+	block-size: var(--border-thickness);
+	inline-size: 100%;
+	background-color: var(--color-neutral-border-secondary);
+	flex-grow: 999;
 }
 
-.note .body li + li {
-	margin-block-start: var(--flow-space, 0.5em);
-}
-
-.note .body img,
-.note .body pre,
-.note footer {
-	min-inline-size: calc(100% + (2 * var(--body-inline-padding)));
-	margin-inline-start: calc(-1 * var(--body-inline-padding));
-	border-radius: var(--radius);
-}
-
-.note .meta-info {
-	--cluster-gap: 0.5em;
-	display: flex;
-	flex-direction: row;
-	gap: var(--cluster-gap);
-	translate: 0 calc(-1 * 1em * var(--line-height));
+.note .tags-list li {
+	z-index: 1;
 }
 
 .note footer {
-	grid-column: 1/-1;
-	padding: var(--space-s-m) var(--body-inline-padding);
-	background-color: var(--shade-accent);
+	--flow-space: var(--space-m-l);
+
+	padding: var(--space-s-m) var(--gutter);
+	background-color: var(--color-neutral-bg-tertiary);
+	/* box-shadow: var(--shadow-2); */
+	border-radius: var(--border-radius);
+	outline: var(--border-thickness) solid var(--color-neutral-border-tertiary);
 }
 
-@media (min-width: 48rem) {
-	.note h1,
-	.footer-separator,
-	.note footer,
-	.note .body,
-	.back-to-notes {
-		grid-column: 2/-1;
-	}
-
-	.note .meta-info {
-		--cluster-horizontal-alignment: end;
-		flex-direction: column;
-		/* grid-column: 1; */
-		justify-self: end;
-		translate: 0 2px;
-	}
-
-	.note .meta-info * {
-		align-self: end;
-	}
-
-	.meta-separator {
-		display: none;
-	}
+.note footer > * {
+	--flow-space: 1em;
 }
 
-@media (min-width: 60rem) {
-	.footer-separator,
-	.note footer,
-	.note .body,
-	.back-to-notes {
-		grid-column: 2/5;
-	}
+.back-to-notes {
+	--flow-space: 0;
+	--cluster-vertical-alignment: center;
+	--cluster-gap: var(--space-2xs);
+	position: relative;
+	display: inline-flex;
+	padding-block: var(--link-padding);
 }
