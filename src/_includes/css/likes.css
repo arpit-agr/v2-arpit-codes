@@ -2,12 +2,16 @@
 	grid-template-columns: 1fr;
 }
 
+.likes > header {
+	--stack-gap: var(--space-s-xs);
+}
+
 @media (min-width: 48rem) {
 	.likes {
 		grid-template-columns: 1fr 2fr;
 	}
 
-	.likes header {
+	.likes > header {
 		align-self: start;
 		position: sticky;
 		inset-block-start: var(--main-padding-block);
