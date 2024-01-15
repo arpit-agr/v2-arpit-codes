@@ -146,7 +146,9 @@
 	}
 
 	:where(.has-js #mainnav) button svg rect {
-		transition: all 0.2s ease-in-out;
+		transition-property: transform, opacity;
+		transition-duration: 222ms;
+		transition-timing-function: ease-in-out;
 		transform-origin: center center;
 	}
 
