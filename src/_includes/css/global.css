@@ -141,7 +141,7 @@ a {
 }
 
 /* Change the color on :hover and :focus */
-:is(a, button):where(:hover, :focus) {
+:is(a, button):is(:hover, :focus) {
 	/* --text-decoration-color: currentColor; */
 	color: var(--color-brand-text-primary);
 }
@@ -306,4 +306,8 @@ th {
 
 :target {
 	scroll-margin-block: 1em;
+}
+
+main:target {
+	scroll-margin-block: calc(-1 * var(--border-thickness));
 }
