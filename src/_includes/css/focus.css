@@ -15,12 +15,12 @@
 	I've implemented a custom focus ring for these links
 	so the default is not needed
 */
-:is(.site-head, .site-footer) a:focus-visible {
+:is(.site-head, .site-footer, .pagination) a:focus-visible {
 	outline: none;
 }
 
 /* custom focus ring */
-:is(.site-head, .site-footer) a:before {
+:is(.site-head, .site-footer, .pagination) a:before {
 	content: "";
 	position: absolute;
 	inset: var(--link-padding) calc(-1 / 4 * var(--gutter));
@@ -29,7 +29,7 @@
 	/* z-index: -1; */
 }
 
-:is(.site-head, .site-footer) a:focus-visible:before {
+:is(.site-head, .site-footer, .pagination) a:focus-visible:before {
 	outline: var(--focus-border-thickness) solid
 		var(--color-brand-border-secondary);
 }

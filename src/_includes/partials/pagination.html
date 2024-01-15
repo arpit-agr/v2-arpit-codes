@@ -1,22 +1,22 @@
 <nav class="pagination cluster" aria-label="Select page">
   {% if pagination.href.previous %}
-      <a 
-        class="cluster" 
-        href="{{ pagination.href.previous }}" 
-        data-direction="backwards"
-      >
-        {% include "partials/caret-arrow.html" %}
-        Newer Notes
-      </a>
+    <a 
+      class="cluster" 
+      href="{{ pagination.href.previous }}" 
+      data-direction="backwards"
+    >
+      {% include "partials/caret-arrow.html" %}
+      Newer Notes
+    </a>
   {% endif %}
   {% if pagination.href.next %}
-        <a 
-          class="cluster" 
-          href="{{ pagination.href.next }}" 
-          data-direction="forwards"
-        >
-          Older Notes 
-          {% include "partials/caret-arrow.html" %}
-        </a>
+    <a 
+      class="cluster" 
+      href="{{ pagination.href.next }}" 
+      data-direction="forwards"
+    >
+      Older Notes 
+      {% include "partials/caret-arrow.html" %}
+    </a>
   {% endif %}
 </nav>

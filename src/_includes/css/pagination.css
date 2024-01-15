@@ -1,14 +1,9 @@
-.pagination-separator {
-	margin-block-start: auto;
-}
-
-.pagination {
-	min-inline-size: 100%;
-}
-
 .pagination a {
-	/* display: inline-block; */
-	padding-block: var(--region-padding-block);
+	--cluster-vertical-alignment: center;
+	--cluster-gap: var(--space-2xs);
+
+	position: relative;
+	padding-block: var(--link-padding);
 }
 
 .pagination [data-direction="forwards"] {
