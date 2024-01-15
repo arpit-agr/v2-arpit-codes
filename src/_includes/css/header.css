@@ -54,7 +54,7 @@
 }
 
 .site-logo img {
-	block-size: 1.1lh;
+	block-size: calc(1em * var(--line-height-body));
 	inline-size: auto;
 }
 
