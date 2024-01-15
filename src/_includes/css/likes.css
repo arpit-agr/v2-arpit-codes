@@ -43,8 +43,9 @@
 	inset: 0;
 }
 
-.likes-list :is(.tags-list, .tags-list > li) {
-	display: inline-block;
+.likes-list .tags-list {
+	--cluster-gap: 0.5ch;
+	display: inline-flex;
 }
 
 .likes .icon-container {
