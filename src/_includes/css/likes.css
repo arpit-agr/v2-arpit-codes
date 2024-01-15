@@ -33,6 +33,7 @@
 }
 
 .likes-list a {
+	margin-inline-end: 0.5ch;
 	font-weight: 500;
 	text-decoration: none;
 }
