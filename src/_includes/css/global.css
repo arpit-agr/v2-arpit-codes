@@ -287,6 +287,10 @@ tr + tr {
 	outline: var(--border-thickness) solid var(--color-neutral-border-secondary);
 }
 
+thead {
+	background-color: var(--color-neutral-bg-secondary);
+}
+
 th,
 tr,
 td {
