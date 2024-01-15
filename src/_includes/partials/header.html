@@ -1,7 +1,28 @@
 
 <header class="site-head">
-  <!-- logo container -->
-  {% include "partials/logo-container.html" %}
+  <!-- TODO: optimise image and add alt text-->
+  <a
+  class="site-logo cluster"
+  href="/"
+  aria-label="Home"
+  {{ helpers.getLinkActiveState("/", page.url) | safe }} 
+  >
+    <img src="/icon-192.png" alt="">
+    {% if page.url == "/" %}
+      Home
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+
+    <span class="step--2" aria-hidden="true">
+      {% if page.url == "/" %}
+        [You are here]
+        {# 👋🏽 #}
+      {% else %}
+        [Home]
+      {% endif %}
+    </span>
+  </a>
 
   <!-- site navigation -->
   {% include "partials/main-nav.html" %}
