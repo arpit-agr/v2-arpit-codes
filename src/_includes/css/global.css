@@ -10,7 +10,7 @@
 	--letter-spacing-step--2: 0.05em;
 
 	/* Variables for border */
-	--border-radius: var(--space-4xs-3xs);
+	--border-radius: var(--space-3xs);
 	--border-thickness: var(--space-5xs);
 	--focus-border-thickness: 0.1em;
 
