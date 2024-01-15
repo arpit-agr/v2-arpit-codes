@@ -1,0 +1,50 @@
+.notes-list {
+	display: contents;
+}
+
+.notes-list > li {
+	--stack-gap: var(--space-2xs);
+
+	position: relative;
+	padding: var(--gutter);
+	background-color: var(--color-neutral-bg-tertiary);
+	outline: var(--border-thickness) solid var(--color-neutral-border-tertiary);
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow-2);
+	overflow: hidden;
+}
+
+.notes-list li:has(a:where(:hover, :focus)) .note-title {
+	color: var(--color-brand-text-primary);
+	transition: color 333ms ease;
+}
+
+.notes-list .excerpt {
+	margin-block-end: var(--space-m);
+}
+
+.notes-list .meta-data {
+	--cluster-horizontal-alignment: space-between;
+	margin-block-start: auto;
+	align-self: stretch;
+}
+
+.full-note {
+	--cluster-gap: var(--space-5xs-4xs);
+}
+
+.full-note:after {
+	content: "";
+	position: absolute;
+	inset: 0;
+}
+
+.full-note:where(:hover, :focus-visible) .square {
+	rotate: 90deg;
+	scale: 0.8;
+}
+
+.full-note:where(:hover, :focus-visible) .arrow {
+	opacity: 1;
+	scale: 1;
+}

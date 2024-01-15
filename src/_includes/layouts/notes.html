@@ -22,7 +22,7 @@
     <ol class="notes-list" role="list" reversed>
       {%- for item in notes -%}
         <li class="stack">
-          <h2 class="heading-3 text-wrap:pretty">
+          <h2 class="note-title heading-3 text-wrap:pretty">
             {{ item.data.title -}}
           </h2>
           <div class="excerpt step--1 color:secondary line-clamp">
@@ -32,17 +32,25 @@
               <p>{{ item.content | excerpt | safe }}</p>
             {% endif %}
           </div>
-          <a
-            class="full-note cluster step--1 color:secondary"
-            href="{{ item.url }}"
-          >
-            <span>Read full note</span>
-            <span class="vh">: {{ item.data.title -}}</span>
-            <span class="icon-container">
-              <span class="square"></span>
-              {% include "partials/arrow.html" %}
-            </span>
-          </a>
+          <div class="meta-data cluster">
+            <time 
+              class="step--2 color:secondary" 
+              datetime={{ item.date | htmlDate }}
+            >
+              {{ item.date | readableDate | safe }}
+            </time>
+            <a
+              class="full-note cluster step--2 color:secondary"
+              href="{{ item.url }}"
+            >
+              <span>Read full note</span>
+              <span class="vh">: {{ item.data.title -}}</span>
+              <span class="icon-container">
+                <span class="square"></span>
+                {% include "partials/arrow.html" %}
+              </span>
+            </a>
+          </div>
         </li>
       {%- endfor -%}
     </ol>
