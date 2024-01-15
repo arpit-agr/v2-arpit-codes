@@ -17,7 +17,7 @@
 
 .questionnaire ul:before {
 	content: "";
-	inline-size: 1px;
+	inline-size: var(--border-thickness);
 	block-size: calc(100% - (2 * var(--counter-size)));
 
 	position: absolute;

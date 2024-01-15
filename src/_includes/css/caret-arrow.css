@@ -7,7 +7,7 @@
 	inline-size: auto;
 	block-size: 0.5lh;
 	vertical-align: middle;
-	stroke-width: 1px;
+	stroke-width: var(--border-thickness);
 	fill: none;
 	stroke: currentColor;
 }

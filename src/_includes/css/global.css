@@ -12,7 +12,7 @@
 	/* Variables for border */
 	--border-radius: var(--space-3xs);
 	--border-thickness: var(--space-5xs);
-	--focus-border-thickness: 0.1em;
+	--focus-border-thickness: min(0.125em, var(--space-4xs));
 
 	/* Variables for layout */
 	--gutter: var(--space-s);
