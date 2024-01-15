@@ -7,22 +7,20 @@
 
 {%- block content -%}
   <div class="home stack">
-    <div class="hero fade">
-      <h1>
-        <span class="english">{{ name.english }}</span>
-        <span class="multi-lang" aria-hidden="true">
-          <span lang="hi">{{ name.hindi }}</span>
-          <span lang="ur" dir="rtl">{{ name.urdu }}</span>
-        </span>
-      </h1>
-    </div>
+    <h1 class="stack fade">
+      <span class="english">{{ name.english }}</span>
+      <span class="multi-lang cluster" aria-hidden="true">
+        <span lang="hi">{{ name.hindi }}</span>
+        <span lang="ur" dir="rtl">{{ name.urdu }}</span>
+      </span>
+    </h1>
     <div class="body stack fade">
       {{ content | safe }}
       <div class="info-container cluster">
-        <p class="text-wrap:balance">
+        <p>
           {{ site.description | md | safe }}
         </p>
-        <p class="cta text-wrap:balance">
+        <p class="cta">
           {{ cta | md | safe }}
         </p>
       </div>
