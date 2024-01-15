@@ -1,0 +1,72 @@
+.questionnaire {
+	--stack-gap: var(--main-padding-block);
+}
+
+.questionnaire .body {
+	--row-gap: 1em;
+	--column-gap: var(--space-2xl-3xl);
+	grid-template-columns: 1fr;
+}
+
+.questionnaire ul {
+	--counter-size: 2rem;
+	padding: unset;
+	margin: unset;
+	position: relative;
+}
+
+.questionnaire ul:before {
+	content: "";
+	inline-size: 1px;
+	block-size: calc(100% - (2 * var(--counter-size)));
+
+	position: absolute;
+	inset-inline-start: 1rem;
+	inset-block-start: var(--counter-size);
+	background: var(--color-neutral-border-primary);
+	z-index: -1;
+}
+
+.questionnaire li {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: var(--gutter);
+	align-items: first baseline;
+
+	max-inline-size: var(--measure);
+	text-wrap: pretty;
+
+	counter-increment: questions;
+}
+
+.questionnaire li::before {
+	content: "Q." counter(questions);
+	inline-size: var(--counter-size);
+	block-size: var(--counter-size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background: var(--color-neutral-bg-primary);
+	color: var(--color-brand-text-primary);
+	font-family: var(--font-monospace);
+	font-size: var(--step--1);
+}
+
+.questionnaire li + li {
+	margin-block-start: var(--flow-space, 1em);
+}
+
+@media (min-width: 48rem) {
+	.questionnaire .body {
+		grid-template-columns: 1fr 2fr;
+	}
+
+	.questionnaire ul {
+		grid-row: span 2;
+	}
+
+	.questionnaire > .body :last-child {
+		align-self: end;
+	}
+}
