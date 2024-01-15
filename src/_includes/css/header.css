@@ -142,7 +142,6 @@
 		fill: currentColor;
 		inline-size: calc(1em * var(--line-height-body));
 		block-size: auto;
-		/* translate: 0 2px; */
 	}
 
 	:where(.has-js #mainnav) button svg rect {
