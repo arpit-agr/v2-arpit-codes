@@ -1,0 +1,49 @@
+.icon-container {
+	--icon-container-size: 24px;
+	--square-size: 75;
+
+	display: grid;
+	grid-template-areas: "content";
+	align-items: center;
+	justify-items: center;
+
+	inline-size: var(--icon-container-size);
+	block-size: var(--icon-container-size);
+
+	transition-property: scale, rotate;
+	transition-duration: 333ms;
+	transition-timing-function: ease;
+	/* isolation: isolate; */
+}
+
+.icon-container > * {
+	grid-area: content;
+}
+
+.square {
+	inline-size: calc(var(--square-size) * 1%);
+	aspect-ratio: 1;
+	background-color: var(--color-brand-bg-primary);
+	border-radius: var(--border-radius);
+	scale: 0.5;
+	/* z-index: -1; */
+	transition: inherit;
+}
+
+.arrow {
+	/* align-self: center;
+	justify-self: center; */
+	inline-size: auto;
+	block-size: 40%;
+	opacity: 0;
+	scale: 0;
+	transition: inherit;
+}
+
+.arrow path {
+	fill: var(--color-brand-text-inverted);
+	stroke: var(--color-brand-text-inverted);
+	stroke-width: var(--space-4xs);
+
+	transform-origin: center;
+}
