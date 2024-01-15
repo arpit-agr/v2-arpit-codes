@@ -21,25 +21,27 @@
       {{ content | safe }}
     </div>
     {% if tags %}
-    <ul class="tags-list cluster step--2" role="list" aria-label="Tags">
+    <ul
+      class="tags-list cluster step--2"
+      role="list"
+      aria-label="Tags"
+    >
       {% for tag in tags %}
         <li>#{{ tag }}</li>
       {% endfor %}
     </ul>
     {% endif %}
-    {# <hr class="footer-separator"> #}
-    <footer class="flow">
+    {# <footer class="flow">
       <p>
-        👋🏽 &nbsp;{{ site.description | md | safe }}
+        👋🏽 &nbsp;{{ developer.introduction | md | safe }}
       </p>
-      <p>
-        If I seem like a good fit for your project, I'd love to <a href="mailto:{{ developer.email }}">get in touch</a> with you.
-      </p>
-    </footer>
-    <a class="back-to-notes cluster step--1 color:secondary" href="/notes/">
-      <span>
-        {% include "partials/caret-arrow.html" %}
-      </span>
+      <p>{{ developer.signoff | md | safe }}</p>
+    </footer> #}
+    <a
+      class="back-to-notes cluster step--1 color:secondary"
+      href="/notes/"
+    >
+      {% include "partials/caret-arrow.html" %}
       Back to Notes Archive
     </a>
   </article>
