@@ -49,7 +49,7 @@ module.exports = function (eleventyConfig) {
 			return `
 				<li id="fn${id}" class="footnote-item">
 					<div class="grid">
-						<span>${n}.</span>
+						<span class="footnote-item-counter">${n}.</span>
 			`;
 		};
 
