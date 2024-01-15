@@ -8,13 +8,15 @@
 
 {%- block content -%}
   <div class="notes grid" data-type="archive">
-    <header class="stack fade">
+    <header class="grid fade">
       <h1>{{ title }}</h1>
-      <p class="subtitle step--1 color:secondary text-wrap:balance">
-        {{ subtitle }}
-      </p>
+      {% if pagination.pageNumber < 1 %}
+        <p class="subtitle step--1 color:secondary text-wrap:balance">
+          {{ subtitle }}
+        </p>
+      {% endif %}
       <p class="page-number step--1 color:secondary">
-        Page {{ pagination.pageNumber + 1 }} of {{pagination.hrefs.length}}
+        [Page {{ pagination.pageNumber + 1 }} of {{pagination.hrefs.length}}]
       </p>
     </header>
     <ol class="notes-list" role="list" reversed>
