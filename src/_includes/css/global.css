@@ -23,7 +23,7 @@
 	--gutter: var(--space-s);
 	--max-layout-width: 85rem;
 	--min-layout-height: 100vh;
-	--main-padding-block: var(--space-s-l);
+	--main-padding-block: var(--space-m-l);
 	--link-padding: var(--space-xs-s);
 }
 
