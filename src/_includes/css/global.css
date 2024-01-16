@@ -147,7 +147,7 @@ a {
 
 /* Change the color on :hover and :focus */
 :is(a, button):is(:hover, :focus) {
-	/* --text-decoration-color: currentColor; */
+	--text-decoration-color: currentColor;
 	color: var(--color-brand-text-primary);
 }
 
