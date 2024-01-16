@@ -1,3 +1,10 @@
+.notes-container {
+	min-block-size: 100%;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr;
+	gap: var(--main-padding-block);
+}
+
 .notes {
 	--grid-min-item-size: min(20rem, calc(100vw - var(--gutter) - var(--gutter)));
 
@@ -5,16 +12,21 @@
 		var(--grid-placement, auto-fill),
 		minmax(var(--grid-min-item-size, 16rem), 1fr)
 	);
-	min-block-size: 100%;
 }
 
 .notes > header {
 	--grid-gap: var(--space-s-xs);
-	grid-template-columns: auto 1fr;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
 }
 
-.notes h1 {
-	align-self: end;
+.notes > header:before {
+	content: "";
+	grid-row: 1;
+	grid-column: 2;
+	block-size: 0px;
+	border-block-start: var(--border-thickness) dotted
+		var(--color-neutral-border-primary);
 }
 
 .notes .subtitle {
@@ -23,20 +35,19 @@
 
 .notes .page-number {
 	grid-row: 1;
-	grid-column: 2;
-	align-self: end;
+	grid-column: 3;
 	justify-self: end;
 }
 
-/* FIXME: magic number alert */
+/* FIXME: magic number at which there are 2 columns */
 @media (min-width: 43.875rem) {
 	.notes > header {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto auto 1fr;
 	}
 
-	.notes h1 {
-		align-self: unset;
+	.notes > header:before {
+		display: none;
 	}
 
 	.notes .page-number {
@@ -45,11 +56,6 @@
 		align-self: start;
 		justify-self: start;
 	}
-}
-
-.notes > footer {
-	grid-column: 1/-1;
-	align-self: end;
 }
 
 /* 

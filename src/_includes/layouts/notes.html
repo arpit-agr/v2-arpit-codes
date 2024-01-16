@@ -7,55 +7,55 @@
 {%- endcss %}
 
 {%- block content -%}
-  <div class="notes grid" data-type="archive">
-    <header class="grid fade">
-      <h1>{{ title }}</h1>
-      {% if pagination.pageNumber < 1 %}
-        <p class="subtitle step--1 color:secondary text-wrap:balance">
-          {{ subtitle }}
+  <div class="notes-container grid">
+    <div class="notes grid" data-type="archive">
+      <header class="grid fade">
+        <h1>{{ title }}</h1>
+        {% if pagination.pageNumber < 1 %}
+          <p class="subtitle step--1 color:secondary text-wrap:balance">
+            {{ subtitle }}
+          </p>
+        {% endif %}
+        <p class="page-number step--1 color:secondary">
+          [Page {{ pagination.pageNumber + 1 }} of {{pagination.hrefs.length}}]
         </p>
-      {% endif %}
-      <p class="page-number step--1 color:secondary">
-        [Page {{ pagination.pageNumber + 1 }} of {{pagination.hrefs.length}}]
-      </p>
-    </header>
-    <ol class="notes-list" role="list" reversed>
-      {%- for item in notes -%}
-        <li class="stack">
-          <h2 class="note-title heading-3 text-wrap:pretty">
-            {{ item.data.title -}}
-          </h2>
-          <div class="excerpt step--1 color:secondary line-clamp">
-            {% if item.data.excerpt %}
-              <p>{{ item.data.excerpt }}</p>
-            {% else %}
-              <p>{{ item.content | excerpt | safe }}</p>
-            {% endif %}
-          </div>
-          <div class="meta-data cluster">
-            <time 
-              class="step--2 color:secondary" 
-              datetime={{ item.date | htmlDate }}
-            >
-              {{ item.date | readableDate | safe }}
-            </time>
-            <a
-              class="full-note cluster step--2 color:secondary"
-              href="{{ item.url }}"
-            >
-              <span>Read full note</span>
-              <span class="vh">: {{ item.data.title -}}</span>
-              <span class="icon-container">
-                <span class="square"></span>
-                {% include "partials/arrow.html" %}
-              </span>
-            </a>
-          </div>
-        </li>
-      {%- endfor -%}
-    </ol>
-    <footer>
-      {% include "partials/pagination.html" %}
-    </footer>
+      </header>
+      <ol class="notes-list" role="list" reversed>
+        {%- for item in notes -%}
+          <li class="stack">
+            <h2 class="note-title heading-3 text-wrap:pretty">
+              {{ item.data.title -}}
+            </h2>
+            <div class="excerpt step--1 color:secondary line-clamp">
+              {% if item.data.excerpt %}
+                <p>{{ item.data.excerpt }}</p>
+              {% else %}
+                <p>{{ item.content | excerpt | safe }}</p>
+              {% endif %}
+            </div>
+            <div class="meta-data cluster">
+              <time
+                class="step--2 color:secondary"
+                datetime={{ item.date | htmlDate }}
+              >
+                {{ item.date | readableDate | safe }}
+              </time>
+              <a
+                class="full-note cluster step--2 color:secondary"
+                href="{{ item.url }}"
+              >
+                <span>Read full note</span>
+                <span class="vh">: {{ item.data.title -}}</span>
+                <span class="icon-container">
+                  <span class="square"></span>
+                  {% include "partials/arrow.html" %}
+                </span>
+              </a>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ol>
+    </div>
+    {% include "partials/pagination.html" %}
   </div>
 {%- endblock -%}
