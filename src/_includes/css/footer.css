@@ -1,12 +1,12 @@
 .site-footer {
+	--cluster-gap: 0 1em;
 	--cluster-horizontal-alignment: space-between;
 	border-block-start: var(--border-thickness) solid
 		var(--color-neutral-border-primary);
 }
 
-.site-footer a {
+.site-footer a,
+.license {
 	position: relative;
 	padding-block: var(--link-padding);
 }
-
-/* copyright styles are with the site-name styles in header.css */

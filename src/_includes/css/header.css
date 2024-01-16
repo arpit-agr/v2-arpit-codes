@@ -58,14 +58,14 @@
 	inline-size: auto;
 }
 
-:is(.site-logo, .copyright) span {
+.site-logo span {
 	display: none;
 	pointer-events: none;
 }
 
 /* when hover is the user's primary input mechanism */
 @media (hover: hover) {
-	:is(.site-logo, .copyright) span {
+	.site-logo span {
 		display: unset;
 		position: absolute;
 		inline-size: max-content;
@@ -77,7 +77,7 @@
 		transition: transform 150ms ease, opacity 150ms ease;
 	}
 
-	:is(.site-logo, .copyright):hover span {
+	.site-logo:hover span {
 		transform: translate(0, -50%);
 		opacity: 1;
 	}
