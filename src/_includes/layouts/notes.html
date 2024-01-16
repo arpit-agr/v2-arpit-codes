@@ -26,11 +26,15 @@
             <h2 class="note-title heading-3 text-wrap:pretty">
               {{ item.data.title -}}
             </h2>
-            <div class="excerpt step--1 color:secondary line-clamp">
-              {% if item.data.excerpt %}
-                <p>{{ item.data.excerpt }}</p>
+            <div class="body step--1 color:secondary">
+              {% if item.data.introduction %}
+                <!-- introduction -->
+                <p>{{ item.data.introduction }}</p>
               {% else %}
-                <p>{{ item.content | excerpt | safe }}</p>
+                <!-- excerpt -->
+                <p class="line-clamp">
+                  {{ item.content | excerpt | safe }}
+                </p>
               {% endif %}
             </div>
             <div class="meta-data cluster">

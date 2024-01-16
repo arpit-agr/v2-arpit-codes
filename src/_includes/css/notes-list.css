@@ -19,7 +19,7 @@
 	transition: color 333ms ease;
 }
 
-.notes-list .excerpt {
+.notes-list .body {
 	margin-block-end: var(--space-m);
 }
 
