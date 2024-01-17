@@ -1,7 +1,6 @@
 ---
 title: "About the Gap After the List Marker"
 date: 2023-03-04
-excerpt: "I was reading “Creative List Styling” on Google’s web.dev blog and noticed something odd in one of the code examples in the ::marker section of the article."
 tags:
   - "css"
 ---
