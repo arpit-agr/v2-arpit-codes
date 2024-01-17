@@ -1,10 +1,6 @@
 /* credit: https://codepen.io/TWilson/pen/jOdWqbZ */
 
-body > :is(main, header) {
-	z-index: 1;
-}
-
-.god-rays {
+:root {
 	--stripes: repeating-linear-gradient(
 		100deg,
 		#fff 0%,
@@ -13,21 +9,28 @@ body > :is(main, header) {
 		transparent 12%,
 		#fff 16%
 	);
-	--stripesDark: repeating-linear-gradient(
-		100deg,
-		#000 0%,
-		#000 7%,
-		transparent 10%,
-		transparent 12%,
-		#000 16%
-	);
 	--rainbow: repeating-linear-gradient(
 		100deg,
 		var(--god-ray-color) 10%,
 		var(--god-ray-color) 20%,
 		var(--god-ray-color) 30%
 	);
+	--ray-filter: blur(var(--space-2xs)) invert(100%);
 
+	@media (--OSdark) {
+		--stripes: repeating-linear-gradient(
+			100deg,
+			#000 0%,
+			#000 7%,
+			transparent 10%,
+			transparent 12%,
+			#000 16%
+		);
+		--ray-filter: blur(var(--space-2xs)) opacity(50%) saturate(200%);
+	}
+}
+
+.god-rays {
 	position: fixed;
 	inset: 0;
 	overflow: hidden;
@@ -38,10 +41,19 @@ body > :is(main, header) {
 	background-size: 300%, 200%;
 	background-position: 50% 50%, 50% 50%;
 
-	filter: blur(var(--space-2xs)) invert(100%);
+	filter: var(--ray-filter);
+	-webkit-mask-image: radial-gradient(
+		ellipse at 100% 0%,
+		black 40%,
+		transparent 70%
+	);
 	mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
 	pointer-events: none;
 	opacity: 0.5;
+
+	@media (--OSdark) {
+		inset: -1em;
+	}
 }
 
 .god-rays::after {
@@ -52,26 +64,8 @@ body > :is(main, header) {
 	background-size: 200%, 100%;
 	background-attachment: fixed;
 	mix-blend-mode: difference;
-}
 
-@media (prefers-color-scheme: dark) {
-	.god-rays {
-		inset: -1em;
-
-		background-image: var(--stripesDark), var(--rainbow);
-		filter: blur(var(--space-2xs)) opacity(50%) saturate(200%);
-	}
-
-	.god-rays::after {
-		background-image: var(--stripesDark), var(--rainbow);
-	}
-}
-
-@keyframes jumbo {
-	from {
-		background-position: 50% 50%, 50% 50%;
-	}
-	to {
-		background-position: 350% 50%, 350% 50%;
+	@media (--OSdark) {
+		background-image: var(--stripes), var(--rainbow);
 	}
 }

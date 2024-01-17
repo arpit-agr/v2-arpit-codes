@@ -1,0 +1,13 @@
+.pagination {
+	a {
+		--cluster-vertical-alignment: center;
+		--cluster-gap: var(--space-2xs);
+
+		position: relative;
+		align-self: end;
+	}
+
+	[data-direction="forwards"] {
+		margin-inline-start: auto;
+	}
+}

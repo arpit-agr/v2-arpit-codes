@@ -13,10 +13,10 @@
 	transition-property: scale, rotate;
 	transition-duration: 333ms;
 	transition-timing-function: ease;
-}
 
-.icon-container > * {
-	grid-area: content;
+	> * {
+		grid-area: content;
+	}
 }
 
 .square {
@@ -34,12 +34,12 @@
 	opacity: 0;
 	scale: 0;
 	transition: inherit;
-}
 
-.arrow path {
-	fill: var(--color-brand-text-inverted);
-	stroke: var(--color-brand-text-inverted);
-	stroke-width: var(--space-4xs);
+	path {
+		fill: var(--color-brand-text-inverted);
+		stroke: var(--color-brand-text-inverted);
+		stroke-width: var(--space-4xs);
 
-	transform-origin: center;
+		transform-origin: center;
+	}
 }

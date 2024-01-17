@@ -3,6 +3,7 @@
 	--arrow-hover-offset: translateX(3px);
 	--arrow-tip-transform: none;
 	--arrow-line-opacity: 0;
+
 	position: relative;
 	inline-size: auto;
 	block-size: 0.5lh;
@@ -23,12 +24,12 @@
 }
 
 a:where(:hover, :focus) .line-path,
-button:hover .line-path {
+button:where(:hover, :focus) .line-path {
 	--arrow-line-opacity: 1;
 }
 
 a:where(:hover, :focus) .tip-path,
-button:hover .tip-path {
+button:where(:hover, :focus) .tip-path {
 	--arrow-tip-transform: var(--arrow-hover-offset);
 }
 

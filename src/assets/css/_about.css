@@ -1,0 +1,60 @@
+.about {
+	--stack-gap: var(--main-padding-block);
+
+	.body {
+		/* make the .info-container border stretch across the width of the entire page */
+		min-inline-size: 100%;
+	}
+
+	.info-container {
+		--row-gap: 0.75em;
+		/* --column-gap: var(--space-l-xl); */
+		--column-gap: var(--gutter);
+
+		padding-block: var(--main-padding-block);
+		counter-increment: section;
+		align-items: baseline;
+	}
+
+	.info-container:before {
+		content: "[0" counter(section) "]";
+		color: var(--color-brand-text-primary);
+		font-size: var(--step--2);
+		letter-spacing: var(--letter-spacing-step--2);
+		font-weight: 500;
+		font-family: var(--font-monospace);
+		align-self: flex-start;
+	}
+}
+
+@media (--md-n-above) {
+	.about .info-container {
+		/* FIXME: magic number 18ch */
+		grid-template-columns: auto 18ch 1fr;
+	}
+
+	.about .info-container + .info-container {
+		border-block-start: var(--border-thickness) dotted
+			var(--color-neutral-border-primary);
+	}
+}
+
+/* https://css-tricks.com/everything-you-need-to-know-about-the-gap-after-the-list-marker/#aa-switching-to-a-custom-marker */
+/* workaround*/
+.about .body {
+	li {
+		list-style-type: "→";
+		padding-inline-start: 1ch;
+	}
+
+	li::marker {
+		/* There is no minimum gap after custom markers (string or URL). */
+		/* content: "→ "; */
+		color: var(--color-brand-text-primary);
+	}
+
+	li + li {
+		--flow-space: 0.75em;
+		margin-block-start: var(--flow-space, 1em);
+	}
+}

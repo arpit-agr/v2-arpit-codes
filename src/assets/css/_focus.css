@@ -1,7 +1,8 @@
 /* Show a custom outline on :focus-visible */
 :focus-visible {
 	outline: var(--focus-border-thickness) solid var(--color-brand-border-primary);
-	outline-offset: var(--focus-border-thickness);
+	/* outline-offset: var(--focus-border-thickness); */
+	outline-offset: calc(2 * var(--focus-border-thickness));
 	border-radius: var(--border-radius);
 	text-decoration: none;
 }
@@ -37,6 +38,5 @@
 
 :is(.site-head, .site-footer) a:focus-visible:before,
 .back-to-notes:focus-visible:before {
-	outline: var(--focus-border-thickness) solid
-		var(--color-brand-border-secondary);
+	outline: var(--focus-border-thickness) solid var(--color-brand-border-primary);
 }

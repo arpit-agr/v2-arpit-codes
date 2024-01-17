@@ -1,15 +1,10 @@
 {%- extends "layouts/base.njk" -%}
 
-{%- css "page-specific-styles" %}
-  {% include "css/home.css" %}
-  {% include "css/god-rays.css" %}
-{%- endcss %}
-
 {%- block content -%}
   <div class="home stack">
     <h1 class="stack fade">
       <span class="english">{{ name.english }}</span>
-      <span class="multi-lang cluster" aria-hidden="true">
+      <span class="local-lang cluster" aria-hidden="true">
         <span lang="hi">{{ name.hindi }}</span>
         <span lang="ur" dir="rtl">{{ name.urdu }}</span>
       </span>

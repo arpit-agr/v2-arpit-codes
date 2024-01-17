@@ -10,14 +10,16 @@
 	--letter-spacing-step--2: 0.05em;
 
 	/* Variables for border */
-	--border-radius: var(--space-3xs);
+	/* --border-radius: var(--space-3xs); */
+	--border-radius: var(--space-4xs-3xs);
 	--conditional-border-radius: clamp(
 		0px,
 		((100vw - var(--border-radius)) - 100%) * 9999,
 		var(--border-radius)
 	);
 	--border-thickness: var(--space-5xs);
-	--focus-border-thickness: min(0.125em, var(--space-4xs));
+	/* --focus-border-thickness: min(0.125em, var(--space-4xs)); */
+	--focus-border-thickness: var(--space-5xs);
 
 	/* Variables for layout */
 	--gutter: var(--space-s);
@@ -62,19 +64,27 @@ body {
 	line-height: var(--line-height-body);
 	font-feature-settings: "ss02" on, "zero";
 	text-rendering: optimizeLegibility;
+
+	> header {
+		grid-area: header;
+	}
+
+	> footer {
+		grid-area: footer;
+	}
+}
+
+body > :is(main, header) {
+	z-index: 1;
 }
 
 main {
 	grid-area: main;
 	padding-block: var(--main-padding-block);
-}
 
-body > header {
-	grid-area: header;
-}
-
-body > footer {
-	grid-area: footer;
+	&:target {
+		scroll-margin-block: calc(-1 * var(--border-thickness));
+	}
 }
 
 h1,
@@ -155,7 +165,7 @@ a {
 	because on focus outline is applied
 	and I haven't transitioned the outline */
 :is(a, button):focus {
-	transition: none;
+	transition-duration: 0ms;
 }
 
 [href="mailto:hello@arpit.codes"] {
@@ -173,6 +183,10 @@ blockquote {
 	display: grid;
 	grid-template-columns: 3ch 1fr auto;
 	gap: 0;
+
+	> * {
+		grid-column: 2/3;
+	}
 }
 
 blockquote > * + * {
@@ -181,7 +195,7 @@ blockquote > * + * {
 
 blockquote:before,
 blockquote:after {
-	color: var(--color-brand-bg-secondary);
+	color: var(--color-brand-bg-primary);
 	line-height: 0.8;
 }
 
@@ -198,10 +212,6 @@ blockquote:after {
 	line-height: 0;
 	grid-column: 3;
 	align-self: end;
-}
-
-blockquote > * {
-	grid-column: 2/3;
 }
 
 em {
@@ -244,20 +254,20 @@ pre {
 	font-family: var(--font-monospace);
 	overflow-x: auto;
 	-webkit-font-smoothing: antialiased;
+
+	> code {
+		padding: 0;
+		background-color: transparent;
+		tab-size: 2;
+	}
 }
 
 code {
-	padding-inline: var(--space-3xs);
+	padding: 0.125ex 0.5ex;
 	border-radius: var(--border-radius);
 	background-color: var(--color-neutral-bg-secondary);
 	font-size: 1rem;
 	font-family: var(--font-monospace);
-}
-
-pre > code {
-	padding-inline: 0;
-	background-color: transparent;
-	tab-size: 2;
 }
 
 pre::-webkit-scrollbar {
@@ -311,8 +321,4 @@ th {
 
 :target {
 	scroll-margin-block: 1em;
-}
-
-main:target {
-	scroll-margin-block: calc(-1 * var(--border-thickness));
 }

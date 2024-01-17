@@ -71,19 +71,17 @@
 
 	/* background colors */
 	--color-neutral-bg-primary: var(--zinc-100);
-	--color-neutral-bg-secondary: var(--zinc-200);
+	--color-neutral-bg-secondary: var(--zinc-300);
 	--color-neutral-bg-tertiary: var(--zinc-50);
 	--color-neutral-bg-quaternary: var(--zinc-800);
 	--color-neutral-bg-inverted: var(--zinc-950);
-	--color-brand-bg-primary: var(--rose-700);
-	--color-brand-bg-secondary: var(--rose-600);
+	--color-brand-bg-primary: var(--color-brand-text-primary);
 
 	/* border colors */
 	--color-neutral-border-primary: var(--zinc-300);
 	--color-neutral-border-secondary: var(--zinc-200);
 	--color-neutral-border-tertiary: var(--zinc-200);
-	--color-brand-border-primary: var(--rose-700);
-	--color-brand-border-secondary: var(--rose-600);
+	--color-brand-border-primary: var(--color-brand-text-primary);
 
 	/* shadow */
 	--shadow-color: 220 3% 15%;
@@ -100,7 +98,7 @@
 	--scrollbar-thumb-color: var(--color-neutral-text-inverted);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (--OSdark) {
 	:root {
 		/* text */
 		--color-neutral-text-primary: var(--zinc-200);
@@ -111,19 +109,17 @@
 
 		/* background colors */
 		--color-neutral-bg-primary: var(--zinc-900);
-		--color-neutral-bg-secondary: var(--zinc-800);
+		--color-neutral-bg-secondary: var(--zinc-700);
 		--color-neutral-bg-tertiary: var(--zinc-800);
 		--color-neutral-bg-quaternary: var(--zinc-900);
 		--color-neutral-bg-inverted: var(--zinc-50);
 		--color-brand-bg-primary: var(--color-brand-text-primary);
-		--color-brand-bg-secondary: var(--rose-500);
 
 		/* border colors */
 		--color-neutral-border-primary: var(--zinc-600);
 		--color-neutral-border-secondary: var(--zinc-700);
 		--color-neutral-border-tertiary: var(--zinc-700);
 		--color-brand-border-primary: var(--color-brand-text-primary);
-		--color-brand-border-secondary: var(--rose-500);
 
 		/* shadow */
 		--shadow-strength: 10%;
@@ -145,6 +141,7 @@
 	}
 }
 
+/* do not move. this needs to be at the bottom */
 /* safe to use relative color syntax */
 @supports (color: rgb(from white r g b)) {
 	:root {

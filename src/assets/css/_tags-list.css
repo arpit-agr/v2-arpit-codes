@@ -1,0 +1,10 @@
+.tags-list {
+	gap: 0.5rem;
+
+	li {
+		padding: 0.75ex 1ex;
+		background-color: var(--color-neutral-bg-secondary);
+		border-radius: var(--border-radius);
+		line-height: 1;
+	}
+}

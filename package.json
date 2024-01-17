@@ -29,9 +29,10 @@
 	"dependencies": {
 		"@11ty/eleventy-plugin-bundle": "^1.0.1",
 		"@11ty/eleventy-plugin-directory-output": "^1.0.1",
-		"clean-css": "^5.3.0",
+		"browserslist": "^4.22.2",
 		"dotenv": "^16.0.1",
 		"html-minifier": "^4.0.0",
+		"lightningcss": "^1.23.0",
 		"markdown-it-footnote": "^3.0.3"
 	}
 }

@@ -1,0 +1,106 @@
+.note {
+	max-inline-size: var(--measure);
+	margin-inline: auto;
+}
+
+.footnote-item div {
+	--grid-gap: 1ch;
+	grid-template-columns: auto 1fr;
+	font-variant: tabular-nums;
+}
+
+.footnote-backref {
+	padding-inline: 0.5ch;
+}
+
+.note .tags-list {
+	--flow-space: var(--main-padding-block);
+	--cluster-horizontal-alignment: end;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		block-size: var(--border-thickness);
+		inline-size: 100%;
+		border-block-start: var(--border-thickness) dotted
+			var(--color-neutral-bg-secondary);
+		flex-grow: 999;
+		z-index: -1;
+	}
+}
+
+.note footer {
+	--flow-space: var(--main-padding-block);
+
+	padding: var(--space-s-m) var(--gutter);
+	background-color: var(--color-neutral-bg-tertiary);
+	/* box-shadow: var(--shadow-2); */
+	border-radius: var(--border-radius);
+	outline: var(--border-thickness) solid var(--color-neutral-border-tertiary);
+}
+
+.note footer > * {
+	--flow-space: 1em;
+}
+
+.back-to-notes {
+	--flow-space: calc(
+		var(--main-padding-block) - var(--link-padding) - (1 / 2 * var(--step--1))
+	);
+	--cluster-vertical-alignment: center;
+	--cluster-gap: var(--space-2xs);
+	position: relative;
+	display: inline-flex;
+	padding-block: var(--link-padding);
+}
+
+/* TODO: image */
+.note .body {
+	--flow-space: var(--main-padding-block);
+
+	> * {
+		--flow-space: 1em;
+	}
+
+	:is(
+			.codetitle,
+			pre,
+			pre + *,
+			figure,
+			figure + *,
+			/* blockquote,
+			blockquote + *, */
+			h2,
+			h3,
+			h4
+		) {
+		--flow-space: var(--space-m-l);
+	}
+
+	.codetitle + pre {
+		--flow-space: 0.5em;
+	}
+
+	blockquote > :where(ul, ol) {
+		/* padding-inline-start: 2em; */
+		padding-inline-start: var(--space-s-m);
+	}
+
+	/* make the margin top zero for any ul or ol which is the first child in a blockquote */
+	blockquote > :first-child:where(ul, ol) {
+		margin-block: 0;
+	}
+
+	li + li {
+		--flow-space: 0.75em;
+		margin-block-start: var(--flow-space, 1em);
+	}
+
+	img,
+	pre {
+		min-inline-size: calc(100% + (2 * var(--gutter)));
+		margin-inline-start: calc(-1 * var(--gutter));
+		border-radius: var(--conditional-border-radius);
+	}
+}

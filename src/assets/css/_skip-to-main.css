@@ -18,22 +18,21 @@
 	transition: transform 150ms ease;
 	z-index: 999;
 	-webkit-font-smoothing: antialiased;
+
+	@media (--OSdark) {
+		-webkit-font-smoothing: auto;
+	}
 }
 
 .skip-to-main:focus-visible {
-	color: var(--color-skip-to-main-text);
 	inset-block-start: calc(
 		var(--link-padding) - (2 * var(--focus-border-thickness))
 	);
+	color: var(--color-skip-to-main-text);
+	outline-color: var(--color-skip-to-main-bg);
 	opacity: 1;
 	transform: translate(0);
 
 	/* this needs to be added  to override a style in the global styles */
 	transition: transform 150ms ease;
-}
-
-@media (prefers-color-scheme: dark) {
-	.skip-to-main {
-		-webkit-font-smoothing: auto;
-	}
 }

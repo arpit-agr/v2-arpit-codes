@@ -1,11 +1,5 @@
 {%- extends "layouts/base.njk" -%}
 
-{%- css "page-specific-styles" %}
-  {% include "css/note.css" %}
-  {% include "css/tags-list.css" %}
-  {% include "css/syntax-highlighter.css" %}
-{%- endcss %}
-
 {%- block content -%}
   <article class="note flow">
     <header class="stack">
@@ -22,7 +16,7 @@
     </div>
     {% if tags %}
     <ul
-      class="tags-list cluster step--2"
+      class="tags-list cluster step--1"
       role="list"
       aria-label="Tags"
     >
