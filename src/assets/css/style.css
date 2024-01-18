@@ -25,8 +25,10 @@
 @import "_notes-list.css";
 @import "_note.css";
 @import "_footnotes.css";
+@import "_tag-page.css";
 @import "_tags-list.css";
 @import "_syntax-highlighter.css";
+@import "_links.css";
 @import "_likes.css";
 @import "_contact.css";
 @import "_about.css";

@@ -1,0 +1,15 @@
+.tag-page {
+	--stack-horizontal-alignment: stretch;
+	min-block-size: 100%;
+}
+
+.view-all-tags {
+	--cluster-vertical-alignment: center;
+	--cluster-gap: var(--space-2xs);
+
+	display: inline-flex;
+	position: relative;
+	margin-block-start: auto;
+	padding-block: var(--link-padding);
+	align-self: start;
+}

@@ -1,5 +1,6 @@
 .home {
 	--stack-gap: var(--main-padding-block);
+	--stack-horizontal-alignment: stretch;
 	min-block-size: 100%;
 
 	h1 {
@@ -12,14 +13,12 @@
 
 	.body {
 		margin-block-start: auto;
-		inline-size: 100%;
 		animation-delay: 333ms;
 	}
 
 	.info-container {
 		--cluster-gap: 1em var(--space-2xl-3xl);
 		--cluster-vertical-alignment: last baseline;
-		inline-size: 100%;
 	}
 
 	@media (--md-n-above) {

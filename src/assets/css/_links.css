@@ -1,0 +1,75 @@
+.links > header {
+	--stack-gap: var(--space-s-xs);
+
+	@media (--md-n-above) {
+		align-self: start;
+		position: sticky;
+		inset-block-start: var(--main-padding-block);
+	}
+}
+
+.link-list > li {
+	--grid-gap: var(--space-2xs-4xs);
+
+	position: relative;
+	grid-template-columns: auto 1fr;
+	align-items: flex-start;
+	padding-block: var(--space-xs);
+}
+
+.link-list > li + li {
+	border-block-start: var(--border-thickness) solid
+		var(--color-neutral-border-secondary);
+}
+
+.link-list a {
+	text-decoration: none;
+}
+
+.link-container > a {
+	font-weight: 500;
+
+	&:after {
+		content: "";
+		position: absolute;
+		inset: 0;
+	}
+}
+
+.link-container:has(a + .tags-list) > a {
+	margin-inline-end: 0.5rem;
+}
+
+.link-list {
+	.tags-list {
+		position: relative;
+		display: inline-flex;
+		z-index: 2;
+	}
+
+	.icon-container {
+		--icon-container-size: 1lh;
+	}
+}
+
+.link-list li:has(.link-container > a:where(:hover, :focus-visible)) .square {
+	rotate: 90deg;
+	scale: 0.8;
+}
+
+.link-list li:has(.link-container > a:where(:hover, :focus-visible)) .arrow {
+	opacity: 1;
+	scale: 1;
+}
+
+@media not (--hoverOK) {
+	.link-list .square {
+		rotate: 90deg;
+		scale: 0.8;
+	}
+
+	.link-list .arrow {
+		opacity: 1;
+		scale: 1;
+	}
+}

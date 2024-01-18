@@ -24,8 +24,9 @@
 		grid-row: 1;
 		grid-column: 2;
 		block-size: 0px;
-		border-block-start: var(--border-thickness) dotted
-			var(--color-neutral-border-primary);
+
+		border-block-start: var(--border-thickness) solid
+			var(--color-neutral-border-secondary);
 	}
 }
 

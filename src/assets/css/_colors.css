@@ -71,7 +71,7 @@
 
 	/* background colors */
 	--color-neutral-bg-primary: var(--zinc-100);
-	--color-neutral-bg-secondary: var(--zinc-300);
+	--color-neutral-bg-secondary: var(--zinc-200);
 	--color-neutral-bg-tertiary: var(--zinc-50);
 	--color-neutral-bg-quaternary: var(--zinc-800);
 	--color-neutral-bg-inverted: var(--zinc-950);

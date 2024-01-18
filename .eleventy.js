@@ -19,6 +19,9 @@ const md = require("./config/filters/md.js");
 const { readableDate, htmlDate } = require("./config/filters/date.js");
 const addNbsp = require("./config/filters/add-nbsp.js");
 const excerpt = require("./config/filters/excerpt.js");
+const getAllTags = require("./config/filters/getAllTags.js");
+const filterTagList = require("./config/filters/filterTagList.js");
+const excludeTag = require("./config/filters/excludeTag.js");
 const codetitle = require("./config/shortcodes/codetitle.js");
 const markdown = require("./config/plugins/md.js");
 const assetHash = require("./config/plugins/asset-hash.js");
@@ -38,6 +41,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", readableDate);
 	eleventyConfig.addFilter("addNbsp", addNbsp);
 	eleventyConfig.addFilter("excerpt", excerpt);
+	eleventyConfig.addFilter("getAllTags", getAllTags);
+	eleventyConfig.addFilter("filterTagList", filterTagList);
+	eleventyConfig.addFilter("excludeTag", excludeTag);
 
 	//Add Plugins
 	eleventyConfig.addPlugin(markdown);

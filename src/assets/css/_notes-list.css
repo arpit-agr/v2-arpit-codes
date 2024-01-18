@@ -14,12 +14,12 @@
 	overflow: hidden;
 }
 
-.notes-list > li:has(a:focus) {
+.notes-list > li:has(a:focus-visible) {
 	outline-width: var(--focus-border-thickness);
 	outline-color: var(--color-brand-border-primary);
 }
 
-.notes-list > li:has(a:where(:hover, :focus)) .note-title {
+.notes-list > li:has(a:where(:hover, :focus-visible)) .note-title {
 	color: var(--color-brand-text-primary);
 }
 

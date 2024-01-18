@@ -1,4 +1,4 @@
-/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1360,18,1.25,7,2,&s=0.75|0.5|0.25|0.125|0.0833333333,1.5|2|2.5|3|4|5|7.5,s-l|m-xl|l-s|l-2xl|l-m|s-xs|l-5xl|xl-5xl|l-3xl|2xl-5xl&g=s,l,xl,12 */
+/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1360,18,1.25,7,2,&s=0.75|0.5|0.25|0.125|0.0833333333,1.5|2|2.5|3|4|5|7.5,s-l|m-xl|l-s|l-2xl|l-m|s-xs|l-5xl|xl-5xl|l-3xl|2xl-5xl|2xs-4xs&g=s,l,xl,12 */
 
 :root {
 	--space-5xs: clamp(0.0625rem, 0.0625rem + 0vw, 0.0625rem);
@@ -40,4 +40,5 @@
 	--space-xl-5xl: clamp(2.5rem, 0.6731rem + 9.1346vw, 8.4375rem);
 	--space-l-3xl: clamp(2rem, 1.2308rem + 3.8462vw, 4.5rem);
 	--space-2xl-5xl: clamp(3rem, 1.3269rem + 8.3654vw, 8.4375rem);
+	--space-2xs-4xs: clamp(0.125rem, 0.6154rem + -0.5769vw, 0.5rem);
 }

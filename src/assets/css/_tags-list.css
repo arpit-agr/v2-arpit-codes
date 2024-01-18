@@ -1,10 +1,34 @@
+.tags {
+	--stack-horizontal-alignment: stretch;
+	min-block-size: 100%;
+
+	.tags-list {
+		margin-block-start: auto;
+		max-inline-size: var(--measure);
+	}
+}
+
 .tags-list {
 	gap: 0.5rem;
+	/* font-family: var(--font-monospace); */
 
-	li {
+	a {
+		display: inline-block;
 		padding: 0.75ex 1ex;
 		background-color: var(--color-neutral-bg-secondary);
 		border-radius: var(--border-radius);
 		line-height: 1;
+		text-decoration: none;
+		transition-property: background-color, color;
+	}
+
+	a:where(:hover, :focus) {
+		background-color: var(--color-brand-bg-primary);
+		color: var(--color-brand-text-inverted);
+		-webkit-font-smoothing: antialiased;
+	}
+
+	a:focus-visible {
+		outline-offset: 0;
 	}
 }

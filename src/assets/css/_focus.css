@@ -16,13 +16,13 @@
 	so the default is not needed
 */
 :is(.site-head, .site-footer) a:focus-visible,
-.back-to-notes:focus-visible {
+:is(.back-to-notes, .view-all-tags):focus-visible {
 	outline: none;
 }
 
 /* custom focus ring */
 :where(.site-head, .site-footer) a:before,
-.back-to-notes:before {
+:is(.back-to-notes, .view-all-tags):before {
 	content: "";
 	position: absolute;
 	inset: var(--link-padding) calc(-1 / 4 * var(--gutter));
@@ -37,6 +37,6 @@
 }
 
 :is(.site-head, .site-footer) a:focus-visible:before,
-.back-to-notes:focus-visible:before {
+:is(.back-to-notes, .view-all-tags):focus-visible:before {
 	outline: var(--focus-border-thickness) solid var(--color-brand-border-primary);
 }

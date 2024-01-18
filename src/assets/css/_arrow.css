@@ -43,3 +43,8 @@
 		transform-origin: center;
 	}
 }
+
+/* exception */
+li:has([data-type="like"]) .arrow path {
+	rotate: -45deg;
+}

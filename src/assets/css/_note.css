@@ -13,8 +13,8 @@
 		position: absolute;
 		block-size: var(--border-thickness);
 		inline-size: 100%;
-		border-block-start: var(--border-thickness) dotted
-			var(--color-neutral-bg-secondary);
+		border-block-start: var(--border-thickness) solid
+			var(--color-neutral-border-secondary);
 		flex-grow: 999;
 		z-index: -1;
 	}

@@ -111,6 +111,12 @@ h1 {
 	letter-spacing: var(--letter-spacing-h1);
 }
 
+.heading-1 {
+	font-size: var(--step-5);
+	line-height: var(--line-height-h2);
+	letter-spacing: normal;
+}
+
 h2,
 .heading-2 {
 	font-size: var(--step-3);

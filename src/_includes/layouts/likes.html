@@ -1,22 +1,23 @@
 {%- extends "layouts/base.njk" -%}
 
 {%- block content -%}
-  <div class="likes grid" data-type="archive">
+  <div class="likes links grid" data-type="archive">
     <header class="stack fade">
       <h1>{{ title }}</h1>
       <p class="subtitle step--1 color:secondary text-wrap:balance">
         {{ subtitle }}
       </p>
     </header>
-    <ol class="likes-list" role="list" reversed>
+    <ol class="link-list" role="list" reversed>
       {%- for item in collections.likes | reverse -%}
         <li class="grid">
-          <span class="icon-container">
-            <span class="square"></span>
-            {% include "partials/arrow.html" %}
-          </span>
+          {% include "partials/arrow.html" %}
           <div class="link-container">
-            <a class="text-wrap:pretty" href="{{ item.data.url }}">
+            <a
+              class="text-wrap:pretty"
+              href="{{ item.data.url }}"
+              data-type="like"
+            >
               {{ item.data.title -}}
             </a>
             {% if item.data.tags %}
@@ -26,7 +27,10 @@
                 aria-label="Tags"
               >
                 {% for tag in item.data.tags | sort %}
-                  <li>#{{ tag }}</li>
+                {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                  <li>
+                    <a href={{ tagUrl }}>#{{ tag }}</a>
+                  </li>
                 {% endfor %}
               </ul>
             {% endif %}

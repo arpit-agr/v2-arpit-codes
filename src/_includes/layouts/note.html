@@ -21,7 +21,10 @@
       aria-label="Tags"
     >
       {% for tag in tags %}
-        <li>#{{ tag }}</li>
+      {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+        <li>
+          <a href={{ tagUrl }}>#{{ tag }}</a>
+        </li>
       {% endfor %}
     </ul>
     {% endif %}
