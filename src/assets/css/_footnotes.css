@@ -1,0 +1,26 @@
+.footnote-item {
+	--grid-gap: 1ch;
+	grid-template-columns: auto 1fr;
+	font-variant: tabular-nums;
+}
+
+.footnote-backref {
+	padding-inline: 0.5ch;
+}
+
+@supports (grid-template-columns: subgrid) {
+	/* safe to enhance to */
+	.footnotes-list {
+		display: grid;
+		grid-template-columns: auto 1fr;
+	}
+
+	.footnote-item {
+		grid-column: 1/-1;
+		grid-template-columns: subgrid;
+	}
+
+	.footnote-item-counter {
+		justify-self: end;
+	}
+}

@@ -47,15 +47,13 @@ module.exports = function (eleventyConfig) {
 			}
 
 			return `
-				<li id="fn${id}" class="footnote-item">
-					<div class="grid">
-						<span class="footnote-item-counter">${n}.</span>
+				<li id="fn${id}" class="footnote-item grid">
+					<span class="footnote-item-counter">${n}.</span>
 			`;
 		};
 
 		mdLib.renderer.rules.footnote_close = () => {
 			return `
-				</div>
 			</li>
 			`;
 		};

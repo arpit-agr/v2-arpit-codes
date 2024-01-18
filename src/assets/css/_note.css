@@ -3,16 +3,6 @@
 	margin-inline: auto;
 }
 
-.footnote-item div {
-	--grid-gap: 1ch;
-	grid-template-columns: auto 1fr;
-	font-variant: tabular-nums;
-}
-
-.footnote-backref {
-	padding-inline: 0.5ch;
-}
-
 .note .tags-list {
 	--flow-space: var(--main-padding-block);
 	--cluster-horizontal-alignment: end;
