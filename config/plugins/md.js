@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
 					? '<hr class="footnotes-sep" />\n'
 					: '<hr class="footnotes-sep">\n') +
 				'<section class="footnotes flow">\n' +
-				'<h2 id="footnotes-heading">Footnotes</h2>' +
+				'<h2 id="footnotes-heading" class="heading-3">Footnotes</h2>' +
 				'<ol class="footnotes-list" role="list" aria-labelledby="footnotes-heading">\n'
 			);
 		};

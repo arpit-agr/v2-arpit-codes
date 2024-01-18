@@ -1,7 +1,11 @@
 .footnote-item {
 	--grid-gap: 1ch;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: auto [main-start] 1fr [main-end];
 	font-variant: tabular-nums;
+}
+
+.footnote-item > :not(.footnote-item-counter) {
+	grid-column: main;
 }
 
 .footnote-backref {
@@ -12,7 +16,7 @@
 	/* safe to enhance to */
 	.footnotes-list {
 		display: grid;
-		grid-template-columns: auto 1fr;
+		grid-template-columns: auto [main-start] 1fr [main-end];
 	}
 
 	.footnote-item {
