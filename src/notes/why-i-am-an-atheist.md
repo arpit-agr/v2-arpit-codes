@@ -3,7 +3,8 @@ title: "Bhagat Singh on Atheism"
 date: 2022-09-28
 url: "https://www.marxists.org/archive/bhagat-singh/1930/10/05.htm"
 tags:
-  - "likes"
+  - "atheism"
+  - "india"
 ---
 
 > Criticism and independent thinking are the two indispensable qualities of a revolutionary. Because Mahatamaji is great, therefore none should criticise him. Because he has risen above, therefore everything he says —may be in the field of Politics or Religion, Economics or Ethics— is right. Whether you are convinced or not you must say: "Yes, that's true". This mentality does not lead towards progress. It is rather too obviously reactionary.

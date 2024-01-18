@@ -4,4 +4,5 @@ url: "https://www.outlookindia.com/magazine/story/entertainment-news-the-third-c
 date: "2022-11-02"
 tags:
   - "india"
+  - "srk"
 ---

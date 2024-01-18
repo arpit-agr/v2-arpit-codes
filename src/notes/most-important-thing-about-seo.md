@@ -3,7 +3,7 @@ title: "The Most Important Thing About SEO"
 date: 2022-12-12
 url: "https://youtube.com/watch?v=53mVg45Rdxg&t=790"
 tags:
-  - "SEO"
+  - "seo"
 ---
 
 Jason Lengstorf on server side rendering and SEO:

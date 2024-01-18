@@ -1,9 +1,9 @@
 ---
-title: "Style The Marker Of The Summary Element For Open And Closed States"
+title: "Styling The Open And Closed State of The Summary Element"
 date: 2023-01-25
 url: "https://andy-bell.co.uk/improving-likes-on-my-site/"
 tags:
-  - "CSS"
+  - "css"
 ---
 
 TIL how Andy styles the summary `::marker` pseudo-element for open and closed states:

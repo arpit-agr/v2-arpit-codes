@@ -3,6 +3,7 @@ title: "About the Gap After the List Marker"
 date: 2023-03-04
 tags:
   - "css"
+  - "list"
 ---
 
 > 1. Browsers apply a default padding-inline-start of 40px to `<ul>` and `<ol>` elements.

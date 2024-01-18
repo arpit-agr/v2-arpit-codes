@@ -3,7 +3,7 @@ title: "Understanding Layout Algorithms"
 date: 2022-12-23
 url: "https://www.joshwcomeau.com/css/understanding-layout-algorithms/"
 tags:
-  - "CSS"
+  - "css"
 ---
 
 Josh Comeau writes:
