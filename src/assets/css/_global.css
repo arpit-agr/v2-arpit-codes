@@ -4,7 +4,7 @@
 	--line-height-h1: 0.8;
 	--line-height-h2: 1.2;
 	--line-height-h3: 1.4;
-	--line-height-body: 1.6;
+	--line-height-body: 1.7;
 	--letter-spacing-h1: -0.033em;
 	--letter-spacing-step--1: 0.0125em;
 	--letter-spacing-step--2: 0.05em;
@@ -39,11 +39,13 @@
 * {
 	text-decoration-color: var(--text-decoration-color, currentColor);
 	text-decoration-style: solid;
-}
 
-@supports (text-decoration-thickness: 1px) {
-	* {
+	@supports (text-decoration-thickness: 1px) {
 		text-decoration-thickness: var(--border-thickness);
+	}
+
+	@supports (text-underline-offset: 1px) {
+		text-underline-offset: max(0.1em, 3.6px);
 	}
 }
 
@@ -112,14 +114,14 @@ h1 {
 }
 
 .heading-1 {
-	font-size: var(--step-5);
+	font-size: var(--step-3);
 	line-height: var(--line-height-h2);
 	letter-spacing: normal;
 }
 
 h2,
 .heading-2 {
-	font-size: var(--step-3);
+	font-size: var(--step-2);
 	line-height: var(--line-height-h2);
 	letter-spacing: normal;
 }
@@ -148,12 +150,6 @@ a {
 	transition-property: color, text-decoration-color;
 	transition-duration: 333ms;
 	transition-timing-function: ease;
-}
-
-@supports (text-underline-offset: 1px) {
-	a {
-		text-underline-offset: max(0.1em, 3.6px);
-	}
 }
 
 @supports (-webkit-tap-highlight-color: transparent) {
