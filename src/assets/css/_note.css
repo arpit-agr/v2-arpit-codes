@@ -59,13 +59,14 @@
 			pre + *,
 			figure,
 			figure + *,
-			/* blockquote,
-			blockquote + *, */
+			blockquote,
+			blockquote + *,
 			h2,
 			h3,
 			h4
 		) {
-		--flow-space: var(--space-m-l);
+		/* --flow-space: var(--space-m-l); */
+		--flow-space: 1lh;
 	}
 
 	.codetitle + pre {
