@@ -3,6 +3,7 @@ title: "CSS Variable Fallbacks"
 date: 2023-02-07
 tags:
   - "css"
+draft: true
 ---
 
 Fallbacks can be dynamic, via `var()` references.

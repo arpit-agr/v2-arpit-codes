@@ -4,6 +4,7 @@ date: 2022-12-12
 url: "https://youtube.com/watch?v=53mVg45Rdxg&t=790"
 tags:
   - "seo"
+draft: true
 ---
 
 Jason Lengstorf on server side rendering and SEO:

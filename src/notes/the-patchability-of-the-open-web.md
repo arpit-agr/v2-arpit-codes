@@ -6,6 +6,7 @@ tags:
   - "design-principles"
   - "html"
   - "web"
+draft: true
 ---
 
 Dave Rupert on the principle of 'considering users over authors':

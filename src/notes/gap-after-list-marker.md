@@ -4,6 +4,7 @@ date: 2023-03-04
 tags:
   - "css"
   - "list"
+draft: true
 ---
 
 > 1. Browsers apply a default padding-inline-start of 40px to `<ul>` and `<ol>` elements.
