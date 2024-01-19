@@ -1,5 +1,5 @@
 ---
-title: "Understanding `text-underline-offset`"
+title: "Understanding the naming of `text-underline-offset`"
 date: 2024-01-19
 tags:
   - "css"
