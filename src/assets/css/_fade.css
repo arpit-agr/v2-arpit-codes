@@ -1,13 +1,13 @@
 @keyframes fade {
 	100% {
 		opacity: 1;
-		filter: unset;
+		/* filter: unset; */
 	}
 }
 
 .fade {
 	opacity: 0;
-	filter: blur(var(--space-4xs));
+	/* filter: blur(var(--space-4xs)); */
 	animation-name: fade;
 	animation-duration: 999ms;
 	animation-fill-mode: forwards;

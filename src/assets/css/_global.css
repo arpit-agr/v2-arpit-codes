@@ -59,7 +59,7 @@ body {
 
 	padding-inline: var(--gutter);
 	background-color: var(--color-neutral-bg-primary);
-	color: var(--color-neutral-text-primary);
+	color: var(--body-text-color);
 
 	font-family: var(--font-plain);
 	font-size: var(--step-0);

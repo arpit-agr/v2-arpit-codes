@@ -88,6 +88,7 @@
 	--shadow-strength: 1%;
 
 	/* TKTK */
+	--body-text-color: var(--color-neutral-text-primary);
 	--text-decoration-color: var(--zinc-500);
 	--color-skip-to-main-text: var(--color-brand-text-inverted);
 	--color-skip-to-main-bg: var(--color-brand-bg-primary);
@@ -126,6 +127,7 @@
 		--shadow-color: 220 40% 2%;
 
 		/* TKTK */
+		--body-text-color: var(--rose-50);
 		--text-decoration-color: var(--zinc-500);
 		--color-skip-to-main-text: var(--color-brand-text-inverted);
 		--color-skip-to-main-bg: var(--color-brand-bg-primary);
