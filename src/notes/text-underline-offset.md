@@ -18,7 +18,7 @@ a {
 
 ## The Issue
 
-When using this property, I find myself looking it up quite frequently because all the other underline style properties are linked to the `text-decoration` property.
+The `text-underline-offset` property trips me up quite frequently because all the other underline style properties are linked to the `text-decoration` property and this causes a lot of confusion.
 
 ```css
 a {
@@ -36,5 +36,3 @@ Thanks to [Kevin Powell](https://youtube.com/watch?v=x3MTfp3HDLc&t=506), today I
 As per [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset):
 
 > `text-underline-offset` is not part of the [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) shorthand. While an element can have multiple `text-decoration` lines, `text-underline-offset` only impacts underlining, and not other possible line decoration options such as `overline` or `line-through`.
-
-Now that I know the reason behind the naming, I hope I won't be as uncertain when using the `text-underline-offset` property.
