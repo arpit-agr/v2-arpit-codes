@@ -76,10 +76,6 @@ body {
 	}
 }
 
-body > :is(main, header) {
-	z-index: 1;
-}
-
 main {
 	grid-area: main;
 	padding-block: var(--main-padding-block);
