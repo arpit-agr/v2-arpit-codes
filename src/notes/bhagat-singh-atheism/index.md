@@ -5,6 +5,7 @@ url: "https://www.marxists.org/archive/bhagat-singh/1930/10/05.htm"
 tags:
   - "atheism"
   - "india"
+draft: true
 ---
 
 Bhagat Singh was 23 years old when he is supposed to have written his essay on 'Why I Am An Atheist'
