@@ -28,12 +28,15 @@
       {% endfor %}
     </ul>
     {% endif %}
-    {# <footer class="flow">
+    <footer class="stack">
       <p>
-        👋🏽 &nbsp;{{ developer.introduction | md | safe }}
+        {{ developer.introduction | md | safe }}
+        {{ developer.signoff | md | safe }}
       </p>
-      <p>{{ developer.signoff | md | safe }}</p>
-    </footer> #}
+      <a href="mailto:{{ developer.email }}">
+        Send an Email
+      </a>
+    </footer>
     <a
       class="back-to-notes cluster step--1 color:secondary"
       href="/notes/"
