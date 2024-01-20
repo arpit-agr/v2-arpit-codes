@@ -7,7 +7,13 @@
   aria-label="Home"
   {{ helpers.getLinkActiveState("/", page.url) | safe }} 
   >
-    <img src="/assets/images/arpit.webp?{{ assetHash }}" alt="" width="128" height="128">
+    <img
+      src="/assets/images/arpit.webp?{{ assetHash }}"
+      alt=""
+      width="128"
+      height="128"
+      aria-hidden="true"
+    >
 
     {% if page.url == "/" %}
       Home
