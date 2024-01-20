@@ -1,9 +1,56 @@
+const path = require("path");
+const markdownItEleventyImg = require("markdown-it-eleventy-img");
 const markdownItFootnote = require("markdown-it-footnote");
+const markdownItAttrs = require("markdown-it-attrs");
 
 module.exports = function (eleventyConfig) {
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", (mdLib) => {
-		mdLib.use(markdownItFootnote);
+		mdLib
+			.use(markdownItEleventyImg, {
+				imgOptions: {
+					widths: [400, 800, 1200],
+					formats: ["avif", "webp", "auto"],
+					urlPath: "/assets/images/scaled",
+					outputDir: "public/assets/images/scaled",
+				},
+				globalAttributes: {
+					class: "note-image",
+					sizes: "(min-width: 85rem) 80vw, 100vw",
+					loading: "lazy",
+					decoding: "async",
+				},
+				renderImage(image, attributes) {
+					const [Image, options] = image;
+					const [src, attrs] = attributes;
+
+					Image(src, options);
+
+					const metadata = Image.statsSync(src, options);
+					const imageMarkup = Image.generateHTML(metadata, attrs, {
+						whitespaceMode: "inline",
+					});
+
+					return `<figure class="flow">${imageMarkup}${
+						attrs.title
+							? `<figcaption class="step--1 color:secondary">${attrs.title}</figcaption>`
+							: ""
+					}</figure>`;
+				},
+				resolvePath: (filepath, env) => {
+					let isContentImage = filepath.startsWith("./");
+					if (isContentImage) {
+						// Resolve path to content-relative images
+						return path.join(path.dirname(env.page.inputPath), filepath);
+					} else {
+						// Resolve path to global images
+						return path.join("public", filepath);
+					}
+				},
+			})
+			.use(markdownItFootnote)
+			.use(markdownItAttrs);
+
 		mdLib.renderer.rules.footnote_caption = (tokens, idx) => {
 			let n = Number(tokens[idx].meta.id + 1).toString();
 

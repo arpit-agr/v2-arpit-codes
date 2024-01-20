@@ -3,11 +3,7 @@ const htmlmin = require("html-minifier");
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addTransform("htmlmin", function (content) {
 		// Prior to Eleventy 2.0: use this.outputPath instead
-		if (
-			this.page.outputPath &&
-			this.page.outputPath.endsWith(".html") &&
-			process.env.NODE_ENV === "production"
-		) {
+		if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
 			let minified = htmlmin.minify(content, {
 				useShortDoctype: false,
 				removeComments: true,
