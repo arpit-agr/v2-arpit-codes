@@ -76,12 +76,16 @@
 		--flow-space: 1em;
 	}
 
+	/* empty paragraph elements are added before and after the figure element by the markdown-it-eleventy-img plugin */
+	p:empty {
+		--flow-space: 0;
+	}
+
 	:is(
 			.codetitle,
 			pre,
 			pre + *,
 			figure,
-			figure + *,
 			figure + * + *, /* FIXME: remove once there are no empty elements after figure */
 			blockquote,
 			blockquote + *,

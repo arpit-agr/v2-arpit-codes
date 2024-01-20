@@ -136,11 +136,6 @@ p {
 	text-wrap: pretty;
 }
 
-/* empty paragraph elements are added before and after the figure element by the markdown-it-eleventy-img plugin */
-p:empty {
-	display: none;
-}
-
 /* Reset button styling */
 button {
 	/* all: unset; */
