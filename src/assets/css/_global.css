@@ -189,43 +189,22 @@ hr {
 }
 
 blockquote {
-	display: grid;
-	grid-template-columns: 3ch 1fr auto;
-	gap: 0;
-
-	> * {
-		grid-column: 2/3;
-	}
+	padding-inline-start: var(--gutter);
+	border-inline-start: var(--space-4xs) solid
+		var(--color-neutral-border-primary);
 }
 
 blockquote > * + * {
 	margin-block-start: var(--flow-space, 1em);
 }
 
-blockquote:before,
-blockquote:after {
-	color: var(--color-brand-bg-primary);
-	line-height: 0.8;
+figcaption {
+	line-height: var(--line-height-h3);
 }
 
-blockquote:before {
-	content: open-quote;
-	font-size: var(--step-5);
-}
-
-blockquote:after {
-	content: close-quote;
-	font-size: 0px;
-	opacity: 0;
-
-	line-height: 0;
-	grid-column: 3;
-	align-self: end;
-}
-
-em {
+/* em {
 	color: var(--color-brand-text-primary);
-}
+} */
 
 strong {
 	color: var(--color-brand-text-primary);
