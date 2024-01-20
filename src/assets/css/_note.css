@@ -1,43 +1,64 @@
 .note {
+	--_footer-space: calc(var(--link-padding) + var(--main-padding-block));
 	max-inline-size: var(--measure);
 	margin-inline: auto;
 }
 
 .note .tags-list {
-	--flow-space: var(--main-padding-block);
+	--flow-space: var(--_footer-space);
 	--cluster-horizontal-alignment: end;
 	position: relative;
 
 	&:before {
+		content: "Tagged:";
+		padding-block: 0.75ex;
+		background: var(--color-neutral-bg-primary);
+		line-height: 1;
+	}
+
+	&:after {
 		content: "";
 		position: absolute;
 		block-size: var(--border-thickness);
 		inline-size: 100%;
-		border-block-start: var(--border-thickness) solid
-			var(--color-neutral-border-secondary);
+		border-block-start: var(--border-thickness) dashed
+			var(--color-neutral-border-primary);
 		flex-grow: 999;
+		translate: 0 calc(1 / 2 * var(--border-thickness));
 		z-index: -1;
 	}
 }
 
 .note footer {
-	--flow-space: var(--main-padding-block);
+	--flow-space: var(--_footer-space);
 
-	padding: var(--space-s-m) var(--gutter);
+	padding: var(--gutter);
 	background-color: var(--color-neutral-bg-tertiary);
 	/* box-shadow: var(--shadow-2); */
 	border-radius: var(--border-radius);
 	outline: var(--border-thickness) solid var(--color-neutral-border-tertiary);
-}
 
-.note footer > * {
-	--flow-space: 1em;
+	> * {
+		--flow-space: 1em;
+	}
+
+	> [href="mailto:hello@arpit.codes"] {
+		--text-decoration-color: transparent;
+		-webkit-font-smoothing: antialiased;
+
+		padding: 0.25ex 1ex;
+		background: var(--color-brand-bg-primary);
+		color: var(--color-brand-text-inverted);
+		border-radius: var(--border-radius);
+
+		&:where(:hover) {
+			--text-decoration-color: currentColor;
+		}
+	}
 }
 
 .back-to-notes {
-	--flow-space: calc(
-		var(--main-padding-block) - var(--link-padding) - (1 / 2 * var(--step--1))
-	);
+	--flow-space: 0;
 	--cluster-vertical-alignment: center;
 	--cluster-gap: var(--space-2xs);
 	position: relative;
@@ -45,7 +66,6 @@
 	padding-block: var(--link-padding);
 }
 
-/* TODO: image */
 .note .body {
 	--flow-space: var(--main-padding-block);
 
@@ -69,7 +89,8 @@
 		--flow-space: 1lh;
 	}
 
-	.codetitle + pre {
+	.codetitle + pre,
+	picture + figcaption {
 		--flow-space: 0.5em;
 	}
 
@@ -83,15 +104,26 @@
 		margin-block: 0;
 	}
 
+	blockquote > * {
+		--flow-space: 1em;
+	}
+
 	li + li {
 		--flow-space: 0.75em;
 		margin-block-start: var(--flow-space, 1em);
 	}
 
-	img,
-	pre {
-		min-inline-size: calc(100% + (2 * var(--gutter)));
-		margin-inline-start: calc(-1 * var(--gutter));
+	img {
+		margin-inline: auto;
+		inline-size: auto;
+		block-size: auto;
 		border-radius: var(--conditional-border-radius);
 	}
+}
+
+.note .body :is(picture, pre),
+.note footer {
+	min-inline-size: calc(100% + (2 * var(--gutter)));
+	margin-inline-start: calc(-1 * var(--gutter));
+	border-radius: var(--conditional-border-radius);
 }
