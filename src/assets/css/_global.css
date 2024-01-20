@@ -63,7 +63,6 @@ body {
 	background-color: var(--color-neutral-bg-primary);
 	color: var(--body-text-color);
 
-	font-family: var(--font-plain);
 	font-size: var(--step-0);
 	line-height: var(--line-height-body);
 	font-feature-settings: "ss02" on, "zero";
