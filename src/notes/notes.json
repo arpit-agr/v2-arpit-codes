@@ -1,4 +1,4 @@
 {
 	"layout": "layouts/note.html",
-	"permalink": "./notes/{% if customTitle %}{{ customTitle | slugify }}{% else %}{{ title | slugify }}{% endif %}/"
+	"permalink": "./notes/{% if slug %}{{ slug | slugify }}{% else %}{{ title | slugify }}{% endif %}/"
 }
