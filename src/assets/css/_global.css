@@ -49,6 +49,9 @@
 }
 
 body {
+	max-inline-size: var(--max-layout-width);
+	margin-inline: auto;
+
 	position: relative;
 	display: grid;
 	grid-template-areas: "header" "main" "footer";
