@@ -7,7 +7,8 @@
   aria-label="Home"
   {{ helpers.getLinkActiveState("/", page.url) | safe }} 
   >
-    <img src="/icon-192.png" alt="">
+    <img src="/assets/images/arpit.webp?{{ assetHash }}" alt="" width="128" height="128">
+
     {% if page.url == "/" %}
       Home
     {% else %}
