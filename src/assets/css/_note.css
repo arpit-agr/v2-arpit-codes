@@ -7,6 +7,7 @@
 .note .tags-list {
 	--flow-space: var(--_footer-space);
 	--cluster-horizontal-alignment: end;
+	--cluster-vertical-alignment: start;
 	position: relative;
 
 	&:before {
@@ -24,7 +25,9 @@
 		border-block-start: var(--border-thickness) dashed
 			var(--color-neutral-border-primary);
 		flex-grow: 999;
-		translate: 0 calc(1 / 2 * var(--border-thickness));
+		transform: translateY(
+			calc((1 / 2 * (var(--border-thickness) + var(--step--1)) + 0.75ex))
+		);
 		z-index: -1;
 	}
 }
@@ -79,6 +82,7 @@
 			pre + *,
 			figure,
 			figure + *,
+			figure + * + *, /* FIXME: remove once there are no empty elements after figure */
 			blockquote,
 			blockquote + *,
 			h2,
