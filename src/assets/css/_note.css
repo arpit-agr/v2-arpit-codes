@@ -78,7 +78,8 @@
 
 	/* empty paragraph elements are added before and after the figure element by the markdown-it-eleventy-img plugin */
 	p:empty {
-		--flow-space: 0;
+		/* --flow-space: 0; */
+		display: none;
 	}
 
 	:is(
