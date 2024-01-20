@@ -45,14 +45,12 @@
 	.note {
 		max-inline-size: unset;
 		inline-size: 100%;
+		block-size: max-content;
 
 		display: grid;
 		grid-template-columns:
 			1fr [main-start] 1fr [text-start] minmax(0, var(--measure))
 			[text-end] 1fr [main-end] 1fr;
-
-		/* header, body, tags, footer, back to notes */
-		grid-template-rows: auto auto auto auto 1fr;
 	}
 
 	.note > * {
