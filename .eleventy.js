@@ -68,6 +68,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./src/assets/scripts");
 	eleventyConfig.addPassthroughCopy({ "./src/assets/favicons": "/" });
 	// eleventyConfig.addPassthroughCopy("./src/manifest.webmanifest");
+	// Copy any .pdf file to `public`, via Glob pattern
+	// Keeps the same directory structure.
+	eleventyConfig.addPassthroughCopy("**/*.pdf");
 
 	eleventyConfig.setServerOptions({
 		showAllHosts: true,
