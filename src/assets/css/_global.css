@@ -10,8 +10,7 @@
 	--letter-spacing-step--2: 0.05em;
 
 	/* Variables for border */
-	/* --border-radius: var(--space-3xs); */
-	--border-radius: var(--space-4xs-3xs);
+	--border-radius: var(--space-3xs);
 	--conditional-border-radius: clamp(
 		0px,
 		((100vw - var(--border-radius)) - 100%) * 9999,
@@ -134,6 +133,11 @@ p {
 	text-wrap: pretty;
 }
 
+/* empty paragraph elements are added before and after the figure element by the markdown-it-eleventy-img plugin */
+p:empty {
+	display: none;
+}
+
 /* Reset button styling */
 button {
 	/* all: unset; */
@@ -174,9 +178,11 @@ a {
 }
 
 hr {
+	margin: unset;
 	border: unset;
-	block-size: var(--border-thickness);
-	background-color: var(--color-neutral-border-secondary);
+	inline-size: 100%;
+	border-block-start: var(--border-thickness) dashed
+		var(--color-neutral-border-secondary);
 }
 
 blockquote {
@@ -246,6 +252,7 @@ del {
 }
 
 pre {
+	margin: unset;
 	padding: var(--gutter);
 	max-inline-size: calc(100vw - (2 * var(--gutter)));
 
@@ -263,7 +270,7 @@ pre {
 }
 
 code {
-	padding: 0.125ex 0.5ex;
+	padding: 0.0625ex 0.5ex;
 	border-radius: var(--border-radius);
 	background-color: var(--color-neutral-bg-secondary);
 	font-size: 1rem;

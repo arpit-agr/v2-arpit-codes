@@ -128,7 +128,7 @@
 
 		/* TKTK */
 		--body-text-color: var(--rose-50);
-		--text-decoration-color: var(--zinc-500);
+		--text-decoration-color: var(--zinc-400);
 		--color-skip-to-main-text: var(--color-brand-text-inverted);
 		--color-skip-to-main-bg: var(--color-brand-bg-primary);
 		--god-ray-color: var(--rose-200);
