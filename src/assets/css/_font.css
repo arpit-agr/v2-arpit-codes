@@ -14,3 +14,10 @@
 	--font-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco,
 		Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
+@font-face {
+	font-family: "Golos Text";
+	src: url("/assets/fonts/GolosText-VariableFont_wght-subset.woff2?{{ assetHash }}")
+		format("woff2");
+	font-display: swap;
+}
