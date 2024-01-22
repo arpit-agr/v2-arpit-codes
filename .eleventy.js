@@ -70,7 +70,7 @@ module.exports = function (eleventyConfig) {
 	// eleventyConfig.addPassthroughCopy("./src/manifest.webmanifest");
 	// Copy any .pdf file to `public`, via Glob pattern
 	// Keeps the same directory structure.
-	eleventyConfig.addPassthroughCopy("**/*.pdf");
+	eleventyConfig.addPassthroughCopy("./src/**/*.pdf");
 
 	eleventyConfig.setServerOptions({
 		showAllHosts: true,
