@@ -25,12 +25,18 @@
       font-display: swap;
     }
 
+    @font-face {
+      font-family: "Golos Text-fallback";
+      size-adjust: 117.19999999999999%;
+      src: local("Times New Roman");
+    }
+
     :root {
       /* Variables for type */
-      --font-plain: "Golos Text", -apple-system, BlinkMacSystemFont, helvetica neue,
+      --font-plain: "Golos Text", "Golos Text-fallback", -apple-system, BlinkMacSystemFont, helvetica neue,
         helvetica, avenir next, avenir, segoe ui, roboto, noto, arial, sans-serif;
 
-      --font-special: "Golos Text", -apple-system, BlinkMacSystemFont,
+      --font-special: "Golos Text", "Golos Text-fallback", -apple-system, BlinkMacSystemFont,
         helvetica neue, helvetica, avenir next, avenir, segoe ui, roboto, noto,
         arial, sans-serif;
 
