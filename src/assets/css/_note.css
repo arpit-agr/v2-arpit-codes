@@ -64,8 +64,9 @@
 	--flow-space: 0;
 	--cluster-vertical-alignment: center;
 	--cluster-gap: var(--space-2xs);
+
+	max-inline-size: fit-content;
 	position: relative;
-	display: inline-flex;
 	padding-block: var(--link-padding);
 }
 

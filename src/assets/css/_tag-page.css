@@ -7,7 +7,6 @@
 	--cluster-vertical-alignment: center;
 	--cluster-gap: var(--space-2xs);
 
-	display: inline-flex;
 	position: relative;
 	margin-block-start: auto;
 	padding-block: var(--link-padding);

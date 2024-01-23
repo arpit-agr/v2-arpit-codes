@@ -50,7 +50,7 @@
 
 .site-logo {
 	--cluster-gap: 0.5em;
-	display: inline-flex;
+	max-inline-size: fit-content;
 
 	img {
 		block-size: calc(1em * var(--line-height-body));
