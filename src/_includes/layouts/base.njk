@@ -17,6 +17,7 @@
   <!-- if js is available add class -->
   <script>document.documentElement.classList.add('has-js');</script>
   <!-- css -->
+  <!-- the following style uses a njk variable so it can't be moved to a css file -->
   <style>
     @font-face {
       font-family: "Golos Text";
@@ -33,19 +34,13 @@
 
     :root {
       /* Variables for type */
-      --font-plain: "Golos Text", "Golos Text-fallback", -apple-system, BlinkMacSystemFont, helvetica neue,
-        helvetica, avenir next, avenir, segoe ui, roboto, noto, arial, sans-serif;
+      --font-plain: "Golos Text", "Golos Text-fallback", -apple-system, BlinkMacSystemFont, helvetica neue, helvetica, avenir next, avenir, segoe ui, roboto, noto, arial, sans-serif;
 
-      --font-special: "Golos Text", "Golos Text-fallback", -apple-system, BlinkMacSystemFont,
-        helvetica neue, helvetica, avenir next, avenir, segoe ui, roboto, noto,
-        arial, sans-serif;
+      --font-special: "Golos Text", "Golos Text-fallback", -apple-system,BlinkMacSystemFont, helvetica neue, helvetica, avenir next, avenir, segoe ui, roboto, noto, arial, sans-serif;
 
-      --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
-        Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
-        Segoe UI Emoji, Segoe UI Symbol;
+      --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
-      --font-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco,
-        Consolas, "Liberation Mono", "Courier New", monospace;
+      --font-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco,Consolas, "Liberation Mono", "Courier New", monospace;
     }
 
     body {
