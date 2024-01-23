@@ -41,6 +41,11 @@
 		grid-column: body;
 	}
 
+	/* styles specifically for the home page  */
+	.home h1 {
+		font-size: var(--fluid-47-223);
+	}
+
 	/* styles specifically for the note page  */
 	.note {
 		max-inline-size: unset;
