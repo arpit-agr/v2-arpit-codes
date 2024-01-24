@@ -62,7 +62,7 @@
 	scale: 1;
 }
 
-@media not (--hoverOK) {
+@media (--hoverNotOK) {
 	.link-list .square {
 		rotate: 90deg;
 		scale: 0.8;

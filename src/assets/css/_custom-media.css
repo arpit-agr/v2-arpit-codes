@@ -9,6 +9,8 @@
 @custom-media --OSlight (prefers-color-scheme: light);
 
 @custom-media --hoverOK (hover: hover);
+/* xrOS, iOS */
+@custom-media --hoverNotOK (hover: none);
 
 @custom-media --motionOK (prefers-reduced-motion: no-preference);
 @custom-media --motionNotOK (prefers-reduced-motion: reduce);
