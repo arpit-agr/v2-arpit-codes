@@ -5,7 +5,7 @@
 
 .view-all-tags {
 	--cluster-vertical-alignment: center;
-	--cluster-gap: var(--space-2xs);
+	--cluster-gap: var(--space-3xs);
 
 	position: relative;
 	margin-block-start: auto;

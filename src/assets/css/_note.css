@@ -62,7 +62,7 @@
 .back-to-notes {
 	--flow-space: 0;
 	--cluster-vertical-alignment: center;
-	--cluster-gap: var(--space-2xs);
+	--cluster-gap: var(--space-3xs);
 
 	max-inline-size: fit-content;
 	position: relative;
