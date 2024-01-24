@@ -20,16 +20,14 @@
 
 	&:after {
 		content: "";
-		position: absolute;
 		block-size: var(--border-thickness);
-		inline-size: 100%;
 		border-block-start: var(--border-thickness) dashed
 			var(--color-neutral-border-primary);
 		flex-grow: 999;
 		transform: translateY(
 			calc((1 / 2 * (var(--border-thickness) + var(--step--1)) + 0.75ex))
 		);
-		z-index: -1;
+		order: -1;
 	}
 }
 

@@ -54,8 +54,11 @@
 
 		display: grid;
 		grid-template-columns:
-			1fr [main-start] 1fr [text-start] minmax(0, var(--measure))
-			[text-end] 1fr [main-end] 1fr;
+			minmax(0, 1fr) [main-start] minmax(0, 1fr) [text-start] minmax(
+				0,
+				var(--measure)
+			)
+			[text-end] minmax(0, 1fr) [main-end] minmax(0, 1fr);
 	}
 
 	.note > * {
