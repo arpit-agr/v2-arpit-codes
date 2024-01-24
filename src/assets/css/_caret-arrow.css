@@ -6,11 +6,15 @@
 
 	position: relative;
 	inline-size: auto;
-	block-size: 0.5lh;
+	block-size: calc(1 / 2 * 1em * var(--line-height-body));
 	vertical-align: middle;
 	stroke-width: var(--border-thickness);
 	fill: none;
 	stroke: currentColor;
+
+	@supports (block-size: 1lh) {
+		block-size: 0.5lh;
+	}
 }
 
 .line-path {

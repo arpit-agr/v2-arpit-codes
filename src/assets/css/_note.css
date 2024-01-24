@@ -94,8 +94,11 @@
 			h3,
 			h4
 		) {
-		/* --flow-space: var(--space-m-l); */
+		--flow-space: calc(1em * var(--line-height-body));
+
+		@supports (margin: 1lh) {
 		--flow-space: 1lh;
+		}
 	}
 
 	.codetitle + pre,

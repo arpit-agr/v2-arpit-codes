@@ -48,7 +48,11 @@
 	}
 
 	.icon-container {
-		--icon-container-size: 1lh;
+		--icon-container-size: calc(1em * var(--line-height-body));
+
+		@supports (inline-size: 1lh) {
+			--icon-container-size: 1lh;
+		}
 	}
 }
 

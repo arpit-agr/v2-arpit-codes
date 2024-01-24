@@ -29,7 +29,11 @@
 
 .notes-list {
 	.body {
-		margin-block-end: var(--space-m);
+		margin-block-end: calc(1em * var(--line-height-body));
+
+		@supports (margin: 1lh) {
+			margin-block-end: 1lh;
+		}
 	}
 
 	.meta-data {
