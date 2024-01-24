@@ -2,6 +2,7 @@
 	--_footer-space: calc(var(--link-padding) + var(--main-padding-block));
 	max-inline-size: var(--measure);
 	margin-inline: auto;
+	font-size-adjust: from-font;
 }
 
 .note .tags-list {
@@ -97,7 +98,7 @@
 		--flow-space: calc(1em * var(--line-height-body));
 
 		@supports (margin: 1lh) {
-		--flow-space: 1lh;
+			--flow-space: 1lh;
 		}
 	}
 

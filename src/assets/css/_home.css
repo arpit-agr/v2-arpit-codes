@@ -8,6 +8,7 @@
 		--stack-horizontal-alignment: stretch;
 
 		font-size: var(--fluid-47-217);
+		font-size-adjust: from-font;
 		pointer-events: none;
 	}
 
