@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
 		mdLib
 			.use(markdownItEleventyImg, {
 				imgOptions: {
-					widths: [400, 800, 1200],
+					widths: [400, 800, 1200, null],
 					formats: ["avif", "webp", "auto"],
 					urlPath: "/assets/images/scaled",
 					outputDir: "public/assets/images/scaled",
