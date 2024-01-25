@@ -9,14 +9,13 @@
 }
 
 .tags-list {
-	gap: 0.5rem;
-	/* font-family: var(--font-monospace); */
+	--cluster-gap: var(--space-3xs);
 
 	a {
 		display: inline-block;
-		padding: 0.75ex 1ex;
+		padding: 0.75ex 1.25ex;
 		background-color: var(--color-neutral-bg-secondary);
-		border-radius: var(--border-radius);
+		border-radius: 9999px;
 		line-height: 1;
 		text-decoration: none;
 		transition-property: background-color, color;
