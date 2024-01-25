@@ -8,4 +8,8 @@ eleventyNavigation:
 
 ## 🚧 Work in Progress 🚧
 
-I'm currently working on enhancing this page to provide a better experience. In the meantime, if you'd like to explore my projects, please feel free to reach out to me at <hello@arpit.codes>
+I'm currently working on enhancing this page to provide a better experience. In the meantime, here's a list of some of my recent work:
+
+- [CG21 EXIM](https://cg21.in)
+- [Code Squad](https://www.codesquadedu.com)
+- [Packnwraps Packaging Solutions](https://packnwraps.netlify.app)
