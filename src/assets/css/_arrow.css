@@ -45,6 +45,6 @@
 }
 
 /* exception */
-li:has([data-type="like"]) .arrow path {
+li:has([data-type="link"]) .arrow path {
 	rotate: -45deg;
 }

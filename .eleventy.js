@@ -15,7 +15,7 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 // Importing from config
 const getPages = require("./config/collections/pages.js");
 const getNotes = require("./config/collections/notes.js");
-const getLikes = require("./config/collections/likes.js");
+const getLinks = require("./config/collections/links.js");
 const md = require("./config/filters/md.js");
 const { readableDate, htmlDate } = require("./config/filters/date.js");
 const addNbsp = require("./config/filters/add-nbsp.js");
@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
 	//Add Collections
 	eleventyConfig.addCollection("pages", getPages);
 	eleventyConfig.addCollection("notes", getNotes);
-	eleventyConfig.addCollection("likes", getLikes);
+	eleventyConfig.addCollection("links", getLinks);
 
 	//Add Filters
 	eleventyConfig.addFilter("md", md);

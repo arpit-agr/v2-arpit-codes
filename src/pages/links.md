@@ -1,8 +1,8 @@
 ---
-title: "Likes"
-layout: "layouts/likes.html"
+title: "Links"
+layout: "layouts/links.html"
 eleventyNavigation:
-  key: "Likes"
+  key: "Links"
   order: 3
 
 subtitle: "Articles, videos and whatnot that I’ve liked"

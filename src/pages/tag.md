@@ -7,7 +7,7 @@ pagination:
     - all
     - pages
     - notes
-    - likes
+    - links
 layout: "layouts/tag.html"
 permalink: "/tags/{{ tag | slugify }}/"
 eleventyComputed:

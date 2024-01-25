@@ -1,3 +1,11 @@
+.links {
+	grid-template-columns: 1fr;
+
+	@media (--md-n-above) {
+		grid-template-columns: 1fr 2fr;
+	}
+}
+
 .links > header {
 	--stack-gap: var(--space-s-xs);
 

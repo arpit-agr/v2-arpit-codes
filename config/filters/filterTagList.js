@@ -1,6 +1,6 @@
 const filterTagList = (tags) => {
 	return (tags || []).filter(
-		(tag) => ["all", "notes", "likes"].indexOf(tag) === -1
+		(tag) => ["all", "notes", "links"].indexOf(tag) === -1
 	);
 };
 

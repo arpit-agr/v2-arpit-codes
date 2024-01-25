@@ -1,7 +1,7 @@
 {%- extends "layouts/base.njk" -%}
 
 {%- block content -%}
-  <div class="likes links grid" data-type="archive">
+  <div class="links links grid" data-type="archive">
     <header class="stack fade">
       <h1>{{ title }}</h1>
       <p class="subtitle step--1 color:secondary text-wrap:balance">
@@ -9,14 +9,14 @@
       </p>
     </header>
     <ol class="link-list" role="list" reversed>
-      {%- for item in collections.likes | reverse -%}
+      {%- for item in collections.links | reverse -%}
         <li class="grid">
           {% include "partials/arrow.html" %}
           <div class="link-container">
             <a
               class="text-wrap:pretty"
               href="{{ item.data.url }}"
-              data-type="like"
+              data-type="link"
             >
               {{ item.data.title -}}
             </a>
