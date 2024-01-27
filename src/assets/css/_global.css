@@ -17,8 +17,7 @@
 		var(--border-radius)
 	);
 	--border-thickness: var(--space-5xs);
-	/* --focus-border-thickness: min(0.125em, var(--space-4xs)); */
-	--focus-border-thickness: var(--space-5xs);
+	--focus-border-thickness: var(--space-4xs);
 
 	/* Variables for layout */
 	--gutter: var(--space-s);

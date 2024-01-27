@@ -26,8 +26,4 @@
 		color: var(--color-brand-text-inverted);
 		-webkit-font-smoothing: antialiased;
 	}
-
-	a:focus-visible {
-		outline-offset: 0;
-	}
 }
