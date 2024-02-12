@@ -1,51 +1,39 @@
 {%- extends "layouts/base.njk" -%}
 
 {%- block content -%}
-  <div class="tag-page links stack" data-type="archive">
-    <h1 class="heading-1 fade">Content tagged "{{ tag }}"</h1>
-    <ol class="link-list" role="list" reversed>
-      {% set taglist = collections[ tag ] %}
-      {% for post in taglist | reverse %}
-        <li class="grid">
-          {% include "partials/arrow.html" %}
-          <div class="link-container">
-            {% if post.url %}
-              <a
-                class="text-wrap:pretty"
-                href="{{ post.url }}"
-              >
-                {{ post.data.title -}}
-              </a>
-            {% else %}
-              <a
-                class="text-wrap:pretty"
-                href="{{ post.data.url }}"
-                data-type="link"
-              >
-                {{ post.data.title -}}
-              </a>
-            {% endif %}
-            {% if post.data.tags.length > 1 %}
-              <ul
-                class="tags-list cluster step--1"
-                role="list"
-                aria-label="Tags"
-              >
-                {% for tag in post.data.tags | excludeTag(tag) | sort %}
-                {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-                  <li>
-                    <a href={{ tagUrl }}>#{{ tag }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </div>
-        </li>
-      {%- endfor -%}
-    </ol>
-    <a class="view-all-tags cluster step--1 color:secondary" href="/tags/">
-      {% include "partials/caret-arrow.html" %}
-      View All Tags
-    </a>
-  </div>
+	<div class="tag-page links stack" data-type="archive">
+		<h1 class="heading-1 fade">Content tagged "{{ tag }}"</h1>
+		<ol class="link-list" role="list" reversed>
+			{% set taglist = collections[ tag ] %}
+			{% for post in taglist | reverse %}
+				<li class="grid">
+					{% include "partials/arrow.html" %}
+					<div class="link-container">
+						{% if post.url %}
+							<a class="text-wrap:pretty" href="{{ post.url }}">
+								{{- post.data.title -}}
+							</a>
+						{% else %}
+							<a class="text-wrap:pretty" href="{{ post.data.url }}" data-type="link">
+								{{- post.data.title -}}
+							</a>
+						{% endif %}
+						{% if post.data.tags.length > 1 %}
+							<ul class="tags-list cluster step--1" role="list" aria-label="Tags">
+								{% for tag in post.data.tags | excludeTag(tag) | sort %}
+									{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+									<li>
+										<a href="{{ tagUrl }}">#{{ tag }}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</div>
+				</li>
+			{%- endfor -%}
+		</ol>
+		<a class="view-all-tags cluster step--1 color:secondary" href="/tags/">
+			{% include "partials/caret-arrow.html" %} View All Tags
+		</a>
+	</div>
 {%- endblock -%}

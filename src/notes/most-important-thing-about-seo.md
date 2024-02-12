@@ -1,9 +1,9 @@
 ---
-title: "The Most Important Thing About SEO"
+title: 'The Most Important Thing About SEO'
 date: 2022-12-12
-url: "https://youtube.com/watch?v=53mVg45Rdxg&t=790"
+url: 'https://youtube.com/watch?v=53mVg45Rdxg&t=790'
 tags:
-  - "seo"
+  - 'seo'
 draft: true
 ---
 

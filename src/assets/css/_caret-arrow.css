@@ -38,8 +38,7 @@ button:where(:hover, :focus) .tip-path {
 }
 
 /* exceptions */
-:where([data-direction="backwards"], .back-to-notes, .view-all-tags)
-	.caret-arrow {
+:where([data-direction='backwards'], .back-to-notes, .view-all-tags) .caret-arrow {
 	rotate: 180deg;
 }
 

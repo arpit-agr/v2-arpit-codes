@@ -25,9 +25,7 @@
 }
 
 .skip-to-main:focus-visible {
-	inset-block-start: calc(
-		var(--link-padding) - (2 * var(--focus-border-thickness))
-	);
+	inset-block-start: calc(var(--link-padding) - (2 * var(--focus-border-thickness)));
 	color: var(--color-skip-to-main-text);
 	outline-color: var(--color-skip-to-main-bg);
 	opacity: 1;

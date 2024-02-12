@@ -13,7 +13,7 @@
 	}
 
 	.info-container:before {
-		content: "[0" counter(section) "]";
+		content: '[0' counter(section) ']';
 		color: var(--color-brand-text-primary);
 		font-size: var(--step--2);
 		letter-spacing: var(--letter-spacing-step--2);
@@ -39,7 +39,7 @@
 /* workaround*/
 .about .body {
 	li {
-		list-style-type: "→";
+		list-style-type: '→';
 		padding-inline-start: 1ch;
 	}
 

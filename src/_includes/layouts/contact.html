@@ -1,39 +1,37 @@
 {%- extends "layouts/base.njk" -%}
 
 {%- block content -%}
-  <div class="contact stack">
-    <header class="stack">
-      <h1 class="fade">{{ title }}</h1>
-      <p class="introduction">
-        {{ introduction | md | safe }}
-      </p>
-    </header>
-    <div class="body stack">
-      <!-- markdown content, if any, will come here -->
-      {{ content | safe }}
-      <div class="info-container cluster">
-        <div class="info-box stack">
-          <h2>Mail:</h2>
-          {{ mail | md | safe  }}
-        </div>
-        <div class="socials info-box stack">
-          <h2>Socials:</h2>
-          <ul class="cluster" role="list">
-            {% for item in socials %}
-              <li>
-                <a class="cluster" href="{{ item.url }}">
-                  {% include item.icon %}
-                  {{ item.platform }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="info-box stack">
-          <h2>Location:</h2>
-          <p>{{ location }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="contact stack">
+		<header class="stack">
+			<h1 class="fade">{{ title }}</h1>
+			<p class="introduction">{{ introduction | md | safe }}</p>
+		</header>
+		<div class="body stack">
+			<!-- markdown content, if any, will come here -->
+			{{ content | safe }}
+			<div class="info-container cluster">
+				<div class="info-box stack">
+					<h2>Mail:</h2>
+					{{ mail | md | safe }}
+				</div>
+				<div class="socials info-box stack">
+					<h2>Socials:</h2>
+					<ul class="cluster" role="list">
+						{% for item in socials %}
+							<li>
+								<a class="cluster" href="{{ item.url }}">
+									{% include item.icon %}
+									{{ item.platform }}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="info-box stack">
+					<h2>Location:</h2>
+					<p>{{ location }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
 {%- endblock -%}

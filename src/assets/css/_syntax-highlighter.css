@@ -1,14 +1,14 @@
 /* syntax highlighter styles*/
 
-code[class*="language"] {
+code[class*='language'] {
 	color: #ddd;
 }
 
-code[class*="language"] .comment {
+code[class*='language'] .comment {
 	color: #707985;
 }
 
-code[class*="language"] .string {
+code[class*='language'] .string {
 	color: #f6a66c;
 }
 

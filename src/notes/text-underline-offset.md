@@ -1,11 +1,11 @@
 ---
-title: "Understanding the naming of `text-underline-offset`"
+title: 'Understanding the naming of `text-underline-offset`'
 date: 2024-01-19
 tags:
-  - "css"
-  - "underline"
-  - "offset"
-description: "The `text-underline-offset` property is named so because it only applies to underlines and not other options such as `overline` or `line-through`."
+  - 'css'
+  - 'underline'
+  - 'offset'
+description: 'The `text-underline-offset` property is named so because it only applies to underlines and not other options such as `overline` or `line-through`.'
 ---
 
 The `text-underline-offset` CSS property sets how far you want the underline to be from its default position.

@@ -20,7 +20,7 @@ dd {
 }
 
 /* Remove list styles and padding on ul, ol elements with a list role, which suggests default styling will be removed */
-:where(ul[role="list"], ol[role="list"]) {
+:where(ul[role='list'], ol[role='list']) {
 	list-style: none;
 	/* Browsers apply a default padding-inline-start
 	 of 40px to <ul> and <ol> elements. */

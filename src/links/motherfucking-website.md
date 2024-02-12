@@ -1,4 +1,4 @@
 ---
-title: "This is a motherfucking website."
-url: "https://motherfuckingwebsite.com"
+title: 'This is a motherfucking website.'
+url: 'https://motherfuckingwebsite.com'
 ---

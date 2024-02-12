@@ -1,11 +1,11 @@
 ---
-title: "Understanding the difference between grid-template and grid-auto"
+title: 'Understanding the difference between grid-template and grid-auto'
 date: 2024-02-12
 tags:
-  - "css"
-  - "grid"
-  - "explicit-grid"
-  - "implicit-grid"
+  - 'css'
+  - 'grid'
+  - 'explicit-grid'
+  - 'implicit-grid'
 draft: true
 ---
 

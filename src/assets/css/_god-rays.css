@@ -39,14 +39,12 @@
 	block-size: 100%;
 	background-image: var(--stripes), var(--rainbow);
 	background-size: 300%, 200%;
-	background-position: 50% 50%, 50% 50%;
+	background-position:
+		50% 50%,
+		50% 50%;
 
 	filter: var(--ray-filter);
-	-webkit-mask-image: radial-gradient(
-		ellipse at 100% 0%,
-		black 40%,
-		transparent 70%
-	);
+	-webkit-mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
 	mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
 	pointer-events: none;
 	opacity: 0.5;
@@ -57,7 +55,7 @@
 }
 
 .god-rays::after {
-	content: "";
+	content: '';
 	position: absolute;
 	inset: 0;
 	background-image: var(--stripes), var(--rainbow);

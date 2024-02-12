@@ -1,8 +1,8 @@
 ---
-title: "Accessible Close Button"
+title: 'Accessible Close Button'
 date: 2023-02-14
 tags:
-  - "html"
+  - 'html'
 draft: true
 ---
 

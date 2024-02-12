@@ -1,8 +1,8 @@
 ---
-title: "CSS repeat() notation"
+title: 'CSS repeat() notation'
 date: 2024-02-12
 tags:
-  - "css"
+  - 'css'
 draft: true
 ---
 

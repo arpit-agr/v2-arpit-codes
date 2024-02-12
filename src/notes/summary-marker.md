@@ -1,9 +1,9 @@
 ---
-title: "Styling The Open And Closed State of The Summary Element"
+title: 'Styling The Open And Closed State of The Summary Element'
 date: 2023-01-25
-url: "https://andy-bell.co.uk/improving-likes-on-my-site/"
+url: 'https://andy-bell.co.uk/improving-likes-on-my-site/'
 tags:
-  - "css"
+  - 'css'
 draft: true
 ---
 
@@ -27,7 +27,7 @@ summary:focus-visible {
 }
 
 summary::before {
-	content: "+";
+	content: '+';
 	display: block;
 	color: var(--color-primary);
 	line-height: 0.5;
@@ -37,13 +37,13 @@ summary::before {
 }
 
 [open] summary::before {
-	content: "—";
+	content: '—';
 }
 
 /* Hide default marker */
 summary::-webkit-details-marker,
 summary::marker {
-	content: "";
+	content: '';
 	display: none;
 }
 ```

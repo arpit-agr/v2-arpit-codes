@@ -3,7 +3,7 @@
 	--square-size: 75;
 
 	display: grid;
-	grid-template-areas: "content";
+	grid-template-areas: 'content';
 	align-items: center;
 	justify-items: center;
 
@@ -45,6 +45,6 @@
 }
 
 /* exception */
-li:has([data-type="link"]) .arrow path {
+li:has([data-type='link']) .arrow path {
 	rotate: -45deg;
 }

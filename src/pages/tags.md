@@ -1,5 +1,5 @@
 ---
-title: "Tags"
-layout: "layouts/tags-list.html"
-permalink: "/tags/"
+title: 'Tags'
+layout: 'layouts/tags-list.html'
+permalink: '/tags/'
 ---

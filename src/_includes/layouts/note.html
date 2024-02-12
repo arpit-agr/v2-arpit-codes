@@ -1,48 +1,33 @@
 {%- extends "layouts/base.njk" -%}
 
 {%- block content -%}
-  <article class="note flow">
-    <header class="stack">
-      <h1 class="heading-1 fade">{{ title }}</h1>
-      <time 
-        class="step--2" 
-        datetime={{ date | htmlDate }}
-      >
-        {{ date | readableDate | safe }}
-      </time>
-    </header>
-    <div class="body flow">
-      {{ content | safe }}
-    </div>
-    {% if tags %}
-    <ul
-      class="tags-list cluster step--1"
-      role="list"
-      aria-label="Tags"
-    >
-      {% for tag in tags %}
-      {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-        <li>
-          <a href={{ tagUrl }}>#{{ tag }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    <footer class="stack">
-      <p>
-        {{ developer.introduction | md | safe }}
-        {{ developer.signoff | md | safe }}
-      </p>
-      <a href="mailto:{{ developer.email }}">
-        Hire Me
-      </a>
-    </footer>
-    <a
-      class="back-to-notes cluster step--1 color:secondary"
-      href="/notes/"
-    >
-      {% include "partials/caret-arrow.html" %}
-      Back to Notes Archive
-    </a>
-  </article>
+	<article class="note flow">
+		<header class="stack">
+			<h1 class="heading-1 fade">{{ title }}</h1>
+			<time class="step--2" datetime="{{ date | htmlDate }}">
+				{{ date | readableDate | safe }}
+			</time>
+		</header>
+		<div class="body flow">{{ content | safe }}</div>
+		{% if tags %}
+			<ul class="tags-list cluster step--1" role="list" aria-label="Tags">
+				{% for tag in tags %}
+					{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+					<li>
+						<a href="{{ tagUrl }}">#{{ tag }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		<footer class="stack">
+			<p>
+				{{ developer.introduction | md | safe }}
+				{{ developer.signoff | md | safe }}
+			</p>
+			<a href="mailto:{{ developer.email }}"> Hire Me </a>
+		</footer>
+		<a class="back-to-notes cluster step--1 color:secondary" href="/notes/">
+			{% include "partials/caret-arrow.html" %} Back to Notes Archive
+		</a>
+	</article>
 {%- endblock -%}

@@ -7,8 +7,7 @@
 	gap: 0 1em;
 	font-size: var(--nav-font-size, var(--step-0));
 	letter-spacing: var(--nav-letter-spacing, normal);
-	border-block-end: var(--border-thickness) dashed
-		var(--color-neutral-border-primary);
+	border-block-end: var(--border-thickness) dashed var(--color-neutral-border-primary);
 }
 
 .site-head a {
@@ -20,11 +19,9 @@
 .site-head a:after {
 	--text-decoration-size: var(--border-thickness);
 
-	content: "";
+	content: '';
 	position: absolute;
-	inset-block-end: calc(
-		-1 / 2 * (var(--text-decoration-size) + var(--border-thickness))
-	);
+	inset-block-end: calc(-1 / 2 * (var(--text-decoration-size) + var(--border-thickness)));
 	inset-inline-start: auto;
 	inset-inline-end: 0;
 	inline-size: 0%;
@@ -40,8 +37,8 @@
 }
 
 .site-head a:hover:after,
-.site-head [aria-current="page"]:after,
-.site-head [data-state="active"]:after {
+.site-head [aria-current='page']:after,
+.site-head [data-state='active']:after {
 	inset-inline-start: 0;
 	inset-inline-end: auto;
 	inline-size: 100%;
@@ -74,7 +71,9 @@
 		padding-inline-start: 1ch;
 		transform: translate(-1ch, -50%);
 		opacity: 0;
-		transition: transform 150ms ease, opacity 150ms ease;
+		transition:
+			transform 150ms ease,
+			opacity 150ms ease;
 	}
 
 	.site-logo:hover span {
@@ -110,10 +109,9 @@
 		transition: grid-template-rows 111ms ease;
 	}
 
-	.has-js [aria-expanded="true"] + .mainnav-list-container {
+	.has-js [aria-expanded='true'] + .mainnav-list-container {
 		grid-template-rows: 1fr;
-		border-block-start: var(--border-thickness) dashed
-			var(--color-neutral-border-primary);
+		border-block-start: var(--border-thickness) dashed var(--color-neutral-border-primary);
 		overflow: visible;
 		transition-duration: 333ms;
 	}
@@ -124,7 +122,7 @@
 		min-block-size: 0;
 	}
 
-	.has-js [aria-expanded="true"] + .mainnav-list-container .mainnav-list {
+	.has-js [aria-expanded='true'] + .mainnav-list-container .mainnav-list {
 		opacity: 1;
 		visibility: visible;
 		transition: opacity 333ms ease 222ms;
@@ -151,15 +149,15 @@
 		transform-origin: center center;
 	}
 
-	:where(.has-js #mainnav) [aria-expanded="true"] .bar {
+	:where(.has-js #mainnav) [aria-expanded='true'] .bar {
 		opacity: 0;
 	}
 
-	:where(.has-js #mainnav) [aria-expanded="true"] #turn1 {
+	:where(.has-js #mainnav) [aria-expanded='true'] #turn1 {
 		transform: rotate(45deg);
 	}
 
-	:where(.has-js #mainnav) [aria-expanded="true"] #turn2 {
+	:where(.has-js #mainnav) [aria-expanded='true'] #turn2 {
 		transform: rotate(-45deg);
 	}
 }

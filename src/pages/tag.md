@@ -8,8 +8,8 @@ pagination:
     - pages
     - notes
     - links
-layout: "layouts/tag.html"
-permalink: "/tags/{{ tag | slugify }}/"
+layout: 'layouts/tag.html'
+permalink: '/tags/{{ tag | slugify }}/'
 eleventyComputed:
-  title: "#{{ tag }}"
+  title: '#{{ tag }}'
 ---

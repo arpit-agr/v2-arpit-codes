@@ -53,7 +53,7 @@ body {
 
 	position: relative;
 	display: grid;
-	grid-template-areas: "header" "main" "footer";
+	grid-template-areas: 'header' 'main' 'footer';
 	grid-template-rows: auto 1fr auto;
 	grid-template-columns: 1fr;
 	grid-gap: 0;
@@ -64,7 +64,9 @@ body {
 
 	font-size: var(--step-0);
 	line-height: var(--line-height-body);
-	font-feature-settings: "ss02" on, "zero";
+	font-feature-settings:
+		'ss02' on,
+		'zero';
 	text-rendering: optimizeLegibility;
 
 	> header {
@@ -168,7 +170,7 @@ a {
 	transition-duration: 0ms;
 }
 
-[href="mailto:hello@arpit.codes"] {
+[href='mailto:hello@arpit.codes'] {
 	-webkit-hyphens: initial;
 	hyphens: initial;
 }
@@ -177,14 +179,12 @@ hr {
 	margin: unset;
 	border: unset;
 	inline-size: 100%;
-	border-block-start: var(--border-thickness) dashed
-		var(--color-neutral-border-secondary);
+	border-block-start: var(--border-thickness) dashed var(--color-neutral-border-secondary);
 }
 
 blockquote {
 	padding-inline-start: var(--gutter);
-	border-inline-start: var(--space-4xs) solid
-		var(--color-neutral-border-primary);
+	border-inline-start: var(--space-4xs) solid var(--color-neutral-border-primary);
 }
 
 blockquote > * + * {

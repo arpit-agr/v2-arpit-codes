@@ -1,9 +1,9 @@
 ---
-title: "About the Gap After the List Marker"
+title: 'About the Gap After the List Marker'
 date: 2023-03-04
 tags:
-  - "css"
-  - "list"
+  - 'css'
+  - 'list'
 draft: true
 ---
 

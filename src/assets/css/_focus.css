@@ -6,7 +6,7 @@
 	text-decoration: none;
 }
 
-[tabindex="-1"]:focus {
+[tabindex='-1']:focus {
 	outline: none;
 }
 
@@ -22,7 +22,7 @@
 /* custom focus ring */
 :where(.site-head, .site-footer) a:before,
 :is(.back-to-notes, .view-all-tags):before {
-	content: "";
+	content: '';
 	position: absolute;
 	inset: var(--link-padding) calc(-1 / 4 * var(--gutter));
 	border-radius: var(--border-radius);

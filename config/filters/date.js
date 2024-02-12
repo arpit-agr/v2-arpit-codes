@@ -1,19 +1,17 @@
-const { DateTime } = require("luxon");
+const {DateTime} = require('luxon');
 
-const readableDate = (dateObj) => {
+const readableDate = dateObj => {
 	return DateTime.fromJSDate(dateObj)
-		.setZone("Asia/Calcutta")
+		.setZone('Asia/Calcutta')
 		.toLocaleString(DateTime.DATE_MED)
-		.replaceAll(" ", "&nbsp;");
+		.replaceAll(' ', '&nbsp;');
 };
 
-const htmlDate = (dateObj) => {
-	return DateTime.fromJSDate(dateObj)
-		.setZone("Asia/Calcutta")
-		.toFormat("yyyy-LL-dd");
+const htmlDate = dateObj => {
+	return DateTime.fromJSDate(dateObj).setZone('Asia/Calcutta').toFormat('yyyy-LL-dd');
 };
 
 module.exports = {
 	readableDate,
-	htmlDate,
+	htmlDate
 };

@@ -1,6 +1,6 @@
 // Pages
-const getPages = (collection) => {
-	return collection.getFilteredByGlob("src/pages/**/*.md");
+const getPages = collection => {
+	return collection.getFilteredByGlob('src/pages/**/*.md');
 };
 
 module.exports = getPages;

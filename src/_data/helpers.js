@@ -10,7 +10,7 @@ module.exports = {
 	 * @returns {String} The attributes or empty
 	 */
 	getLinkActiveState(itemUrl, pageUrl) {
-		let response = "";
+		let response = '';
 
 		if (!pageUrl) {
 			return response;
@@ -37,7 +37,7 @@ module.exports = {
 	 * @returns {Array} The resulting collection
 	 */
 	getSiblingContent(collection, item, limit = 3, random = true) {
-		let filteredItems = collection.filter((x) => x.url !== item.url);
+		let filteredItems = collection.filter(x => x.url !== item.url);
 
 		if (random) {
 			let counter = filteredItems.length;
@@ -74,6 +74,6 @@ module.exports = {
 	 * @returns {Array} result collection or empty
 	 */
 	filterCollectionByKeys(collection, keys) {
-		return collection.filter((x) => keys.includes(x.data.key));
-	},
+		return collection.filter(x => keys.includes(x.data.key));
+	}
 };

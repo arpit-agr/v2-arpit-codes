@@ -12,17 +12,16 @@
 	position: relative;
 
 	&:before {
-		content: "Tagged:";
+		content: 'Tagged:';
 		padding-block: 0.75ex;
 		background: var(--color-neutral-bg-primary);
 		line-height: 1;
 	}
 
 	&:after {
-		content: "";
+		content: '';
 		block-size: var(--border-thickness);
-		border-block-start: var(--border-thickness) dashed
-			var(--color-neutral-border-primary);
+		border-block-start: var(--border-thickness) dashed var(--color-neutral-border-primary);
 		flex-grow: 999;
 		transform: translateY(
 			calc((1 / 2 * (var(--border-thickness) + var(--step--1)) + 0.75ex))
@@ -44,7 +43,7 @@
 		--flow-space: 1em;
 	}
 
-	> [href="mailto:hello@arpit.codes"] {
+	> [href='mailto:hello@arpit.codes'] {
 		--text-decoration-color: transparent;
 		-webkit-font-smoothing: antialiased;
 

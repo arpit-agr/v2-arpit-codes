@@ -1,4 +1,4 @@
-const md = require("markdown-it")();
+const md = require('markdown-it')();
 
 /**
  * Render content as inline markdown if single line, or full
@@ -16,7 +16,7 @@ module.exports = (content, opts) => {
 		md.set(opts);
 	}
 
-	let inline = !content.includes("\n");
+	let inline = !content.includes('\n');
 
 	// If there's quite a bit of content, we want to make sure
 	// it's marked up for readability purposes

@@ -2,22 +2,22 @@
 title: "Bhagat Singh's Thoughts on Atheism"
 date: 2024-01-20
 source:
-  label: "marxists.org"
-  url: "https://www.marxists.org/archive/bhagat-singh/1930/10/05.htm"
+  label: 'marxists.org'
+  url: 'https://www.marxists.org/archive/bhagat-singh/1930/10/05.htm'
 tags:
-  - "atheism"
-  - "blind-faith"
-  - "critical-thinking"
-  - "poverty"
-  - "india"
-slug: "bhagat-singh-atheism"
+  - 'atheism'
+  - 'blind-faith'
+  - 'critical-thinking'
+  - 'poverty'
+  - 'india'
+slug: 'bhagat-singh-atheism'
 ---
 
 [Bhagat Singh](https://en.wikipedia.org/wiki/Bhagat_Singh) was an iconic Indian revolutionary of the Indian freedom struggle, who at age 23 wrote 'Why I Am An Atheist' while he was in Lahore Central Jail.
 
 Published posthmously on 27 September 1931 in [The People](./why-i-am-an-atheist.pdf), the essay can be accessed in its entirety on [{{ source.label }}]({{ source.url }}).
 
-![](./why-i-am-an-atheist-essay.jpg "Image of page 195 of the 27 September 1931 edition of The People, provided by Prof. Chaman Lal to {{ source.label }}."){loading=eager}
+![](./why-i-am-an-atheist-essay.jpg 'Image of page 195 of the 27 September 1931 edition of The People, provided by Prof. Chaman Lal to {{ source.label }}.'){loading=eager}
 
 Here are some passages from Bhagat Singh's essay that I find noteworthy, listed in the order they appear.
 

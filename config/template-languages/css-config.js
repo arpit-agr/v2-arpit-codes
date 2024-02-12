@@ -1,37 +1,34 @@
-const fs = require("node:fs");
-const path = require("node:path");
-const browserslist = require("browserslist");
+const fs = require('node:fs');
+const path = require('node:path');
+const browserslist = require('browserslist');
 const {
 	bundle,
 	Features,
 	browserslistToTargets,
-	composeVisitors,
-} = require("lightningcss");
+	composeVisitors
+} = require('lightningcss');
 
 // Set default transpiling targets
-let browserslistTargets = "> 0.2% and not dead";
+let browserslistTargets = '> 0.2% and not dead';
 
 // Check for user's browserslist
 try {
-	const package = path.resolve(__dirname, fs.realpathSync("package.json"));
+	const package = path.resolve(__dirname, fs.realpathSync('package.json'));
 	const userPkgBrowserslist = require(package);
 
 	if (userPkgBrowserslist.browserslist) {
 		browserslistTargets = userPkgBrowserslist.browserslist;
 	} else {
 		try {
-			const browserslistrc = path.resolve(
-				__dirname,
-				fs.realpathSync(".browserslistrc")
-			);
+			const browserslistrc = path.resolve(__dirname, fs.realpathSync('.browserslistrc'));
 
-			fs.readFile(browserslistrc, "utf8", (_err, data) => {
+			fs.readFile(browserslistrc, 'utf8', (_err, data) => {
 				if (data.length) {
 					browserslistTargets = [];
 				}
 
-				data.split(/\r?\n/).forEach((line) => {
-					if (line.length && !line.startsWith("#")) {
+				data.split(/\r?\n/).forEach(line => {
+					if (line.length && !line.startsWith('#')) {
 						browserslistTargets.push(line);
 					}
 				});
@@ -46,32 +43,25 @@ try {
 
 module.exports = (eleventyConfig, options) => {
 	const defaults = {
-		importPrefix: "_",
+		importPrefix: '_',
 		customMedia: true,
 		minify: true,
 		sourceMap: false,
 		visitors: [],
-		customAtRules: {},
+		customAtRules: {}
 	};
 
-	const {
-		importPrefix,
-		customMedia,
-		minify,
-		sourceMap,
-		visitors,
-		customAtRules,
-	} = {
+	const {importPrefix, customMedia, minify, sourceMap, visitors, customAtRules} = {
 		...defaults,
-		...options,
+		...options
 	};
 
 	// Recognize CSS as a "template language"
-	eleventyConfig.addTemplateFormats("css");
+	eleventyConfig.addTemplateFormats('css');
 
 	// Process CSS with LightningCSS
-	eleventyConfig.addExtension("css", {
-		outputFileExtension: "css",
+	eleventyConfig.addExtension('css', {
+		outputFileExtension: 'css',
 		compile: async function (_inputContent, inputPath) {
 			let parsed = path.parse(inputPath);
 			if (parsed.name.startsWith(importPrefix)) {
@@ -80,17 +70,16 @@ module.exports = (eleventyConfig, options) => {
 
 			// Support @import triggering regeneration for incremental builds
 			// h/t @julientaq for the fix
-			if (_inputContent.includes("@import")) {
+			if (_inputContent.includes('@import')) {
 				// for each file create a list of files to look at
 				const fileList = [];
 
 				// get a list of import on the file your reading
-				const importRuleRegex =
-					/@import\s+(?:url\()?['"]?([^'"\);]+)['"]?\)?.*;/g;
+				const importRuleRegex = /@import\s+(?:url\()?['"]?([^'"\);]+)['"]?\)?.*;/g;
 
 				let match;
 				while ((match = importRuleRegex.exec(_inputContent))) {
-					fileList.push(parsed.dir + "/" + match[1]);
+					fileList.push(parsed.dir + '/' + match[1]);
 				}
 
 				this.addDependencies(inputPath, fileList);
@@ -99,20 +88,20 @@ module.exports = (eleventyConfig, options) => {
 			let targets = browserslistToTargets(browserslist(browserslistTargets));
 
 			return async () => {
-				let { code } = await bundle({
+				let {code} = await bundle({
 					filename: inputPath,
 					minify,
 					sourceMap,
 					targets,
 					drafts: {
-						customMedia,
+						customMedia
 					},
 					exclude: Features.VendorPrefixes | Features.LogicalProperties,
 					customAtRules,
-					visitor: composeVisitors(visitors),
+					visitor: composeVisitors(visitors)
 				});
 				return code;
 			};
-		},
+		}
 	});
 };

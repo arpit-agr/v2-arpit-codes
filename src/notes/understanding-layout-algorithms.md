@@ -1,9 +1,9 @@
 ---
-title: "Understanding Layout Algorithms"
+title: 'Understanding Layout Algorithms'
 date: 2022-12-23
-url: "https://www.joshwcomeau.com/css/understanding-layout-algorithms/"
+url: 'https://www.joshwcomeau.com/css/understanding-layout-algorithms/'
 tags:
-  - "css"
+  - 'css'
 draft: true
 ---
 

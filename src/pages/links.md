@@ -1,9 +1,9 @@
 ---
-title: "Links"
-layout: "layouts/links.html"
+title: 'Links'
+layout: 'layouts/links.html'
 eleventyNavigation:
-  key: "Links"
+  key: 'Links'
   order: 3
 
-subtitle: "Articles, videos and whatnot that I’ve liked"
+subtitle: 'Articles, videos and whatnot that I’ve liked'
 ---

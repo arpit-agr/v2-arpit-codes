@@ -1,8 +1,8 @@
 ---
-title: "CSS Variable Fallbacks"
+title: 'CSS Variable Fallbacks'
 date: 2023-02-07
 tags:
-  - "css"
+  - 'css'
 draft: true
 ---
 

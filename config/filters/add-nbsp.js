@@ -1,8 +1,8 @@
-module.exports = (str) => {
+module.exports = str => {
 	if (!str) {
 		return;
 	}
-	let title = str.replace(/((.*)\s(.*))$/g, "$2&nbsp;$3");
+	let title = str.replace(/((.*)\s(.*))$/g, '$2&nbsp;$3');
 	title = title.replace(/"(.*)"/g, '\\"$1\\"');
 	return title;
 };

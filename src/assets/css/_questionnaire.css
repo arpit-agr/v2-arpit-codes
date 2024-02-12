@@ -24,7 +24,7 @@
 	}
 
 	ul:before {
-		content: "";
+		content: '';
 		inline-size: var(--border-thickness);
 		block-size: calc(100% - (2 * var(--counter-size)));
 
@@ -48,7 +48,7 @@
 	}
 
 	li::before {
-		content: "Q." counter(questions);
+		content: 'Q.' counter(questions);
 		inline-size: var(--counter-size);
 		block-size: var(--counter-size);
 		display: flex;

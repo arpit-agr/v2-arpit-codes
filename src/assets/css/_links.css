@@ -26,8 +26,7 @@
 }
 
 .link-list > li + li {
-	border-block-start: var(--border-thickness) dashed
-		var(--color-neutral-border-secondary);
+	border-block-start: var(--border-thickness) dashed var(--color-neutral-border-secondary);
 }
 
 .link-list a {
@@ -38,7 +37,7 @@
 	font-weight: 500;
 
 	&:after {
-		content: "";
+		content: '';
 		position: absolute;
 		inset: 0;
 	}

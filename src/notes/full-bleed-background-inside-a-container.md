@@ -1,9 +1,9 @@
 ---
-title: "Full-Bleed Background Inside A Container"
+title: 'Full-Bleed Background Inside A Container'
 date: 2023-02-09
-url: "https://www.youtube.com/shorts/81pnuZFarRw"
+url: 'https://www.youtube.com/shorts/81pnuZFarRw'
 tags:
-  - "css"
+  - 'css'
 draft: true
 ---
 

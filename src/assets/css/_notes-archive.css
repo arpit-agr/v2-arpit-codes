@@ -20,7 +20,7 @@
 	align-items: end;
 
 	&:before {
-		content: "";
+		content: '';
 		grid-row: 1;
 		grid-column: 2;
 		block-size: 0px;

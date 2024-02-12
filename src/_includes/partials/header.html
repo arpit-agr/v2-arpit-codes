@@ -1,35 +1,33 @@
-
 <header class="site-head">
-  <!-- TODO: optimise image and add alt text-->
-  <a
-  class="site-logo cluster"
-  href="/"
-  {{ helpers.getLinkActiveState("/", page.url) | safe }} 
-  >
-    <img
-      src="/assets/images/arpit.webp?{{ assetHash }}"
-      alt=""
-      width="128"
-      height="128"
-      aria-hidden="true"
-    >
+	<!-- TODO: optimise image and add alt text-->
+	<a
+		class="site-logo cluster"
+		href="/"
+		{{ helpers.getLinkActiveState("/", page.url) | safe }}
+	>
+		<img
+			src="/assets/images/arpit.webp?{{ assetHash }}"
+			alt=""
+			width="128"
+			height="128"
+			aria-hidden="true"
+		/>
 
-    {% if page.url == "/" %}
-      Home
-    {% else %}
-      {{ site.title }}
-    {% endif %}
+		{% if page.url == "/" %}
+			Home
+		{% else %}
+			{{ site.title }}
+		{% endif %}
 
-    <span class="step--2" aria-hidden="true">
-      {% if page.url == "/" %}
-        [You are here]
-        {# 👋🏽 #}
-      {% else %}
-        [Home]
-      {% endif %}
-    </span>
-  </a>
+		<span class="step--2" aria-hidden="true">
+			{% if page.url == "/" %}
+				[You are here] {# 👋🏽 #}
+			{% else %}
+				[Home]
+			{% endif %}
+		</span>
+	</a>
 
-  <!-- site navigation -->
-  {% include "partials/main-nav.html" %}
+	<!-- site navigation -->
+	{% include "partials/main-nav.html" %}
 </header>

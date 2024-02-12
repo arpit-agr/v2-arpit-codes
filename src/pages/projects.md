@@ -1,8 +1,8 @@
 ---
-title: "Projects"
-layout: "layouts/projects.html"
+title: 'Projects'
+layout: 'layouts/projects.html'
 eleventyNavigation:
-  key: "Projects"
+  key: 'Projects'
   order: 1
 ---
 

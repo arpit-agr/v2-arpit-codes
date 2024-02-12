@@ -7,7 +7,7 @@
 		align-self: end;
 	}
 
-	[data-direction="forwards"] {
+	[data-direction='forwards'] {
 		margin-inline-start: auto;
 	}
 }
