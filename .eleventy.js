@@ -11,6 +11,7 @@ const directoryOutputPlugin = require('@11ty/eleventy-plugin-directory-output');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const {EleventyRenderPlugin} = require('@11ty/eleventy');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 // Importing from config
 const getPages = require('./config/collections/pages.js');
@@ -55,6 +56,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(htmlmin);
 	eleventyConfig.addPlugin(drafts);
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
+	eleventyConfig.addPlugin(pluginRss);
 
 	//Shortcode
 	eleventyConfig.addShortcode('codetitle', codetitle);
