@@ -1,5 +1,5 @@
 .home {
-	--stack-gap: var(--main-padding-block);
+	--stack-gap: var(--space-2xl-3xl);
 	--stack-horizontal-alignment: stretch;
 	min-block-size: 100%;
 
