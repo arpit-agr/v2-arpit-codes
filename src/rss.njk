@@ -5,24 +5,25 @@
   "metadata": {
     "title": "Arpit's Notes",
     "subtitle": "A feed of the latest notes on everything I'm learning and excited about",
-    "language": "en"
+    "language": "en",
+		"url": "https://arpit.codes/"
   }
 }
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
 	<title>{{ metadata.title }}</title>
 	<subtitle>{{ metadata.subtitle }}</subtitle>
-	<link href="{{ permalink | absoluteUrl(site.url) }}" rel="self" />
-	<link href="{{ site.url }}" />
+	<link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self" />
+	<link href="{{ metadata.url }}" />
 	<updated>{{ collections.notes | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-	<id>{{ site.url }}</id>
+	<id>{{ metadata.url }}</id>
 	<author>
 		<name>{{ developer.name }}</name>
 		<email>{{ developer.email }}</email>
 	</author>
 	{%- for note in collections.notes | reverse -%}
-		{%- set absolutePostUrl = note.url | absoluteUrl(site.url) -%}
+		{%- set absolutePostUrl = note.url | absoluteUrl(metadata.url) -%}
 		<entry>
 			<title>{{ note.data.title }}</title>
 			<link href="{{ absolutePostUrl }}" />
