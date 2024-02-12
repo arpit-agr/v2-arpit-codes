@@ -1,12 +1,14 @@
+---json
+{
+  "permalink": "feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Arpit's Notes",
+    "subtitle": "A feed of the latest notes on everything I'm learning and excited about",
+    "language": "en"
+  }
+}
 ---
-permalink: 'feed.xml'
-eleventyExcludeFromCollections: true
-metadata:
-  title: "Arpit's Notes"
-  subtitle: "A feed of the latest notes on everything I'm learning and excited about"
-  language: 'en'
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
 	<title>{{ metadata.title }}</title>
