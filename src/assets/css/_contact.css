@@ -18,13 +18,3 @@
 		--stack-gap: 1ex 0;
 	}
 }
-
-.socials {
-	a {
-		--cluster-gap: 0.25em;
-	}
-
-	ul {
-		--cluster-gap: 1em;
-	}
-}

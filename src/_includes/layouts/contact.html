@@ -14,19 +14,6 @@
 					<h2>Mail:</h2>
 					{{ mail | md | safe }}
 				</div>
-				<div class="socials info-box stack">
-					<h2>Socials:</h2>
-					<ul class="cluster" role="list">
-						{% for item in socials %}
-							<li>
-								<a class="cluster" href="{{ item.url }}">
-									{% include item.icon %}
-									{{ item.platform }}
-								</a>
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
 				<div class="info-box stack">
 					<h2>Location:</h2>
 					<p>{{ location }}</p>

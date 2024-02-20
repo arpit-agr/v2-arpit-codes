@@ -1,15 +1,23 @@
 .site-footer {
 	--cluster-gap: 0 1em;
-	/* --cluster-horizontal-alignment: space-between; */
+	--cluster-horizontal-alignment: space-between;
 	border-block-start: var(--border-thickness) dashed var(--color-neutral-border-primary);
 
-	> :last-child {
+	/* > :last-child {
 		margin-inline-start: auto;
-	}
+	} */
 }
 
 .site-footer a,
 .license {
 	position: relative;
 	padding-block: var(--link-padding);
+}
+
+[aria-label='Socials'] {
+	--cluster-gap: 1em;
+
+	a {
+		--cluster-gap: var(--space-3xs);
+	}
 }

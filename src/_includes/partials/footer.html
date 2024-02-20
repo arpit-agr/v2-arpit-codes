@@ -1,4 +1,14 @@
 <footer class="site-footer cluster color:secondary step--2" role="contentinfo">
 	{# <p class="license">{{ site.license | md | safe }}</p> #}
+	<ul class="cluster" role="list" aria-label="Socials">
+		{% for item in socials %}
+			<li>
+				<a class="cluster" href="{{ item.url }}">
+					{% include item.icon %}
+					{{ item.platform }}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
 	<a href="#top">Back to top ↑</a>
 </footer>
