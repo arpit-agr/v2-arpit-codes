@@ -91,12 +91,6 @@
 		grid-column: text;
 	}
 
-	.note > .body img {
-		object-fit: contain;
-		/* random magic number */
-		max-block-size: 70vh;
-	}
-
 	.note > .tags-list {
 		grid-column: main;
 	}

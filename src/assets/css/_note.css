@@ -59,7 +59,7 @@
 }
 
 .back-to-notes {
-	--flow-space: 0;
+	--flow-space: var(--main-padding-block);
 	--cluster-vertical-alignment: center;
 	--cluster-gap: var(--space-3xs);
 
@@ -125,8 +125,8 @@
 
 	img {
 		margin-inline: auto;
-		inline-size: auto;
-		block-size: 100%;
+		min-inline-size: min(100%, var(--measure));
+		block-size: auto;
 		border-radius: var(--conditional-border-radius);
 	}
 }
