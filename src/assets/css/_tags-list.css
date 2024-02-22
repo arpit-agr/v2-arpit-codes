@@ -9,7 +9,7 @@
 }
 
 .tags-list {
-	--cluster-gap: var(--space-3xs);
+	--cluster-gap: var(--space-2xs) var(--space-3xs);
 
 	a {
 		display: inline-block;
