@@ -20,12 +20,15 @@
 <meta property="og:description" content="{{ description }}" />
 
 <meta name="color-scheme" content="{{ site.colorScheme }}" />
+{# var(--zinc-100) #}
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f4f5" />
+{# var(--zinc-900) #}
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#18181b" />
 
 <!-- favicon -->
 <link rel="icon" href="/favicon.ico" sizes="any" />
-{# <link rel="icon" href="/icon.svg" type="image/svg+xml"> #}
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-{# <link rel="manifest" href="/manifest.webmanifest"> #}
+<link rel="manifest" href="/site.webmanifest" />
 
 <!-- ELEVENTY -->
 <meta name="generator" content="{{ eleventy.generator }}" />
