@@ -1,7 +1,6 @@
 .site-footer {
 	--cluster-gap: 0 1em;
 	--cluster-horizontal-alignment: space-between;
-	padding-block-end: env(safe-area-inset-bottom, 0px);
 	border-block-start: var(--border-thickness) dashed var(--color-neutral-border-primary);
 
 	/* > :last-child {

@@ -29,20 +29,31 @@ dd {
 }
 
 /* Set core root defaults */
+:root {
+	--min-layout-height: 100vh;
+
+	@supports (min-height: 100svh) {
+		--min-layout-height: 100svh;
+	}
+}
+
+html {
+	min-height: 100%;
+	padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+		env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+}
+
 html:focus-within {
 	scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-	min-height: 100vh;
+	min-height: calc(
+		var(--min-layout-height) - env(safe-area-inset-top, 0px) -
+			env(safe-area-inset-bottom, 0px)
+	);
 	line-height: 1.5;
-}
-
-@supports (min-height: 100svh) {
-	body {
-		min-height: 100svh;
-	}
 }
 
 /* A elements that don't have a class get default styles */

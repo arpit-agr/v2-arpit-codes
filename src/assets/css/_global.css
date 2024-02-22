@@ -22,15 +22,8 @@
 	/* Variables for layout */
 	--gutter: var(--space-s);
 	--max-layout-width: 85rem;
-	--min-layout-height: 100vh;
 	--main-padding-block: var(--space-m-l);
 	--link-padding: var(--space-xs-s);
-}
-
-@supports (min-height: 100svh) {
-	:root {
-		--min-layout-height: 100svh;
-	}
 }
 
 /* https://andy-bell.co.uk/always-aim-high/ */

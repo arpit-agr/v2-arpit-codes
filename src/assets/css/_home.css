@@ -1,7 +1,6 @@
 .home {
 	--stack-gap: var(--space-2xl-3xl);
 	--stack-horizontal-alignment: stretch;
-	min-block-size: 100%;
 
 	h1 {
 		--stack-gap: 0;
