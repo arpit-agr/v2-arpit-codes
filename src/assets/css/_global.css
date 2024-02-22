@@ -183,8 +183,9 @@ hr {
 }
 
 blockquote {
+	margin-inline-start: 0.5ch;
 	padding-inline-start: var(--gutter);
-	border-inline-start: var(--space-4xs) solid var(--color-neutral-border-primary);
+	border-inline-start: var(--space-5xs) solid var(--color-neutral-border-primary);
 }
 
 blockquote > * + * {
