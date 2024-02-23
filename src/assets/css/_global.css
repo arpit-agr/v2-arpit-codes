@@ -3,7 +3,7 @@
 	--measure: 60ch;
 	--line-height-h1: 0.8;
 	--line-height-h2: 1.2;
-	--line-height-h3: 1.4;
+	--line-height-h3: 1.3;
 	--line-height-body: 1.7;
 	--letter-spacing-h1: -0.033em;
 	--letter-spacing-step--1: 0.0125em;
@@ -178,7 +178,7 @@ hr {
 blockquote {
 	margin-inline-start: 0.5ch;
 	padding-inline-start: var(--gutter);
-	border-inline-start: var(--space-5xs) solid var(--color-neutral-border-primary);
+	border-inline-start: var(--space-3xs) solid var(--color-neutral-border-primary);
 }
 
 blockquote > * + * {

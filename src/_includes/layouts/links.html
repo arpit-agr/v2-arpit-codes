@@ -1,7 +1,7 @@
 {%- extends "layouts/base.njk" -%}
 
 {%- block content -%}
-	<div class="links links grid" data-type="archive">
+	<div class="links grid" data-type="archive">
 		<header class="stack fade">
 			<h1>{{ title }}</h1>
 			<p class="subtitle step--1 color:secondary text-wrap:balance">{{ subtitle }}</p>
@@ -19,7 +19,7 @@
 								{% for tag in item.data.tags | sort %}
 									{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 									<li>
-										<a href="{{ tagUrl }}">#{{ tag }}</a>
+										<a href="{{ tagUrl }}">{{ tag }}</a>
 									</li>
 								{% endfor %}
 							</ul>

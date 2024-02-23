@@ -14,18 +14,18 @@
 				{% for tag in tags %}
 					{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 					<li>
-						<a href="{{ tagUrl }}">#{{ tag }}</a>
+						<a href="{{ tagUrl }}">{{ tag }}</a>
 					</li>
 				{% endfor %}
 			</ul>
 		{% endif %}
-		<footer class="stack">
+		{# <div class="callout stack">
 			<p>
 				{{ developer.introduction | md | safe }}
 				{{ developer.signoff | md | safe }}
 			</p>
 			<a href="mailto:{{ developer.email }}"> Hire Me </a>
-		</footer>
+		</div> #}
 		<a class="back-to-notes cluster step--1 color:secondary" href="/notes/">
 			{% include "partials/caret-arrow.html" %} Back to Notes Archive
 		</a>

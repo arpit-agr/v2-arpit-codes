@@ -1,12 +1,12 @@
 .note {
-	--_footer-space: calc(var(--link-padding) + var(--main-padding-block));
+	--_callout-space: calc(var(--link-padding) + var(--main-padding-block));
 	max-inline-size: var(--measure);
 	margin-inline: auto;
 	font-size-adjust: from-font;
 }
 
 .note .tags-list {
-	--flow-space: var(--_footer-space);
+	--flow-space: var(--_callout-space);
 	--cluster-horizontal-alignment: end;
 	--cluster-vertical-alignment: start;
 	position: relative;
@@ -30,8 +30,8 @@
 	}
 }
 
-.note footer {
-	--flow-space: var(--_footer-space);
+.note .callout {
+	--flow-space: var(--_callout-space);
 
 	padding: var(--gutter);
 	background-color: var(--color-neutral-bg-tertiary);
@@ -132,7 +132,7 @@
 }
 
 .note .body :is(picture, pre),
-.note footer {
+.note .callout {
 	min-inline-size: calc(100% + (2 * var(--gutter)));
 	margin-inline-start: calc(-1 * var(--gutter));
 	border-radius: var(--conditional-border-radius);

@@ -26,12 +26,18 @@
 							{% endif %}
 						</div>
 						<div class="meta-data cluster">
-							<time class="step--2 color:secondary" datetime="{{ item.date | htmlDate }}">
-								{{ item.date | readableDate | safe }}
-							</time>
+							<p>
+								<span class="vh">Published on</span>
+								<time
+									class="step--2 color:secondary"
+									datetime="{{ item.date | htmlDate }}"
+								>
+									{{ item.date | readableDate | safe }}
+								</time>
+							</p>
 							<a class="full-note cluster step--2 color:secondary" href="{{ item.url }}">
 								<span>Read Full Note</span>
-								<span class="vh">: {{- item.data.title -}}</span>
+								<span class="vh">: {{ item.data.title }}</span>
 								{% include "partials/arrow.html" %}
 							</a>
 						</div>
