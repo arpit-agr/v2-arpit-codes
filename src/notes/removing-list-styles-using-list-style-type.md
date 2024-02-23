@@ -9,7 +9,7 @@ tags:
   - 'semantics'
 ---
 
-I recently read an [article by Andy Bell](https://piccalil.li/blog/removing-list-styles-without-affecting-semantics/) where he discusses his [CSS reset](https://piccalil.li/blog/a-more-modern-css-reset/) in light of Manuel Matuzović's article on ['Removing list styles without affecting semantics'](https://www.matuzo.at/blog/2023/removing-list-styles-without-affecting-semantics).
+I recently read an [article by Andy Bell](https://piccalil.li/blog/removing-list-styles-without-affecting-semantics/) wherein he discusses his [CSS reset](https://piccalil.li/blog/a-more-modern-css-reset/), prompted by Manuel Matuzović's article on ['Removing list styles without affecting semantics'](https://www.matuzo.at/blog/2023/removing-list-styles-without-affecting-semantics).
 
 Manuel suggests using `list-style-type: ""` as a method to remove list styles while preserving semantics:
 
