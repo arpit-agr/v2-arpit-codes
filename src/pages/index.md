@@ -2,6 +2,7 @@
 title: 'Home'
 layout: 'layouts/home.html'
 permalink: '/'
+opengraphUrl: '/assets/images/opengraph.jpg'
 
 name:
   english: 'Arpit Agrawal'

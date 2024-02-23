@@ -13,8 +13,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
 
-<!-- <meta property="og:image" content="{{ opengraphUrl }}">
-<meta property="og:image:alt" content="Page image for {{ pageTitle }}"> -->
+{%- if opengraphUrl -%}
+	<meta property="og:image" content="{{ opengraphUrl }}" />
+	<meta property="og:image:alt" content="Page image for {{ pageTitle }}" />
+{%- endif -%}
 
 <meta name="description" content="{{ description }}" />
 <meta property="og:description" content="{{ description }}" />
