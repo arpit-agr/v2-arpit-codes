@@ -46,7 +46,7 @@
 .local-lang {
 	--cluster-horizontal-alignment: space-between;
 
-	font-size: var(--fluid-8-35);
+	font-size: var(--fluid-9-35);
 	font-weight: 400;
 	letter-spacing: normal;
 	translate: 0 43%;
