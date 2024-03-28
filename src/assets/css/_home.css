@@ -47,11 +47,29 @@
 	--cluster-horizontal-alignment: space-between;
 
 	font-size: var(--fluid-9-35);
-	font-weight: 400;
+	font-weight: 200;
 	letter-spacing: normal;
-	translate: 0 43%;
+	translate: 0 28%;
+}
+
+[lang='hi'] {
+	font-family: 'Kohinoor Devanagari', sans-serif;
 }
 
 [lang='ur'] {
 	font-family: 'Times New Roman';
+}
+
+@supports (font-size: 1cqi) {
+	.home {
+		container-type: inline-size;
+
+		h1 {
+			font-size: 16.4cqi;
+		}
+
+		.local-lang {
+			font-size: 3cqi;
+		}
+	}
 }
