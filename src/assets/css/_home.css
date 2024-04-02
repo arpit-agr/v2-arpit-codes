@@ -49,7 +49,7 @@
 	font-size: var(--fluid-9-35);
 	font-weight: 200;
 	letter-spacing: normal;
-	translate: 0 28%;
+	translate: 0 40%;
 }
 
 [lang='hi'] {
@@ -69,7 +69,7 @@
 		}
 
 		.local-lang {
-			font-size: 3cqi;
+			font-size: 2.7cqi;
 		}
 	}
 }
