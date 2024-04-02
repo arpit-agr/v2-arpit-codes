@@ -2,7 +2,7 @@
 title: 'Notes'
 pagination:
   data: collections.notes
-  size: 8
+  size: 6
   alias: notes
   reverse: true
 layout: 'layouts/notes.html'

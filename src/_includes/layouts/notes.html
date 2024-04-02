@@ -5,14 +5,12 @@
 		<div class="notes grid" data-type="archive">
 			<header class="grid fade">
 				<h1>{{ title }}</h1>
-				{% if pagination.pageNumber < 1 %}
-					<p class="subtitle step--1 color:secondary text-wrap:balance">{{ subtitle }}</p>
-				{% endif %}
+				<p class="subtitle step--1 color:secondary text-wrap:balance">{{ subtitle }}</p>
 				<p class="page-number step--1 color:secondary">
 					[Page {{ pagination.pageNumber + 1 }} of {{ pagination.hrefs.length }}]
 				</p>
 			</header>
-			<ol class="notes-list" role="list" reversed>
+			<ol class="notes-list grid" role="list" reversed>
 				{%- for item in notes -%}
 					<li class="stack">
 						<h2 class="note-title heading-3 text-wrap:pretty">{{- item.data.title -}}</h2>

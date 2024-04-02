@@ -1,5 +1,10 @@
 .notes-list {
-	display: contents;
+	--grid-min-item-size: min(20rem, calc(100vw - var(--gutter) - var(--gutter)));
+
+	grid-template-columns: repeat(
+		var(--grid-placement, auto-fill),
+		minmax(var(--grid-min-item-size, 16rem), 1fr)
+	);
 }
 
 .notes-list > li {

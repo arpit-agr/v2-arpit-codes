@@ -1,3 +1,18 @@
 [data-type='archive'] {
 	--grid-gap: var(--main-padding-block);
+	grid-template-columns: 1fr;
+
+	@media (--md-n-above) {
+		grid-template-columns: 1fr 2fr;
+	}
+}
+
+[data-type='archive'] > header {
+	--stack-gap: var(--space-s-xs);
+
+	@media (--md-n-above) {
+		align-self: start;
+		position: sticky;
+		inset-block-start: var(--main-padding-block);
+	}
 }
